@@ -11,68 +11,56 @@ import fiskfille.tf.helper.TFVectorHelper;
 import fiskfille.tfg1.TFG1;
 import fiskfille.tfg1.common.item.TFG1Items;
 
-public class TransformerOptimusPrime extends TransformerTruck
-{
-    public TransformerOptimusPrime()
-    {
+public class TransformerOptimusPrime extends TransformerTruck {
+    public TransformerOptimusPrime() {
         super("G1 Optimus Prime");
     }
 
     @Override
-    public Item getHelmet()
-    {
+    public Item getHelmet() {
         return TFG1Items.optimusPrimeHelmet;
     }
 
     @Override
-    public Item getChestplate()
-    {
+    public Item getChestplate() {
         return TFG1Items.optimusPrimeChestplate;
     }
 
     @Override
-    public Item getLeggings()
-    {
+    public Item getLeggings() {
         return TFG1Items.optimusPrimeLeggings;
     }
 
     @Override
-    public Item getBoots()
-    {
+    public Item getBoots() {
         return TFG1Items.optimusPrimeBoots;
     }
 
     @Override
-    public boolean hasStealthForce(EntityPlayer player, int altMode)
-    {
+    public boolean hasStealthForce(EntityPlayer player, int altMode) {
         return false;
     }
 
     @Override
-    public void updateMovement(EntityPlayer player, int altMode)
-    {
+    public void updateMovement(EntityPlayer player, int altMode) {
         TFMotionManager.motion(player, 40, 60, 0, 30, false, true, false);
     }
 
     @Override
-    public float getHeightOffset(EntityPlayer player, int altMode)
-    {
+    public float getHeightOffset(EntityPlayer player, int altMode) {
         return -0.1F;
     }
 
     @Override
-    public float getVehicleHeightOffset(EntityPlayer player, int altMode)
-    {
+    public float getVehicleHeightOffset(EntityPlayer player, int altMode) {
         return -1.25F;
     }
 
     @Override
-    public void doNitroParticles(EntityPlayer player, int altMode)
-    {
+    public void doNitroParticles(EntityPlayer player, int altMode) {
         Random rand = new Random();
 
-        for (int i = 0; i < 4; ++i)
-        {
+        for (int i = 0; i < 4; ++i) {
             Vec3 side = TFVectorHelper.getBackSideCoords(player, 0.225, i < 2, -0.3, false);
 
             float divider = 10;
@@ -81,8 +69,7 @@ public class TransformerOptimusPrime extends TransformerTruck
     }
 
     @Override
-    public String getTransformationSound(int altMode)
-    {
+    public String getTransformationSound(int altMode) {
         return TFG1.modid + ":transform_" + (altMode == -1 ? "robot" : "vehicle");
     }
 }

@@ -17,8 +17,7 @@ import fiskfille.tf.helper.TFModelHelper;
 import fiskfille.tf.helper.TFRenderHelper;
 import fiskfille.tfg1.G1TransformerManager;
 
-public class ModelStarscream extends ModelTransformerBase
-{
+public class ModelStarscream extends ModelTransformerBase {
     public ModelRendererTF waist;
     public ModelRendererTF frontCrotch;
     public ModelRendererTF backCrotch;
@@ -236,8 +235,7 @@ public class ModelStarscream extends ModelTransformerBase
     public ModelRendererTF upperFoot2;
     public ModelRendererTF lowerFoot2;
 
-    public ModelStarscream()
-    {
+    public ModelStarscream() {
         super(1, 0.8F, new AnimationModifier(Type.DEGREE, isBacking(), 0.5F), new AnimationModifier(Type.SPEED, isSneaking(), 1.5F));
         textureWidth = 64;
         textureHeight = 64;
@@ -1314,76 +1312,64 @@ public class ModelStarscream extends ModelTransformerBase
     }
 
     @Override
-    public Transformer getTransformer()
-    {
+    public Transformer getTransformer() {
         return G1TransformerManager.STARSCREAM;
     }
 
     @Override
-    public ModelRendererTF getWaist()
-    {
+    public ModelRendererTF getWaist() {
         return waist;
     }
 
     @Override
-    public void setupOffsets(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void setupOffsets(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         ModelOffset offsets = TFModelHelper.getOffsets(player);
         head.rotationPointX += offsets.headOffsetX;
         head.rotationPointY += offsets.headOffsetY;
         head.rotationPointZ += offsets.headOffsetZ;
 
-        if (wearingChest && !wearingLegs)
-        {
+        if (wearingChest && !wearingLegs) {
             waist.rotationPointY += 2;
 
-            if (!wearingHead)
-            {
+            if (!wearingHead) {
                 offsets.headOffsetY = 2;
             }
         }
 
-        if (!wearingChest && wearingHead)
-        {
+        if (!wearingChest && wearingHead) {
             head.rotationPointY += 0.5F;
             head.rotationPointZ += 1;
         }
 
-        if (!wearingChest && wearingLegs)
-        {
+        if (!wearingChest && wearingLegs) {
             upperLeg1.rotationPointY += 2;
             upperLeg2.rotationPointY += 2;
             lowerLeg1.rotationPointY -= 2;
             lowerLeg2.rotationPointY -= 2;
         }
 
-        if (wearingFeet && !wearingLegs)
-        {
+        if (wearingFeet && !wearingLegs) {
             upperLeg1.rotationPointY = 0;
             upperLeg2.rotationPointY = 0;
             footBase1.setRotationPoint(0.5F, 6.5F, 1);
             footBase2.setRotationPoint(-0.5F, 6.5F, 1);
 
-            if (!wearingChest)
-            {
+            if (!wearingChest) {
                 waist.rotationPointY += 2;
             }
         }
 
-        if (wearingHead)
-        {
+        if (wearingHead) {
             faceTarget(head, 1, rotationYaw, rotationPitch);
         }
     }
 
     @Override
-    public void doActiveAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doActiveAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         applyDefaultHoldingAnimation(rightArm1, leftArm1, rightArm3, leftArm3);
         applyDefaultHittingAnimation(rightArm1, leftArm1, head, torso, rightArm3, leftArm3);
 
-        if (isRiding)
-        {
+        if (isRiding) {
             rightArm1.rotateAngleX -= PI / 5F;
             leftArm1.rotateAngleX -= PI / 5F;
             upperLeg1.rotateAngleX -= PI * 2F / 5F;
@@ -1393,8 +1379,7 @@ public class ModelStarscream extends ModelTransformerBase
             upperLeg2.rotateAngleY -= PI / 10F;
         }
 
-        if (aimedBow)
-        {
+        if (aimedBow) {
             rightArm1.rotateAngleY += -0.1F + head.rotateAngleY;
             leftArm1.rotateAngleY += 0.1F + head.rotateAngleY + 0.4F;
             rightArm1.rotateAngleX += -(PI / 2F) + head.rotateAngleX + 0.5F;
@@ -1407,8 +1392,7 @@ public class ModelStarscream extends ModelTransformerBase
     }
 
     @Override
-    public void doWalkingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doWalkingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         waist.rotationPointY -= 3;
         upperLeg1.rotateAngleX -= 0.1;
         upperLeg2.rotateAngleX -= 0.1;
@@ -1443,8 +1427,7 @@ public class ModelStarscream extends ModelTransformerBase
         swing(rightWing1, 0.5F * globalSpeed, 0.25F * globalDegree, true, 0F, 0.3F * limbSwingAmount * 1, limbSwing, limbSwingAmount);
         swing(leftWing1, 0.5F * globalSpeed, 0.25F * globalDegree, true, 0F, -0.3F * limbSwingAmount * 1, limbSwing, limbSwingAmount);
 
-        if (player.isSneaking())
-        {
+        if (player.isSneaking()) {
             waist.rotationPointY -= limbSwingAmount;
             waist.rotateAngleX += 0.3;
             waist.rotationPointZ -= 0;
@@ -1470,14 +1453,12 @@ public class ModelStarscream extends ModelTransformerBase
     }
 
     @Override
-    public void doIdleAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doIdleAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
 
     }
 
     @Override
-    public void doFallingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doFallingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         double motionY = TFRenderHelper.getMotionY(player);
         float upwardPose = (float) (1 / (1 + Math.exp(-20 * (motionY + 0.2))));
         float downwardPose = (float) (1 / (1 + Math.exp(10 * (motionY + 0.2))));
@@ -1522,8 +1503,7 @@ public class ModelStarscream extends ModelTransformerBase
     }
 
     @Override
-    public void doPartialAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doPartialAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         leftArm1.rotateAngleX += MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         rightArm1.rotateAngleX += MathHelper.cos(limbSwing * 0.6662F + PI) * 1.4F * limbSwingAmount;
 
@@ -1533,10 +1513,8 @@ public class ModelStarscream extends ModelTransformerBase
         leftWing1.rotateAngleY += Math.min(MathHelper.cos(limbSwing * 0.6662F + PI) * 1.4F * limbSwingAmount, 0);
         rightWing1.rotateAngleY += Math.max(MathHelper.cos(limbSwing * 0.6662F + PI) * 1.4F * limbSwingAmount, 0);
 
-        if (isSneak)
-        {
-            if (wearingChest)
-            {
+        if (isSneak) {
+            if (wearingChest) {
                 head.rotateAngleX -= 0.4F;
             }
 
@@ -1550,8 +1528,7 @@ public class ModelStarscream extends ModelTransformerBase
             upperLeg1.rotateAngleX -= 0.5F;
             upperLeg2.rotateAngleX -= 0.5F;
 
-            if (wearingLegs != wearingFeet)
-            {
+            if (wearingLegs != wearingFeet) {
                 lowerLeg1.rotationPointY -= 2;
                 lowerLeg2.rotationPointY -= 2;
             }
@@ -1559,8 +1536,7 @@ public class ModelStarscream extends ModelTransformerBase
     }
 
     @Override
-    public void doTransformationAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doTransformationAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         ModelStarscreamVehicle vehicle = (ModelStarscreamVehicle) getTransformerModel().getVehicleModel();
 
         rotateTo(waist, vehicle.waist, progress);
@@ -1782,18 +1758,14 @@ public class ModelStarscream extends ModelTransformerBase
     }
 
     @Override
-    public void renderArmorPiece(int armorPiece)
-    {
+    public void renderArmorPiece(int armorPiece) {
         setToInitPose();
 
-        if (armorPiece == 0)
-        {
+        if (armorPiece == 0) {
             GL11.glTranslatef(0, 0.0625F, -0.0625F);
             GL11.glRotatef(4, 1, 0, 0);
             head.render(0.0625F);
-        }
-        else if (armorPiece == 1)
-        {
+        } else if (armorPiece == 1) {
             GL11.glTranslatef(0, 0, 0.0625F);
             upperLeg1.showModel = false;
             upperLeg2.showModel = false;
@@ -1802,18 +1774,14 @@ public class ModelStarscream extends ModelTransformerBase
             upperLeg1.showModel = true;
             upperLeg2.showModel = true;
             head.showModel = true;
-        }
-        else if (armorPiece == 2)
-        {
+        } else if (armorPiece == 2) {
             footBase1.showModel = false;
             footBase2.showModel = false;
             upperLeg1.render(0.0625F);
             upperLeg2.render(0.0625F);
             footBase1.showModel = true;
             footBase2.showModel = true;
-        }
-        else if (armorPiece == 3)
-        {
+        } else if (armorPiece == 3) {
             footBase1.rotationPointX -= 3;
             footBase2.rotationPointX += 3;
             footBase1.rotateAngleX += 0.2F;

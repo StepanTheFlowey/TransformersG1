@@ -16,8 +16,7 @@ import fiskfille.tf.helper.TFModelHelper;
 import fiskfille.tf.helper.TFRenderHelper;
 import fiskfille.tfg1.G1TransformerManager;
 
-public class ModelOptimusPrime extends ModelTransformerBase
-{
+public class ModelOptimusPrime extends ModelTransformerBase {
     public ModelRendererTF waist;
     public ModelRendererTF upperLeg1;
     public ModelRendererTF upperLeg2;
@@ -128,8 +127,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
     public ModelRendererTF headTop2;
     public ModelRendererTF headTop3;
 
-    public ModelOptimusPrime()
-    {
+    public ModelOptimusPrime() {
         super(1, 0.8F, new AnimationModifier(Type.DEGREE, isBacking(), 0.5F));
         textureWidth = 64;
         textureHeight = 128;
@@ -678,8 +676,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
         crotchPiece1.addChild(crotchPiece2);
         upperArm1.addChild(upperArmPiece1);
 
-        for (ModelRendererTF modelRenderer : new ModelRendererTF[] {wheel1, wheel2, wheel3, wheel4, wheel5, wheel6})
-        {
+        for (ModelRendererTF modelRenderer : new ModelRendererTF[] {wheel1, wheel2, wheel3, wheel4, wheel5, wheel6}) {
             float scale = 0.9F;
             modelRenderer.setScale(scale, scale, scale);
         }
@@ -691,51 +688,43 @@ public class ModelOptimusPrime extends ModelTransformerBase
     }
 
     @Override
-    public Transformer getTransformer()
-    {
+    public Transformer getTransformer() {
         return G1TransformerManager.OPTIMUS_PRIME;
     }
 
     @Override
-    public ModelRendererTF getWaist()
-    {
+    public ModelRendererTF getWaist() {
         return waist;
     }
 
     @Override
-    public void setupOffsets(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void setupOffsets(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         ModelOffset offsets = TFModelHelper.getOffsets(player);
         head.rotationPointX += offsets.headOffsetX;
         head.rotationPointY += offsets.headOffsetY;
         head.rotationPointZ += offsets.headOffsetZ;
 
-        if (!wearingChest && wearingHead)
-        {
+        if (!wearingChest && wearingHead) {
             neck.rotationPointY += 5.1F;
             neck.rotationPointZ += 0.5F;
         }
 
-        if (wearingChest && !wearingLegs)
-        {
+        if (wearingChest && !wearingLegs) {
             waist.rotationPointY += 1;
 
-            if (!wearingHead)
-            {
+            if (!wearingHead) {
                 offsets.headOffsetY = 1;
             }
         }
 
-        if (!wearingChest && wearingLegs)
-        {
+        if (!wearingChest && wearingLegs) {
             upperLeg1.rotationPointY += 1;
             upperLeg2.rotationPointY += 1;
             lowerLeg1.rotationPointY -= 1;
             lowerLeg2.rotationPointY -= 1;
         }
 
-        if (wearingFeet && !wearingLegs)
-        {
+        if (wearingFeet && !wearingLegs) {
 //            upperLeg1.rotationPointY = 0;
 //            upperLeg2.rotationPointY = 0;
 //            footBase1.setRotationPoint(0.65F, 0.5F, 0);
@@ -745,8 +734,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
             footBase1.rotationPointZ += 1;
             footBase2.rotationPointZ += 1;
 
-            if (!wearingChest)
-            {
+            if (!wearingChest) {
                 waist.rotationPointY += 1;
                 footBase1.rotationPointY -= 1;
                 footBase2.rotationPointY -= 1;
@@ -757,13 +745,11 @@ public class ModelOptimusPrime extends ModelTransformerBase
     }
 
     @Override
-    public void doActiveAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doActiveAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         applyDefaultHoldingAnimation(upperArm1, upperArm2, lowerArm1, lowerArm2);
         applyDefaultHittingAnimation(upperArm1, upperArm2, head, torso, lowerArm1, lowerArm2);
 
-        if (isRiding)
-        {
+        if (isRiding) {
             upperArm1.rotateAngleX -= PI / 5F;
             upperArm2.rotateAngleX -= PI / 5F;
             upperLeg1.rotateAngleX -= PI * 2F / 5F;
@@ -773,8 +759,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
             upperLeg2.rotateAngleY -= PI / 10F;
         }
 
-        if (aimedBow)
-        {
+        if (aimedBow) {
             upperArm1.rotateAngleY += -0.1F + head.rotateAngleY;
             upperArm2.rotateAngleY += 0.1F + head.rotateAngleY + 0.4F;
             upperArm1.rotateAngleX += -(PI / 2F) + head.rotateAngleX + 0.5F;
@@ -787,8 +772,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
     }
 
     @Override
-    public void doWalkingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doWalkingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         waist.rotationPointY -= 3;
 
         upperLeg1.rotateAngleY += 0.2;
@@ -801,8 +785,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
         lowerArm1.rotateAngleX -= 0.1;
         head.rotateAngleX += 0.1;
 
-        if (player.isSneaking())
-        {
+        if (player.isSneaking()) {
             globalSpeed = 1.5F;
             globalDegree = 1;
         }
@@ -829,8 +812,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
         walk(lowerArm1, 0.5F * globalSpeed, 0.5F * globalDegree, true, -1F * backwardInverter, -0.5F * limbSwingAmount, limbSwing, limbSwingAmount);
         walk(lowerArm2, 0.5F * globalSpeed, 0.5F * globalDegree, false, -1F * backwardInverter, -0.5F * limbSwingAmount, limbSwing, limbSwingAmount);
 
-        if (player.isSneaking())
-        {
+        if (player.isSneaking()) {
             waist.rotationPointY -= limbSwingAmount;
             waist.rotateAngleX += 0.3;
             waist.rotationPointZ -= 0;
@@ -854,8 +836,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
     }
 
     @Override
-    public void doIdleAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doIdleAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         walk(torsoConnector, 0.08F, 0.1F, true, 1, 0, ticks, 1F);
         walk(torso, 0.08F, 0.15F, false, 1, 0, ticks, 1F);
         walk(head, 0.08F, 0.05F, true, 1, 0, ticks, 1F);
@@ -869,8 +850,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
     }
 
     @Override
-    public void doFallingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doFallingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         double motionY = TFRenderHelper.getMotionY(player);
         float upwardPose = (float) (1 / (1 + Math.exp(-20 * (motionY + 0.2))));
         float downwardPose = (float) (1 / (1 + Math.exp(10 * (motionY + 0.2))));
@@ -913,8 +893,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
     }
 
     @Override
-    public void doPartialAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doPartialAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         upperLeg1.setRotationAngles(0, 0, 0);
         upperLeg2.setRotationAngles(0, 0, 0);
         lowerLeg1.setRotationAngles(0, 0, 0);
@@ -926,10 +905,8 @@ public class ModelOptimusPrime extends ModelTransformerBase
         upperLeg1.rotateAngleX += MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         upperLeg2.rotateAngleX += MathHelper.cos(limbSwing * 0.6662F + PI) * 1.4F * limbSwingAmount;
 
-        if (isSneak)
-        {
-            if (wearingChest)
-            {
+        if (isSneak) {
+            if (wearingChest) {
                 head.rotateAngleX -= 0.4F;
             }
 
@@ -943,8 +920,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
             upperLeg1.rotateAngleX -= 0.5F;
             upperLeg2.rotateAngleX -= 0.5F;
 
-            if (wearingLegs != wearingFeet)
-            {
+            if (wearingLegs != wearingFeet) {
                 lowerLeg1.rotationPointY -= 2;
                 lowerLeg2.rotationPointY -= 2;
             }
@@ -952,8 +928,7 @@ public class ModelOptimusPrime extends ModelTransformerBase
     }
 
     @Override
-    public void doTransformationAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet)
-    {
+    public void doTransformationAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
         ModelOptimusPrimeVehicle vehicle = (ModelOptimusPrimeVehicle) getTransformerModel().getVehicleModel();
         float f = Math.min((1 - progress) * 2, 1);
 
@@ -1055,19 +1030,15 @@ public class ModelOptimusPrime extends ModelTransformerBase
     }
 
     @Override
-    public void renderArmorPiece(int armorPiece)
-    {
+    public void renderArmorPiece(int armorPiece) {
         setToInitPose();
 
-        if (armorPiece == 0)
-        {
+        if (armorPiece == 0) {
             GL11.glTranslatef(0, 0.0625F, -0.0625F);
             GL11.glRotatef(4, 1, 0, 0);
             GL11.glScalef(0.3F, 0.3F, 0.3F);
             head.render(0.0625F);
-        }
-        else if (armorPiece == 1)
-        {
+        } else if (armorPiece == 1) {
             GL11.glTranslatef(0, 0, 0.0625F);
             upperLeg1.showModel = false;
             upperLeg2.showModel = false;
@@ -1076,18 +1047,14 @@ public class ModelOptimusPrime extends ModelTransformerBase
             upperLeg1.showModel = true;
             upperLeg2.showModel = true;
             head.showModel = true;
-        }
-        else if (armorPiece == 2)
-        {
+        } else if (armorPiece == 2) {
             footBase1.showModel = false;
             footBase2.showModel = false;
             upperLeg1.render(0.0625F);
             upperLeg2.render(0.0625F);
             footBase1.showModel = true;
             footBase2.showModel = true;
-        }
-        else if (armorPiece == 3)
-        {
+        } else if (armorPiece == 3) {
 //            GL11.glScalef(5, 5, 5);
             GL11.glTranslatef(0, 0.3125F, 0);
             footBase1.rotationPointX -= 3;

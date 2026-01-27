@@ -7,18 +7,15 @@ import fiskfille.tfg1.client.model.transformer.definition.TFG1ModelRegistry;
 import fiskfille.tfg1.common.event.ClientEventHandler;
 import fiskfille.tfg1.common.item.TFG1Items;
 
-public class ClientProxy extends CommonProxy
-{
+public class ClientProxy extends CommonProxy {
     @Override
-    public void preInit()
-    {
+    public void preInit() {
         super.preInit();
         registerEventHandler(new ClientEventHandler());
     }
 
     @Override
-    public void init()
-    {
+    public void init() {
         super.init();
         TFG1ModelRegistry.registerModels();
 
@@ -26,8 +23,7 @@ public class ClientProxy extends CommonProxy
         registerArmorRenderer(TFG1Items.starscreamHelmet, TFG1Items.starscreamChestplate, TFG1Items.starscreamLeggings, TFG1Items.starscreamBoots);
     }
 
-    public void registerArmorRenderer(ItemTransformerArmor helmet, ItemTransformerArmor chest, ItemTransformerArmor legs, ItemTransformerArmor boots)
-    {
+    public void registerArmorRenderer(ItemTransformerArmor helmet, ItemTransformerArmor chest, ItemTransformerArmor legs, ItemTransformerArmor boots) {
         MinecraftForgeClient.registerItemRenderer(helmet, new RenderItemArmor(helmet.getTransformer(), 0));
         MinecraftForgeClient.registerItemRenderer(chest, new RenderItemArmor(chest.getTransformer(), 1));
         MinecraftForgeClient.registerItemRenderer(legs, new RenderItemArmor(legs.getTransformer(), 2));

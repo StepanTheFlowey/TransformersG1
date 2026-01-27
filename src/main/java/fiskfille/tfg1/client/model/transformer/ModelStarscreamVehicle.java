@@ -7,8 +7,7 @@ import fiskfille.tf.client.model.tools.ModelRendererTF;
 import fiskfille.tf.client.model.transformer.vehicle.ModelVehicleBase;
 import fiskfille.tf.helper.TFRenderHelper;
 
-public class ModelStarscreamVehicle extends ModelVehicleBase
-{
+public class ModelStarscreamVehicle extends ModelVehicleBase {
     public ModelRendererTF waist;
     public ModelRendererTF frontCrotch;
     public ModelRendererTF backCrotch;
@@ -226,8 +225,7 @@ public class ModelStarscreamVehicle extends ModelVehicleBase
     public ModelRendererTF upperFoot2;
     public ModelRendererTF lowerFoot2;
 
-    public ModelStarscreamVehicle()
-    {
+    public ModelStarscreamVehicle() {
         textureWidth = 64;
         textureHeight = 64;
         rightWing16 = new ModelRendererTF(this, 60, 43);
@@ -1293,12 +1291,10 @@ public class ModelStarscreamVehicle extends ModelVehicleBase
     }
 
     @Override
-    public void render(EntityPlayer player, ItemStack itemstack)
-    {
+    public void render(EntityPlayer player, ItemStack itemstack) {
         float scale = 1;
 
-        if (player == null)
-        {
+        if (player == null) {
             scale = 0.85F;
             waist.rotationPointZ += 3;
         }
@@ -1308,13 +1304,11 @@ public class ModelStarscreamVehicle extends ModelVehicleBase
     }
 
     @Override
-    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, float scale, Entity entity)
-    {
+    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, float scale, Entity entity) {
         super.setRotationAngles(limbSwing, limbSwingAmount, ticks, rotationYaw, rotationPitch, scale, entity);
         setToInitPose();
 
-        if (entity instanceof EntityPlayer)
-        {
+        if (entity instanceof EntityPlayer) {
             waist.rotateAngleX = (rotationPitch + 90) / (180F / PI);
             waist.rotateAngleZ = -bipedHead.rotateAngleY;
         }

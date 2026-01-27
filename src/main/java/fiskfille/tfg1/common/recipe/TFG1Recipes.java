@@ -19,10 +19,8 @@ import fiskfille.tf.common.recipe.TFRecipes;
 import fiskfille.tfg1.common.item.TFG1Items;
 import fiskfille.tfg1.common.item.TFG1SubItems;
 
-public class TFG1Recipes extends TFRecipes
-{
-    public static void register()
-    {
+public class TFG1Recipes extends TFRecipes {
+    public static void register() {
 //        restore();
         addCraftingComponentRecipes();
         addArmorRecipes();
@@ -30,8 +28,7 @@ public class TFG1Recipes extends TFRecipes
 //        save();
     }
 
-    private static void addCraftingComponentRecipes()
-    {
+    private static void addCraftingComponentRecipes() {
         AssemblyTable.addRecipe(TFG1SubItems.smoke_stack, new Dyes(), "     ", "  I  ", "  I  ", "  I  ", "     ", 'I', Items.iron_ingot);
         AssemblyTable.addRecipe(TFG1SubItems.optimus_primes_gauntlet, new Dyes(RED, 4, BLUE, 1), "   T ", "  TT ", "  TT ", "  T  ", "     ", 'T', TFItems.transformiumAlloy);
         AssemblyTable.addRecipe(TFG1SubItems.optimus_prime_torso_base, new Dyes(RED, 8, SILVER, 3), "     ", "TTGTT", " TTT ", "  T  ", " WTW ", 'T', TFItems.transformiumAlloy, 'W', TFSubItems.wheel, 'G', Dyes.dye(Blocks.stained_glass, LIGHT_BLUE));
@@ -44,8 +41,7 @@ public class TFG1Recipes extends TFRecipes
         AssemblyTable.addRecipe(TFG1SubItems.starscreams_greave, new Dyes(WHITE, 5, LIGHT_BLUE, 1), "  T  ", "  TT ", "  TT ", "  TJ ", "     ", 'T', TFItems.transformiumAlloy, 'J', TFSubItems.jet_thruster);
     }
 
-    private static void addArmorRecipes()
-    {
+    private static void addArmorRecipes() {
         AssemblyTable.addRecipe(new ItemStack(TFG1Items.optimusPrimeHelmet), new Dyes(BLUE, 5, SILVER, 1), "     ", " T T ", " THT ", "     ", "     ", 'T', TFItems.transformiumAlloy, 'H', TFSubItems.protoform_head);
         AssemblyTable.addRecipe(new ItemStack(TFG1Items.optimusPrimeChestplate), new Dyes(), "     ", "     ", " SBS ", " G G ", "     ", 'S', TFG1SubItems.smoke_stack, 'B', TFG1SubItems.optimus_prime_torso_base, 'G', TFG1SubItems.optimus_primes_gauntlet);
         AssemblyTable.addRecipe(new ItemStack(TFG1Items.optimusPrimeLeggings), new Dyes(SILVER, 4), "     ", "     ", " R R ", " G G ", "     ", 'R', TFSubItems.transformium_alloy_rod, 'G', TFG1SubItems.optimus_primes_greave);

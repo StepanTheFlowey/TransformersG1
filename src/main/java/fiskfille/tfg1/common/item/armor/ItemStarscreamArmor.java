@@ -5,16 +5,13 @@ import fiskfille.tf.common.item.armor.ItemTransformerArmor;
 import fiskfille.tf.common.transformer.base.Transformer;
 import fiskfille.tfg1.G1TransformerManager;
 
-public class ItemStarscreamArmor extends ItemTransformerArmor
-{
-    public ItemStarscreamArmor(int armorPiece)
-    {
+public class ItemStarscreamArmor extends ItemTransformerArmor {
+    public ItemStarscreamArmor(int armorPiece) {
         super(TFItems.TRANSFORMERMATERIAL, 4, armorPiece);
     }
 
     @Override
-    public Transformer getTransformer()
-    {
+    public Transformer getTransformer() {
         return G1TransformerManager.STARSCREAM;
     }
 }

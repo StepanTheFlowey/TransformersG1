@@ -12,8 +12,7 @@ import fiskfille.tf.common.tick.ClientTickHandler;
 import fiskfille.tf.helper.TFHelper;
 import fiskfille.tf.helper.TFRenderHelper;
 
-public class ModelOptimusPrimeVehicle extends ModelVehicleBase
-{
+public class ModelOptimusPrimeVehicle extends ModelVehicleBase {
     public ModelRendererTF waist;
     public ModelRendererTF upperLeg1;
     public ModelRendererTF upperLeg2;
@@ -105,8 +104,7 @@ public class ModelOptimusPrimeVehicle extends ModelVehicleBase
     public ModelRendererTF lowerArm2;
     public ModelRendererTF hand2;
 
-    public ModelOptimusPrimeVehicle()
-    {
+    public ModelOptimusPrimeVehicle() {
         textureWidth = 64;
         textureHeight = 128;
         torso = new ModelRendererTF(this, 24, 17);
@@ -547,8 +545,7 @@ public class ModelOptimusPrimeVehicle extends ModelVehicleBase
         upperArm2.addChild(upperArmPiece2);
         lowerLeg1.addChild(wheel3);
 
-        for (ModelRendererTF modelRenderer : new ModelRendererTF[] {wheel1, wheel2, wheel3, wheel4, wheel5, wheel6})
-        {
+        for (ModelRendererTF modelRenderer : new ModelRendererTF[] {wheel1, wheel2, wheel3, wheel4, wheel5, wheel6}) {
             float scale = 0.9F;
             modelRenderer.setScale(scale, scale, scale);
         }
@@ -557,24 +554,20 @@ public class ModelOptimusPrimeVehicle extends ModelVehicleBase
     }
 
     @Override
-    public void render(EntityPlayer player, ItemStack itemstack)
-    {
+    public void render(EntityPlayer player, ItemStack itemstack) {
         TFRenderHelper.setupRenderLayers(player, itemstack, waist);
     }
 
     @Override
-    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, float scale, Entity entity)
-    {
+    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, float scale, Entity entity) {
         super.setRotationAngles(limbSwing, limbSwingAmount, ticks, rotationYaw, rotationPitch, scale, entity);
         setToInitPose();
 
-        if (entity instanceof EntityPlayer)
-        {
+        if (entity instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) entity;
             float wheelSpinSpeed = (TFData.FORWARD_VELOCITY.get(player) < 0 ? -limbSwing : limbSwing) * 0.8F;
 
-            for (ModelRenderer modelRenderer : new ModelRenderer[] {wheel1, wheel2, wheel3, wheel4, wheel5, wheel6})
-            {
+            for (ModelRenderer modelRenderer : new ModelRenderer[] {wheel1, wheel2, wheel3, wheel4, wheel5, wheel6}) {
                 modelRenderer.rotateAngleX = wheelSpinSpeed % PI;
             }
 
