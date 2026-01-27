@@ -1,0 +1,11 @@
+build/
+eclipse/
+.gradle/
+idea/
+*.iml
+*.ipr
+*.iws
+jars/
+libs/
+minecraft/
+out/
