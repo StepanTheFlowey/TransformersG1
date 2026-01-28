@@ -23,9 +23,8 @@ minecraft {
 }
 
 dependencies {
-	compile files("../TransformersMod/jars/TransformersMod-1.7.10-0.6.0-deobf.jar")
-	compile files("../TransformersMod/jars/TransformersMod-1.7.10-0.6.0.jar")
-	compile files("../TransformersMod/jars/TransformersMod-1.7.10-0.6.0-sources.jar")
+	compile files("../TransformersMod/jars/TransformersMod-1.7.10-0.6.4.jar")
+	compile files("../TransformersMod/jars/TransformersMod-1.7.10-0.6.4-sources.jar")
 }
 
 sourceSets {
@@ -33,16 +32,6 @@ sourceSets {
 		resources {
 			srcDir 'resources'
 		}
-	}
-}
-
-jar {
-	destinationDir = file 'jars'
-	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-	includeEmptyDirs = false
-	manifest {
-		attributes 'FMLCorePlugin': 'fiskfille.tf.asm.TFLoadingPlugin'
-		attributes 'FMLCorePluginContainsFMLMod': 'true'
 	}
 }
 
@@ -57,5 +46,15 @@ processResources {
 
 	from(sourceSets.main.resources.srcDirs) {
 		exclude 'mcmod.info'
+	}
+}
+
+jar {
+	destinationDir = file 'jars'
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+	includeEmptyDirs = false
+	manifest {
+		attributes 'FMLCorePlugin': 'fiskfille.tf.asm.TFLoadingPlugin'
+		attributes 'FMLCorePluginContainsFMLMod': 'true'
 	}
 }
