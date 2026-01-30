@@ -1,12 +1,13 @@
 buildscript {
 	repositories {
+		maven { url = "https://gregtech.overminddl1.com" }
+		maven {	url = "https://jitpack.io" }
 		maven {	url = "https://maven.minecraftforge.net" }
 		maven {	url = "https://oss.sonatype.org/content/repositories/snapshots" }
 		maven {	url = "https://repo1.maven.org/maven2" }
-		maven {	url = "https://jitpack.io" }
 	}
 	dependencies {
-		classpath 'com.github.GTNewHorizons:ForgeGradle:1.2.11'
+		classpath 'com.github.GTNewHorizons:ForgeGradle:1.2.13'
 	}
 }
 
@@ -22,9 +23,20 @@ minecraft {
 	replace '${version}', project.version
 }
 
+repositories {
+	maven { url = "http://chickenbones.net/maven" }
+	maven { url = "https://gregtech.overminddl1.com" }
+	maven {	url = "https://maven.minecraftforge.net" }
+	maven { url = "https://www.cursemaven.com" }
+}
+
+configurations {
+	embedded
+	implementation.extendsFrom embedded
+}
+
 dependencies {
-	compile files("../TransformersMod/jars/TransformersMod-1.7.10-0.6.4.jar")
-	compile files("../TransformersMod/jars/TransformersMod-1.7.10-0.6.4-sources.jar")
+	compile files("../TransformersMod/jars/TransformersMod-1.7.10-0.6.4-universal.jar")
 }
 
 sourceSets {
@@ -50,11 +62,11 @@ processResources {
 }
 
 jar {
-	destinationDir = file 'jars'
-	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-	includeEmptyDirs = false
-	manifest {
-		attributes 'FMLCorePlugin': 'fiskfille.tf.asm.TFLoadingPlugin'
-		attributes 'FMLCorePluginContainsFMLMod': 'true'
+	classifier = 'universal'
+	configurations.embedded.each { dep ->
+		from(project.zipTree(dep)) {
+			exclude 'META-INF', 'META-INF/**'
+		}
 	}
+	destinationDir = file 'jars'
 }
