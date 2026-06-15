@@ -1,5 +1,5 @@
 dependencies {
-	api files("../TransformersMod/build/libs/transformers-0.6.5.jar")
+	api fileTree(dir: "../TransformersMod/build/libs", include: ["transformers-*-dev.jar"])
 
 	runtimeOnlyNonPublishable "com.github.GTNewHorizons:CoreTweaks:0.3.4.5-GTNH:dev"
 }
