@@ -12,7 +12,7 @@ import fiskfille.tfg1.common.proxy.CommonProxy;
 				modid = TFG1.modid,
 				name = TFG1.name,
 				version = TFG1.version,
-				dependencies = "required-after:transformers@[0.6.2,)"
+				dependencies = "required-after:transformers@[0.7.0,)"
 )
 public class TFG1 {
 	public static final String modid = "transformersg1";
