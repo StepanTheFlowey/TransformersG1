@@ -11,12 +11,12 @@ import fiskfille.tfg1.common.proxy.CommonProxy;
 @Mod(
 				acceptedMinecraftVersions = "[1.7.10]",
 				dependencies = "required-after:transformers@[0.7.0,)",
-				modid = TFG1.modid,
+				modid = TFG1.MODID,
 				name = TFG1.name,
 				version = Tags.VERSION
 )
 public class TFG1 {
-	public static final String modid = "transformersg1";
+	public static final String MODID = "transformersg1";
 	public static final String name = "Transformers Mod: G1 Edition";
 
 	@SidedProxy(
@@ -25,7 +25,7 @@ public class TFG1 {
 	)
 	public static CommonProxy proxy;
 
-	@Instance(TFG1.modid)
+	@Instance(TFG1.MODID)
 	public static TFG1 instance;
 
 	@EventHandler

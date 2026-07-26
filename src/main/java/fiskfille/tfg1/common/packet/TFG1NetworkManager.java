@@ -8,6 +8,6 @@ public class TFG1NetworkManager {
 	public static SimpleNetworkWrapper networkWrapper;
 
 	public static void registerPackets() {
-		networkWrapper = NetworkRegistry.INSTANCE.newSimpleChannel(TFG1.modid);
+		networkWrapper = NetworkRegistry.INSTANCE.newSimpleChannel(TFG1.MODID);
 	}
 }

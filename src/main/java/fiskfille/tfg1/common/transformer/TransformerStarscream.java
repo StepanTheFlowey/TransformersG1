@@ -32,6 +32,6 @@ public class TransformerStarscream extends TransformerJet {
 
 	@Override
 	public String getTransformationSound(int altMode) {
-		return TFG1.modid + ":transform_" + (altMode == -1 ? "robot" : "vehicle");
+		return TFG1.MODID + ":transform_" + (altMode == -1 ? "robot" : "vehicle");
 	}
 }

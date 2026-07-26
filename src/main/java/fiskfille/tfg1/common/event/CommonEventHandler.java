@@ -11,7 +11,7 @@ import fiskfille.tfg1.common.recipe.TFG1Recipes;
 public class CommonEventHandler {
 	@SubscribeEvent(priority = EventPriority.LOW)
 	public void onItemHandlerInit(ItemHandlerEvent.Init event) {
-		event.registerItemHandler(TFG1.modid, TFG1SubItems.class);
+		event.registerItemHandler(TFG1.MODID, TFG1SubItems.class);
 	}
 
 	@SubscribeEvent(priority = EventPriority.LOW)

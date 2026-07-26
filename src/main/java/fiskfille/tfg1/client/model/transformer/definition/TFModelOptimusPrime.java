@@ -80,7 +80,7 @@ public class TFModelOptimusPrime extends TransformerModel {
 
 	@Override
 	public ResourceLocation getTexture(Entity entity, String suffix) {
-		return new ResourceLocation(TFG1.modid, String.format("textures/models/optimus/optimus_prime%s.png", suffix));
+		return new ResourceLocation(TFG1.MODID, String.format("textures/models/optimus/optimus_prime%s.png", suffix));
 	}
 
 	@Override
