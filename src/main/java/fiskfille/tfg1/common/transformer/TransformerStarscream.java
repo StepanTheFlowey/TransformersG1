@@ -4,6 +4,7 @@ import fiskfille.tf.common.transformer.base.TransformerJet;
 import fiskfille.tfg1.TFG1;
 import fiskfille.tfg1.common.item.TFG1Items;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 
 public class TransformerStarscream extends TransformerJet {
 	public TransformerStarscream() {
@@ -31,7 +32,7 @@ public class TransformerStarscream extends TransformerJet {
 	}
 
 	@Override
-	public String getTransformationSound(int altMode) {
-		return TFG1.MODID + ":transform_" + (altMode == -1 ? "robot" : "vehicle");
+	public ResourceLocation getTransformationSound(int altMode) {
+		return altMode == -1 ? TFG1.soundRobot : TFG1.soundVehicle;
 	}
 }

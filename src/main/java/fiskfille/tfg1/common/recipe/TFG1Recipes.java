@@ -15,11 +15,8 @@ import static fiskfille.tf.common.recipe.Dyes.*;
 
 public class TFG1Recipes extends TFRecipes {
 	public static void register() {
-//        restore();
 		addCraftingComponentRecipes();
 		addArmorRecipes();
-
-//        save();
 	}
 
 	private static void addCraftingComponentRecipes() {

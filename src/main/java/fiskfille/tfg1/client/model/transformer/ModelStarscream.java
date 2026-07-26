@@ -1322,7 +1322,7 @@ public class ModelStarscream extends ModelTransformerBase {
 
 	@Override
 	public void setupOffsets(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
-		ModelOffset offsets = TFModelHelper.getOffsets(player);
+		final ModelOffset offsets = TFModelHelper.getOffsets(player);
 		head.rotationPointX += offsets.headOffsetX;
 		head.rotationPointY += offsets.headOffsetY;
 		head.rotationPointZ += offsets.headOffsetZ;
@@ -1457,9 +1457,9 @@ public class ModelStarscream extends ModelTransformerBase {
 
 	@Override
 	public void doFallingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
-		double motionY = TFRenderHelper.getMotionY(player);
-		float upwardPose = (float) (1 / (1 + Math.exp(-20 * (motionY + 0.2))));
-		float downwardPose = (float) (1 / (1 + Math.exp(10 * (motionY + 0.2))));
+		final double motionY = TFRenderHelper.getMotionY(player);
+		final float upwardPose = (float) (1 / (1 + Math.exp(-20 * (motionY + 0.2))));
+		final float downwardPose = (float) (1 / (1 + Math.exp(10 * (motionY + 0.2))));
 
 		waist.rotateAngleX += 0.2F * limbSwingAmount * backwardInverter;
 
@@ -1535,7 +1535,7 @@ public class ModelStarscream extends ModelTransformerBase {
 
 	@Override
 	public void doTransformationAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
-		ModelStarscreamVehicle vehicle = (ModelStarscreamVehicle) getTransformerModel().getVehicleModel();
+		final ModelStarscreamVehicle vehicle = (ModelStarscreamVehicle) getTransformerModel().getVehicleModel();
 
 		rotateTo(waist, vehicle.waist, progress);
 		rotateTo(frontCrotch, vehicle.frontCrotch, progress);

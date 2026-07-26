@@ -13,16 +13,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
-public class TFModelStarscream extends TransformerModel {
-	private final ModelStarscream model;
-	private final ModelStarscream modelItem;
-	private final ModelStarscreamVehicle vehicle;
+import javax.annotation.Nonnull;
 
-	public TFModelStarscream() {
-		model = new ModelStarscream();
-		modelItem = new ModelStarscream();
-		vehicle = new ModelStarscreamVehicle();
-	}
+public class TFModelStarscream extends TransformerModel {
+	private final ModelStarscream model= new ModelStarscream();
+	private final ModelStarscream modelItem= new ModelStarscream();
+	private final ModelStarscreamVehicle vehicle = new ModelStarscreamVehicle();
 
 	@Override
 	public ModelTransformerBase getMainModel() {
@@ -30,6 +26,7 @@ public class TFModelStarscream extends TransformerModel {
 	}
 
 	@Override
+	@Nonnull
 	public ModelVehicleBase getVehicleModel() {
 		return vehicle;
 	}

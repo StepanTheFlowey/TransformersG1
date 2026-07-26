@@ -676,12 +676,10 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		upperArm1.addChild(upperArmPiece1);
 
 		for(ModelRendererTF modelRenderer : new ModelRendererTF[]{wheel1, wheel2, wheel3, wheel4, wheel5, wheel6}) {
-			float scale = 0.9F;
-			modelRenderer.setScale(scale, scale, scale);
+			modelRenderer.setScale(0.9F, 0.9F, 0.9F);
 		}
 
-		float scale = 0.35F;
-		neck.setScale(scale, scale, scale);
+		neck.setScale(0.35F, 0.35F, 0.35F);
 
 		setInitPose();
 	}
@@ -772,7 +770,7 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 
 	@Override
 	public void doWalkingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
-		waist.rotationPointY -= 3;
+		waist.rotationPointY -= 3F;
 
 		upperLeg1.rotateAngleY += 0.2F;
 		upperLeg2.rotateAngleY -= 0.2F;
@@ -790,7 +788,7 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		}
 
 		bob(waist, globalSpeed, 1.7F * globalDegree, false, limbSwing, limbSwingAmount);
-		waist.rotationPointY += 1 * limbSwingAmount + 3;
+		waist.rotationPointY += limbSwingAmount + 3;
 		walk(waist, globalSpeed, 0.05F * globalDegree, false, 1, 0.15F * limbSwingAmount * backwardInverter, limbSwing, limbSwingAmount);
 		walk(torso, globalSpeed, 0.05F * globalDegree, false, 1, 0.15F * limbSwingAmount * backwardInverter, limbSwing, limbSwingAmount);
 		swing(torso, 0.5F * globalSpeed, 0.6F * globalDegree, true, 0, 0, limbSwing, limbSwingAmount);
@@ -849,9 +847,9 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 
 	@Override
 	public void doFallingAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
-		double motionY = TFRenderHelper.getMotionY(player);
-		float upwardPose = (float) (1 / (1 + Math.exp(-20 * (motionY + 0.2))));
-		float downwardPose = (float) (1 / (1 + Math.exp(10 * (motionY + 0.2))));
+		final double motionY = TFRenderHelper.getMotionY(player);
+		final float upwardPose = (float) (1 / (1 + Math.exp(-20 * (motionY + 0.2))));
+		final float downwardPose = (float) (1 / (1 + Math.exp(10 * (motionY + 0.2))));
 
 		waist.rotateAngleX += 0.2F * limbSwingAmount * backwardInverter;
 
@@ -927,8 +925,8 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 
 	@Override
 	public void doTransformationAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
-		ModelOptimusPrimeVehicle vehicle = (ModelOptimusPrimeVehicle) getTransformerModel().getVehicleModel();
-		float f = Math.min((1 - progress) * 2, 1);
+		final ModelOptimusPrimeVehicle vehicle = (ModelOptimusPrimeVehicle) getTransformerModel().getVehicleModel();
+		final float f = Math.min((1 - progress) * 2, 1);
 
 		neck.rotationPointY += progress * 6;
 		head.rotateAngleX *= f;

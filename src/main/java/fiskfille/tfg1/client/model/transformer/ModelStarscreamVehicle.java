@@ -226,8 +226,8 @@ public class ModelStarscreamVehicle extends ModelVehicleBase {
 	public final ModelRendererTF lowerFoot2;
 
 	public ModelStarscreamVehicle() {
-		textureWidth = 64;
-		textureHeight = 64;
+		textureWidth = textureHeight = 64;
+
 		rightWing16 = new ModelRendererTF(this, 60, 43);
 		rightWing16.setRotationPoint(2, 1, 0);
 		rightWing16.addBox(-1, 0, -0.5F, 1, 4, 1, 0);

@@ -7,11 +7,14 @@ import fiskfille.tfg1.TFG1;
 import fiskfille.tfg1.common.item.TFG1Items;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 
 import java.util.Random;
 
 public class TransformerOptimusPrime extends TransformerTruck {
+	private final Random random = new Random();
+
 	public TransformerOptimusPrime() {
 		super("G1 Optimus Prime");
 	}
@@ -52,24 +55,23 @@ public class TransformerOptimusPrime extends TransformerTruck {
 	}
 
 	@Override
-	public float getVehicleHeightOffset() {
-		return -1.25F;
-	}
-
-	@Override
 	public void doNitroParticles(EntityPlayer player) {
-		final Random rand = new Random();
-		final float divider = 10F;
-
 		for(int i = 0; i < 4; ++i) {
 			final Vec3 side = TFVectorHelper.getBackSideCoords(player, 0.225, i < 2, -0.3, false);
-
-			player.worldObj.spawnParticle("smoke", side.xCoord, side.yCoord + 0.825F, side.zCoord, (rand.nextFloat() - 0.5F) / divider, (rand.nextFloat() - 0.5F) / divider + 0.05F, (rand.nextFloat() - 0.5F) / divider);
+			player.worldObj.spawnParticle(
+							"smoke",
+							side.xCoord,
+							side.yCoord + 0.825F,
+							side.zCoord,
+							(random.nextFloat() - 0.5F) / 10F,
+							(random.nextFloat() - 0.5F) / 10F + 0.05F,
+							(random.nextFloat() - 0.5F) / 10F
+			);
 		}
 	}
 
 	@Override
-	public String getTransformationSound(int altMode) {
-		return TFG1.MODID + ":transform_" + (altMode == -1 ? "robot" : "vehicle");
+	public ResourceLocation getTransformationSound(int altMode) {
+		return altMode == -1 ? TFG1.soundRobot : TFG1.soundVehicle;
 	}
 }

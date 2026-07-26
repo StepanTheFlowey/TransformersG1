@@ -13,6 +13,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
+import javax.annotation.Nonnull;
+
 public class TFModelOptimusPrime extends TransformerModel {
 	private final ModelOptimusPrime model = new ModelOptimusPrime();
 	private final ModelOptimusPrime modelItem = new ModelOptimusPrime();
@@ -24,6 +26,7 @@ public class TFModelOptimusPrime extends TransformerModel {
 	}
 
 	@Override
+	@Nonnull
 	public ModelVehicleBase getVehicleModel() {
 		return vehicle;
 	}

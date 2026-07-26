@@ -546,8 +546,7 @@ public class ModelOptimusPrimeVehicle extends ModelVehicleBase {
 		lowerLeg1.addChild(wheel3);
 
 		for(ModelRendererTF modelRenderer : new ModelRendererTF[]{wheel1, wheel2, wheel3, wheel4, wheel5, wheel6}) {
-			float scale = 0.9F;
-			modelRenderer.setScale(scale, scale, scale);
+			modelRenderer.setScale(0.9F, 0.9F, 0.9F);
 		}
 
 		setInitPose();
@@ -564,8 +563,8 @@ public class ModelOptimusPrimeVehicle extends ModelVehicleBase {
 		setToInitPose();
 
 		if(entity instanceof EntityPlayer) {
-			EntityPlayer player = (EntityPlayer) entity;
-			float wheelSpinSpeed = (TFData.FORWARD_VELOCITY.get(player) < 0 ? -limbSwing : limbSwing) * 0.8F;
+			final EntityPlayer player = (EntityPlayer) entity;
+			final float wheelSpinSpeed = (TFData.FORWARD_VELOCITY.get(player) < 0 ? -limbSwing : limbSwing) * 0.8F;
 
 			for(ModelRenderer modelRenderer : new ModelRenderer[]{wheel1, wheel2, wheel3, wheel4, wheel5, wheel6}) {
 				modelRenderer.rotateAngleX = wheelSpinSpeed % PI;
