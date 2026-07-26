@@ -9,15 +9,15 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import fiskfille.tfg1.common.proxy.CommonProxy;
 
 @Mod(
+				acceptedMinecraftVersions = "[1.7.10]",
+				dependencies = "required-after:transformers@[0.7.0,)",
 				modid = TFG1.modid,
 				name = TFG1.name,
-				version = TFG1.version,
-				dependencies = "required-after:transformers@[0.7.0,)"
+				version = Tags.VERSION
 )
 public class TFG1 {
 	public static final String modid = "transformersg1";
 	public static final String name = "Transformers Mod: G1 Edition";
-	public static final String version = "${version}";
 
 	@SidedProxy(
 					clientSide = "fiskfille.tfg1.common.proxy.ClientProxy",
