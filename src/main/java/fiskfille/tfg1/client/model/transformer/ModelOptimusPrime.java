@@ -16,301 +16,343 @@ import org.lwjgl.opengl.GL11;
 import static fiskfille.tf.common.data.TFPredicates.isBacking;
 
 public class ModelOptimusPrime extends ModelTransformerBase {
-	public final ModelRendererTF waist;
+	private final ModelRendererTF armConnector1;
+	private final ModelRendererTF armConnector2;
+	private final ModelRendererTF cheek2;
+	private final ModelRendererTF crotchPiece1;
+	private final ModelRendererTF crotchPiece2;
+	private final ModelRendererTF crotchPiece3;
+	private final ModelRendererTF elbowJoint1;
+	private final ModelRendererTF elbowJoint2;
+	public final ModelRendererTF footBase1;
+	public final ModelRendererTF footBase2;
+	private final ModelRendererTF grill;
+	private final ModelRendererTF hand1;
+	private final ModelRendererTF hand2;
+	private final ModelRendererTF head;
+	private final ModelRendererTF headBase;
+	private final ModelRendererTF headConnector;
+	private final ModelRendererTF headSpike1;
+	private final ModelRendererTF headSpike2;
+	private final ModelRendererTF headTop1;
+	private final ModelRendererTF headTop2;
+	private final ModelRendererTF headTop3;
+	private final ModelRendererTF leftLegIndent1;
+	private final ModelRendererTF leftLegIndent2;
+	private final ModelRendererTF leftLegIndentFrame1;
+	private final ModelRendererTF leftLegIndentFrame2;
+	private final ModelRendererTF leftLegIndentFrame3;
+	private final ModelRendererTF leftLegIndentFrame4;
+	private final ModelRendererTF leftLegIndentFrame5;
+	private final ModelRendererTF leftLegIndentFrame6;
+	private final ModelRendererTF leftLegVent1;
+	private final ModelRendererTF leftLegVent2;
+	private final ModelRendererTF leftLegVent3;
+	private final ModelRendererTF leftLegVent4;
+	private final ModelRendererTF leftLegVent5;
+	private final ModelRendererTF leftLegVent6;
+	private final ModelRendererTF leftLegVent7;
+	private final ModelRendererTF legPipe1;
+	private final ModelRendererTF legPipe2;
+	public final ModelRendererTF lowerArm1;
+	public final ModelRendererTF lowerArm2;
+	private final ModelRendererTF lowerEar1;
+	private final ModelRendererTF lowerEar2;
+	private final ModelRendererTF lowerFootExtension1;
+	private final ModelRendererTF lowerFootExtension2;
+	private final ModelRendererTF lowerLeg1;
+	private final ModelRendererTF lowerLeg2;
+	private final ModelRendererTF mouthGuard1;
+	private final ModelRendererTF mouthGuard2;
+	public final ModelRendererTF neck;
+	private final ModelRendererTF rightLegIndent1;
+	private final ModelRendererTF rightLegIndent2;
+	private final ModelRendererTF rightLegIndentFrame1;
+	private final ModelRendererTF rightLegIndentFrame2;
+	private final ModelRendererTF rightLegIndentFrame3;
+	private final ModelRendererTF rightLegIndentFrame4;
+	private final ModelRendererTF rightLegIndentFrame5;
+	private final ModelRendererTF rightLegIndentFrame6;
+	private final ModelRendererTF rightLegVent1;
+	private final ModelRendererTF rightLegVent2;
+	private final ModelRendererTF rightLegVent3;
+	private final ModelRendererTF rightLegVent4;
+	private final ModelRendererTF rightLegVent5;
+	private final ModelRendererTF rightLegVent6;
+	private final ModelRendererTF rightLegVent7;
+	private final ModelRendererTF smokeStack1;
+	private final ModelRendererTF smokeStack2;
+	private final ModelRendererTF toeBase1;
+	private final ModelRendererTF toeBase2;
+	private final ModelRendererTF toeExtension1;
+	private final ModelRendererTF toeExtension2;
+	public final ModelRendererTF torso;
+	private final ModelRendererTF torsoConnector;
+	private final ModelRendererTF torsoFront1;
+	private final ModelRendererTF torsoFront2;
+	private final ModelRendererTF torsoFrontUpper1;
+	private final ModelRendererTF torsoFrontUpper2;
+	private final ModelRendererTF torsoSide1;
+	private final ModelRendererTF torsoSide2;
+	private final ModelRendererTF torsoTop;
+	public final ModelRendererTF upperArm1;
+	private final ModelRendererTF upperArm2;
+	private final ModelRendererTF upperArmPiece1;
+	private final ModelRendererTF upperArmPiece2;
+	private final ModelRendererTF upperEar2;
+	private final ModelRendererTF upperFootExtension1;
+	private final ModelRendererTF upperFootExtension2;
 	public final ModelRendererTF upperLeg1;
 	public final ModelRendererTF upperLeg2;
-	public final ModelRendererTF crotchPiece1;
-	public final ModelRendererTF waistPanel1;
-	public final ModelRendererTF waistPanel2;
-	public final ModelRendererTF wheel1;
-	public final ModelRendererTF wheel2;
-	public final ModelRendererTF grill;
-	public final ModelRendererTF torsoConnector;
-	public final ModelRendererTF upperLegBack1;
-	public final ModelRendererTF upperLegTile1;
-	public final ModelRendererTF lowerLeg1;
-	public final ModelRendererTF rightLegIndentFrame1;
-	public final ModelRendererTF rightLegIndentFrame2;
-	public final ModelRendererTF rightLegIndentFrame3;
-	public final ModelRendererTF rightLegIndent1;
-	public final ModelRendererTF rightLegIndentFrame4;
-	public final ModelRendererTF rightLegIndentFrame5;
-	public final ModelRendererTF rightLegIndentFrame6;
-	public final ModelRendererTF rightLegIndent2;
-	public final ModelRendererTF legPipe1;
-	public final ModelRendererTF wheel3;
-	public final ModelRendererTF wheel5;
-	public final ModelRendererTF footBase1;
-	public final ModelRendererTF rightLegVent1;
-	public final ModelRendererTF rightLegVent2;
-	public final ModelRendererTF rightLegVent3;
-	public final ModelRendererTF rightLegVent4;
-	public final ModelRendererTF rightLegVent5;
-	public final ModelRendererTF rightLegVent6;
-	public final ModelRendererTF rightLegVent7;
-	public final ModelRendererTF lowerFootExtension1;
-	public final ModelRendererTF toeBase1;
-	public final ModelRendererTF upperFootExtension1;
-	public final ModelRendererTF toeExtension1;
-	public final ModelRendererTF upperLegTile2;
-	public final ModelRendererTF upperLegBack2;
-	public final ModelRendererTF lowerLeg2;
-	public final ModelRendererTF leftLegIndentFrame1;
-	public final ModelRendererTF leftLegIndentFrame2;
-	public final ModelRendererTF leftLegIndentFrame3;
-	public final ModelRendererTF leftLegIndent1;
-	public final ModelRendererTF leftLegIndentFrame4;
-	public final ModelRendererTF leftLegIndentFrame5;
-	public final ModelRendererTF leftLegIndentFrame6;
-	public final ModelRendererTF leftLegIndent2;
-	public final ModelRendererTF legPipe2;
-	public final ModelRendererTF wheel4;
-	public final ModelRendererTF wheel6;
-	public final ModelRendererTF footBase2;
-	public final ModelRendererTF leftLegVent1;
-	public final ModelRendererTF leftLegVent2;
-	public final ModelRendererTF leftLegVent3;
-	public final ModelRendererTF leftLegVent4;
-	public final ModelRendererTF leftLegVent5;
-	public final ModelRendererTF leftLegVent6;
-	public final ModelRendererTF leftLegVent7;
-	public final ModelRendererTF lowerFootExtension2;
-	public final ModelRendererTF toeBase2;
-	public final ModelRendererTF upperFootExtension2;
-	public final ModelRendererTF toeExtension2;
-	public final ModelRendererTF crotchPiece2;
-	public final ModelRendererTF crotchPiece3;
-	public final ModelRendererTF torso;
-	public final ModelRendererTF torsoFront1;
-	public final ModelRendererTF torsoFront2;
-	public final ModelRendererTF armConnector1;
-	public final ModelRendererTF armConnector2;
-	public final ModelRendererTF torsoSide1;
-	public final ModelRendererTF torsoSide2;
-	public final ModelRendererTF torsoTop;
-	public final ModelRendererTF neck;
-	public final ModelRendererTF torsoFrontUpper1;
-	public final ModelRendererTF windshield1;
-	public final ModelRendererTF upperLights1;
-	public final ModelRendererTF torsoFrontUpper2;
-	public final ModelRendererTF windshield2;
-	public final ModelRendererTF upperLights2;
-	public final ModelRendererTF upperArm1;
-	public final ModelRendererTF elbowJoint1;
-	public final ModelRendererTF smokeStack1;
-	public final ModelRendererTF upperArmPiece1;
-	public final ModelRendererTF lowerArm1;
-	public final ModelRendererTF hand1;
-	public final ModelRendererTF upperArm2;
-	public final ModelRendererTF elbowJoint2;
-	public final ModelRendererTF smokeStack2;
-	public final ModelRendererTF upperArmPiece2;
-	public final ModelRendererTF lowerArm2;
-	public final ModelRendererTF hand2;
-	public final ModelRendererTF headConnector;
-	public final ModelRendererTF head;
-	public final ModelRendererTF headBase;
-	public final ModelRendererTF eye1;
-	public final ModelRendererTF eye2;
-	public final ModelRendererTF lowerEar1;
-	public final ModelRendererTF lowerEar2;
-	public final ModelRendererTF headTop1;
-	public final ModelRendererTF mouthGuard1;
-	public final ModelRendererTF mouthGuard2;
-	public final ModelRendererTF headSpike1;
-	public final ModelRendererTF headSpike2;
-	public final ModelRendererTF upperEar1;
-	public final ModelRendererTF cheek1;
-	public final ModelRendererTF upperEar2;
-	public final ModelRendererTF cheek2;
-	public final ModelRendererTF headTop2;
-	public final ModelRendererTF headTop3;
+	private final ModelRendererTF upperLegBack1;
+	private final ModelRendererTF upperLegBack2;
+	private final ModelRendererTF upperLegTile1;
+	private final ModelRendererTF upperLegTile2;
+	private final ModelRendererTF upperLights1;
+	private final ModelRendererTF upperLights2;
+	private final ModelRendererTF waist;
+	private final ModelRendererTF waistPanel1;
+	private final ModelRendererTF waistPanel2;
+	private final ModelRendererTF wheel1;
+	private final ModelRendererTF wheel2;
+	private final ModelRendererTF wheel3;
+	private final ModelRendererTF wheel4;
+	private final ModelRendererTF wheel5;
+	private final ModelRendererTF wheel6;
+	private final ModelRendererTF windshield1;
+	private final ModelRendererTF windshield2;
 
 	public ModelOptimusPrime() {
 		super(1, 0.8F, new AnimationModifier(Type.DEGREE, isBacking(), 0.5F));
 		textureWidth = 64;
 		textureHeight = 128;
+
 		lowerEar1 = new ModelRendererTF(this, 49, 51);
 		lowerEar1.setRotationPoint(-3, -2, -4);
 		lowerEar1.addBox(-2, -2, -2, 2, 4, 4, 0);
-		setRotateAngle(lowerEar1, 0, -0.7853981633974483F, 0);
+		lowerEar1.rotateAngleY = -0.7853981633974483F;
+
 		lowerArm2 = new ModelRendererTF(this, 12, 20);
 		lowerArm2.mirror = true;
-		lowerArm2.setRotationPoint(0, 1.6F, 0);
+		lowerArm2.rotationPointY = 1.6F;
 		lowerArm2.addBox(-1.5F, 0, -1.5F, 3, 5, 3, 0);
 		setRotateAngle(lowerArm2, -0.20943951023931953F, 0, 0.06981317007977318F);
+
 		smokeStack1 = new ModelRendererTF(this, 48, 6);
-		smokeStack1.setRotationPoint(-2.7F, 0, 0);
+		smokeStack1.rotationPointX = -2.7F;
 		smokeStack1.addBox(-1, -3, -0.5F, 1, 5, 1, 0);
+
 		toeBase1 = new ModelRendererTF(this, 10, 18);
-		toeBase1.setRotationPoint(0, 0, -0.8F);
+		toeBase1.rotationPointZ = -0.8F;
 		toeBase1.addBox(-1.5F, -0.5F, -1, 3, 1, 1, 0);
+
 		upperEar2 = new ModelRendererTF(this, 56, 60);
 		upperEar2.mirror = true;
 		upperEar2.setRotationPoint(0.7F, -1.7F, 0.8F);
 		upperEar2.addBox(-0.5F, -10, -1.5F, 1, 13, 3, 0);
 		setRotateAngle(upperEar2, -0.08726646259971647F, 0, 0.08726646259971647F);
+
 		mouthGuard1 = new ModelRendererTF(this, 24, 51);
 		mouthGuard1.setRotationPoint(3.5F, -1.5F, -3.5F);
 		mouthGuard1.addBox(-4, -3, -1, 5, 6, 1, 0);
+
 		armConnector2 = new ModelRendererTF(this, 23, 26);
 		armConnector2.mirror = true;
 		armConnector2.setRotationPoint(3.5F, -3.7F, 0);
 		armConnector2.addBox(0, -1, -1, 1, 3, 2, 0);
+
 		wheel6 = new ModelRendererTF(this, 48, 0);
 		wheel6.mirror = true;
 		wheel6.setRotationPoint(0.7F, 7.1F, 0);
 		wheel6.addBox(0, -1.5F, -1.5F, 2, 3, 3, 0);
+
 		upperFootExtension1 = new ModelRendererTF(this, 0, 18);
 		upperFootExtension1.setRotationPoint(0, -0.54F, 0.85F);
 		upperFootExtension1.addBox(-2, -1, -1, 4, 1, 1, 0);
-		setRotateAngle(upperFootExtension1, 0.45378560551852565F, 0, 0);
+		upperFootExtension1.rotateAngleX = 0.45378560551852565F;
+
 		leftLegIndentFrame2 = new ModelRendererTF(this, 14, 13);
 		leftLegIndentFrame2.mirror = true;
 		leftLegIndentFrame2.setRotationPoint(-1.5F, 2, -0.75F);
 		leftLegIndentFrame2.addBox(-0.5F, -1, -1, 1, 3, 1, 0);
+
 		rightLegVent3 = new ModelRendererTF(this, 36, 14);
 		rightLegVent3.setRotationPoint(0, -1.3F, -0.2F);
 		rightLegVent3.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
-		setRotateAngle(rightLegVent3, 1.0471975511965976F, 0, 0);
+		rightLegVent3.rotateAngleX = 1.0471975511965976F;
+
 		lowerEar2 = new ModelRendererTF(this, 49, 51);
 		lowerEar2.mirror = true;
 		lowerEar2.setRotationPoint(4, -2, 3);
 		lowerEar2.addBox(0, -2, -2, 2, 4, 4, 0);
-		setRotateAngle(lowerEar2, 0, -0.7853981633974483F, 0);
+		lowerEar2.rotateAngleY = -0.7853981633974483F;
+
 		headTop1 = new ModelRendererTF(this, 0, 69);
-		headTop1.setRotationPoint(0, -6.5F, 0);
+		headTop1.rotationPointY = -6.5F;
 		headTop1.addBox(-4.5F, -3, -4.5F, 9, 3, 9, 0);
+
 		mouthGuard2 = new ModelRendererTF(this, 24, 51);
 		mouthGuard2.mirror = true;
 		mouthGuard2.setRotationPoint(3.6F, -1.5F, -3.5F);
 		mouthGuard2.addBox(-1, -3, -1, 5, 6, 1, 0);
-		setRotateAngle(mouthGuard2, 0, -1.5707963267948966F, 0);
+		mouthGuard2.rotateAngleY = -1.5707963267948966F;
+
 		leftLegVent1 = new ModelRendererTF(this, 36, 14);
 		leftLegVent1.mirror = true;
 		leftLegVent1.setRotationPoint(0, -2.1F, -0.2F);
 		leftLegVent1.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(leftLegVent1, 1.0471975511965976F, 0, 0);
+
 		rightLegVent6 = new ModelRendererTF(this, 36, 14);
 		rightLegVent6.setRotationPoint(0, -0.1F, -0.2F);
 		rightLegVent6.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(rightLegVent6, 1.0471975511965976F, 0, 0);
+
 		wheel1 = new ModelRendererTF(this, 48, 0);
 		wheel1.setRotationPoint(-1.8F, -0.6F, 0);
 		wheel1.addBox(-2, -1.5F, -1.5F, 2, 3, 3, 0);
 		setRotateAngle(wheel1, 0, 0.15707963267948966F, 0.12217304763960307F);
+
 		rightLegIndent2 = new ModelRendererTF(this, 14, 7);
 		rightLegIndent2.setRotationPoint(0, 6, -1.05F);
 		rightLegIndent2.addBox(-1, -2, -1, 2, 5, 1, 0);
+
 		legPipe1 = new ModelRendererTF(this, 32, 14);
 		legPipe1.setRotationPoint(-2, 1.2F, 0);
 		legPipe1.addBox(-1, -1, -0.5F, 1, 2, 1, 0);
+
 		lowerFootExtension2 = new ModelRendererTF(this, 4, 16);
 		lowerFootExtension2.mirror = true;
 		lowerFootExtension2.setRotationPoint(0, -0.1F, -0.5F);
 		lowerFootExtension2.addBox(-2, -1, -0.5F, 4, 1, 1, 0);
+
 		rightLegIndentFrame1 = new ModelRendererTF(this, 4, 12);
 		rightLegIndentFrame1.setRotationPoint(0, 0.5F, -0.75F);
 		rightLegIndentFrame1.addBox(-2, -0.5F, -1, 4, 1, 1, 0);
+
 		rightLegVent1 = new ModelRendererTF(this, 36, 14);
 		rightLegVent1.setRotationPoint(0, -2.1F, -0.2F);
 		rightLegVent1.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(rightLegVent1, 1.0471975511965976F, 0, 0);
+
 		lowerLeg2 = new ModelRendererTF(this, 0, 0);
 		lowerLeg2.mirror = true;
 		lowerLeg2.setRotationPoint(0, 4.7F, -0.25F);
 		lowerLeg2.addBox(-2, 0, -1.25F, 4, 9, 3, 0);
 		setRotateAngle(lowerLeg2, 0.24434609527920614F, -0.05235987755982988F, 0.06981317007977318F);
+
 		toeExtension2 = new ModelRendererTF(this, 18, 17);
 		toeExtension2.mirror = true;
 		toeExtension2.setRotationPoint(0, -0.04F, 0.35F);
 		toeExtension2.addBox(-1.5F, -1, -1, 3, 1, 2, 0);
 		setRotateAngle(toeExtension2, 0.45378560551852565F, 0, 0);
+
 		rightLegIndent1 = new ModelRendererTF(this, 20, 7);
 		rightLegIndent1.setRotationPoint(0, 3, -0.65F);
 		rightLegIndent1.addBox(-1, -2, -1, 2, 3, 1, 0);
+
 		wheel3 = new ModelRendererTF(this, 48, 0);
 		wheel3.setRotationPoint(-0.7F, 3.9F, 0);
 		wheel3.addBox(-2, -1.5F, -1.5F, 2, 3, 3, 0);
+
 		leftLegIndentFrame6 = new ModelRendererTF(this, 0, 12);
 		leftLegIndentFrame6.setRotationPoint(1.5F, 6, -1.25F);
 		leftLegIndentFrame6.addBox(-0.5F, -2, -1, 1, 5, 1, 0);
+
 		headBase = new ModelRendererTF(this, 0, 50);
 		headBase.setRotationPoint(0, 0, 0);
 		headBase.addBox(-4, -11, -4, 8, 11, 8, 0);
 		setRotateAngle(headBase, 0, 0.7853981633974483F, 0);
+
 		legPipe2 = new ModelRendererTF(this, 32, 14);
 		legPipe2.mirror = true;
 		legPipe2.setRotationPoint(2, 1.2F, 0);
 		legPipe2.addBox(0, -1, -0.5F, 1, 2, 1, 0);
+
 		upperLegTile2 = new ModelRendererTF(this, 18, 14);
 		upperLegTile2.mirror = true;
 		upperLegTile2.setRotationPoint(0, 5, -1.3F);
 		upperLegTile2.addBox(-1, -2, -0.5F, 2, 2, 1, 0);
 		setRotateAngle(upperLegTile2, -0.08726646259971647F, 0.0017453292519943296F, 0);
+
 		hand2 = new ModelRendererTF(this, 0, 31);
 		hand2.mirror = true;
 		hand2.setRotationPoint(0, 4.7F, 0);
 		hand2.addBox(-1, 0, -1, 2, 2, 2, 0);
 		setRotateAngle(hand2, -0.12217304763960307F, 0, 0.17453292519943295F);
+
 		lowerFootExtension1 = new ModelRendererTF(this, 4, 16);
 		lowerFootExtension1.setRotationPoint(0, -0.1F, -0.5F);
 		lowerFootExtension1.addBox(-2, -1, -0.5F, 4, 1, 1, 0);
+
 		upperArmPiece2 = new ModelRendererTF(this, 17, 32);
 		upperArmPiece2.mirror = true;
 		upperArmPiece2.setRotationPoint(2.5F, 2.1F, 0);
 		upperArmPiece2.addBox(-0.5F, 0, -1.5F, 1, 1, 3, 0);
+
 		leftLegIndent1 = new ModelRendererTF(this, 20, 7);
 		leftLegIndent1.mirror = true;
 		leftLegIndent1.setRotationPoint(0, 3, -0.65F);
 		leftLegIndent1.addBox(-1, -2, -1, 2, 3, 1, 0);
+
 		waistPanel1 = new ModelRendererTF(this, 24, 14);
 		waistPanel1.setRotationPoint(-1.7F, -1.4F, -1);
 		waistPanel1.addBox(-1.8F, -1, -1, 3, 2, 1, 0);
 		setRotateAngle(waistPanel1, 0, 0, 0.20943951023931953F);
+
 		cheek2 = new ModelRendererTF(this, 36, 63);
 		cheek2.mirror = true;
 		cheek2.setRotationPoint(-2.2F, -0.4F, -0.5F);
 		cheek2.addBox(-3, -2, -3, 6, 4, 3, 0);
 		setRotateAngle(cheek2, 0.3871140280923423F, -0.8035495876181893F, -0.5152211951887261F);
+
 		upperLegBack2 = new ModelRendererTF(this, 24, 0);
 		upperLegBack2.setRotationPoint(0, 2.5F, 0.5F);
 		upperLegBack2.addBox(-1, -2.5F, 0, 2, 5, 1, 0);
+
 		wheel4 = new ModelRendererTF(this, 48, 0);
 		wheel4.mirror = true;
 		wheel4.setRotationPoint(0.7F, 3.9F, 0);
 		wheel4.addBox(0, -1.5F, -1.5F, 2, 3, 3, 0);
+
 		upperLights1 = new ModelRendererTF(this, 43, 19);
 		upperLights1.setRotationPoint(-0.5F, 0.2F, -0.3F);
 		upperLights1.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(upperLights1, -0.6632251157578453F, 0, 0);
-		cheek1 = new ModelRendererTF(this, 36, 63);
+
+		ModelRendererTF cheek1 = new ModelRendererTF(this, 36, 63);
 		cheek1.setRotationPoint(2.2F, -0.4F, -0.5F);
 		cheek1.addBox(-3, -2, -3, 6, 4, 3, 0);
 		setRotateAngle(cheek1, 0.3871140280923423F, 0.8035495876181893F, 0.5152211951887261F);
+
 		elbowJoint2 = new ModelRendererTF(this, 0, 27);
 		elbowJoint2.mirror = true;
 		elbowJoint2.setRotationPoint(1.5F, 2.5F, 0);
 		elbowJoint2.addBox(-1, 0, -1, 2, 2, 2, 0);
+
 		leftLegVent6 = new ModelRendererTF(this, 36, 14);
 		leftLegVent6.mirror = true;
 		leftLegVent6.setRotationPoint(0, -0.1F, -0.2F);
 		leftLegVent6.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(leftLegVent6, 1.0471975511965976F, 0, 0);
+
 		footBase2 = new ModelRendererTF(this, 4, 16);
 		footBase2.mirror = true;
 		footBase2.setRotationPoint(0, 2.5F, -0.9F);
 		footBase2.addBox(-2, -0.5F, -1, 4, 1, 1, 0);
 		setRotateAngle(footBase2, -0.10471975511965977F, 0, 0.017453292519943295F);
+
 		torsoFrontUpper2 = new ModelRendererTF(this, 43, 17);
 		torsoFrontUpper2.mirror = true;
 		torsoFrontUpper2.setRotationPoint(-0.04F, -2.27F, -0.1F);
 		torsoFrontUpper2.addBox(-2, -0.5F, -1, 4, 1, 1, 0);
 		setRotateAngle(torsoFrontUpper2, 0.4363323129985824F, 0, -0.03490658503988659F);
+
 		torsoFront1 = new ModelRendererTF(this, 44, 12);
 		torsoFront1.setRotationPoint(-1.79F, -2.2F, -2);
 		torsoFront1.addBox(-2, -2, -1, 4, 4, 1, 0);
 		setRotateAngle(torsoFront1, 0, 0.17453292519943295F, 0);
+
 		torsoSide2 = new ModelRendererTF(this, 54, 2);
 		torsoSide2.setRotationPoint(3.5F, -2.6F, -2.3F);
 		torsoSide2.addBox(-0.5F, -2, 0, 1, 4, 4, 0);
@@ -324,7 +366,7 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		leftLegVent2.setRotationPoint(0, -1.7F, -0.2F);
 		leftLegVent2.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(leftLegVent2, 1.0471975511965976F, 0, 0);
-		eye1 = new ModelRendererTF(this, 0, 51);
+		final ModelRendererTF eye1 = new ModelRendererTF(this, 0, 51);
 		eye1.setRotationPoint(1, -5.5F, -3.5F);
 		eye1.addBox(-1.5F, -0.5F, -1, 3, 1, 1, 0);
 		setRotateAngle(eye1, 0, -0.17453292519943295F, 0);
@@ -332,26 +374,32 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		grill.setRotationPoint(0, -4, -1.5F);
 		grill.addBox(-1.5F, -2, -1, 3, 4, 1, 0);
 		setRotateAngle(grill, 0.17453292519943295F, 0, 0);
+
 		upperLegBack1 = new ModelRendererTF(this, 24, 0);
 		upperLegBack1.setRotationPoint(0, 2.5F, 0.5F);
 		upperLegBack1.addBox(-1, -2.5F, 0, 2, 5, 1, 0);
+
 		rightLegIndentFrame5 = new ModelRendererTF(this, 0, 12);
 		rightLegIndentFrame5.setRotationPoint(-1.5F, 6, -1.25F);
 		rightLegIndentFrame5.addBox(-0.5F, -2, -1, 1, 5, 1, 0);
+
 		waistPanel2 = new ModelRendererTF(this, 24, 14);
 		waistPanel2.mirror = true;
 		waistPanel2.setRotationPoint(1.7F, -1.4F, -1);
 		waistPanel2.addBox(-1.2F, -1, -1, 3, 2, 1, 0);
 		setRotateAngle(waistPanel2, 0, 0, -0.20943951023931953F);
+
 		windshield2 = new ModelRendererTF(this, 40, 8);
 		windshield2.mirror = true;
 		windshield2.setRotationPoint(0, 0, -0.15F);
 		windshield2.addBox(-1.5F, -1.5F, -1, 3, 3, 1, 0);
-		eye2 = new ModelRendererTF(this, 0, 51);
+
+		final ModelRendererTF eye2 = new ModelRendererTF(this, 0, 51);
 		eye2.mirror = true;
 		eye2.setRotationPoint(3.5F, -5.5F, -1);
 		eye2.addBox(-1.5F, -0.5F, -1, 3, 1, 1, 0);
 		setRotateAngle(eye2, 0, -1.3962634015954636F, 0);
+
 		rightLegIndentFrame2 = new ModelRendererTF(this, 14, 13);
 		rightLegIndentFrame2.setRotationPoint(-1.5F, 2, -0.75F);
 		rightLegIndentFrame2.addBox(-0.5F, -1, -1, 1, 3, 1, 0);
@@ -400,31 +448,39 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		leftLegVent7.setRotationPoint(0, 0.3F, -0.2F);
 		leftLegVent7.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(leftLegVent7, 1.0471975511965976F, 0, 0);
+
 		crotchPiece1 = new ModelRendererTF(this, 8, 28);
 		crotchPiece1.setRotationPoint(0, 0.3F, -0.3F);
 		crotchPiece1.addBox(-1, -3, -2, 2, 3, 4, 0);
+
 		head = new ModelRendererTF(this, 0, 0);
 		head.setRotationPoint(0, -2, 0);
 		head.addBox(0, 0, 0, 0, 0, 0, 0);
+
 		leftLegIndentFrame3 = new ModelRendererTF(this, 14, 13);
 		leftLegIndentFrame3.setRotationPoint(1.5F, 2, -0.75F);
 		leftLegIndentFrame3.addBox(-0.5F, -1, -1, 1, 3, 1, 0);
-		upperEar1 = new ModelRendererTF(this, 56, 60);
+
+		final ModelRendererTF upperEar1 = new ModelRendererTF(this, 56, 60);
 		upperEar1.setRotationPoint(-0.7F, -1.7F, 0.8F);
 		upperEar1.addBox(-0.5F, -10, -1.5F, 1, 13, 3, 0);
 		setRotateAngle(upperEar1, -0.08726646259971647F, 0, -0.08726646259971647F);
+
 		torsoTop = new ModelRendererTF(this, 32, 26);
 		torsoTop.setRotationPoint(0, -5.04F, 2.3F);
 		torsoTop.addBox(-3.5F, -0.5F, -5, 7, 3, 5, 0);
 		setRotateAngle(torsoTop, 0.17453292519943295F, 0, 0);
+
 		torsoSide1 = new ModelRendererTF(this, 54, 2);
 		torsoSide1.setRotationPoint(-3.5F, -2.6F, -2.3F);
 		torsoSide1.addBox(-0.5F, -2, 0, 1, 4, 4, 0);
 		setRotateAngle(torsoSide1, 0.17453292519943295F, 0, -0.10471975511965977F);
+
 		hand1 = new ModelRendererTF(this, 0, 31);
 		hand1.setRotationPoint(0, 4.7F, 0);
 		hand1.addBox(-1, 0, -1, 2, 2, 2, 0);
 		setRotateAngle(hand1, -0.12217304763960307F, 0, -0.17453292519943295F);
+
 		upperArm1 = new ModelRendererTF(this, 0, 20);
 		upperArm1.setRotationPoint(-0.8F, 0.2F, 0);
 		upperArm1.addBox(-3, -1.5F, -1.5F, 3, 4, 3, 0);
@@ -556,16 +612,20 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		rightLegIndentFrame4.setRotationPoint(0, 4.34F, -1.89F);
 		rightLegIndentFrame4.addBox(-2, -1, -0.5F, 4, 1, 1, 0);
 		setRotateAngle(rightLegIndentFrame4, -0.7504915783575618F, 0, 0);
+
 		upperLegTile1 = new ModelRendererTF(this, 18, 14);
 		upperLegTile1.setRotationPoint(0, 5, -1.3F);
 		upperLegTile1.addBox(-1, -2, -0.5F, 2, 2, 1, 0);
 		setRotateAngle(upperLegTile1, -0.08726646259971647F, 0.0017453292519943296F, 0);
+
 		crotchPiece2 = new ModelRendererTF(this, 16, 28);
 		crotchPiece2.setRotationPoint(0, -0.3F, 0);
 		crotchPiece2.addBox(-1, 0, -1, 2, 1, 3, 0);
+
 		upperArmPiece1 = new ModelRendererTF(this, 17, 32);
 		upperArmPiece1.setRotationPoint(-2.5F, 2.1F, 0);
 		upperArmPiece1.addBox(-0.5F, 0, -1.5F, 1, 1, 3, 0);
+
 		headBase.addChild(lowerEar1);
 		elbowJoint2.addChild(lowerArm2);
 		upperArm1.addChild(smokeStack1);

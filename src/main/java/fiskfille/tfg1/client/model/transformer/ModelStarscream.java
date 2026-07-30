@@ -17,345 +17,373 @@ import static fiskfille.tf.common.data.TFPredicates.isBacking;
 import static fiskfille.tf.common.data.TFPredicates.isSneaking;
 
 public class ModelStarscream extends ModelTransformerBase {
-	public final ModelRendererTF waist;
-	public final ModelRendererTF frontCrotch;
-	public final ModelRendererTF backCrotch;
-	public final ModelRendererTF rightHip1;
-	public final ModelRendererTF leftHip1;
+	final ModelRendererTF backCrotch;
+	final ModelRendererTF backUpperLeg1;
+	final ModelRendererTF backUpperLeg2;
+	final ModelRendererTF canopy1;
+	final ModelRendererTF canopy10;
+	final ModelRendererTF canopy11;
+	final ModelRendererTF canopy12;
+	final ModelRendererTF canopy13;
+	final ModelRendererTF canopy14;
+	final ModelRendererTF canopy15;
+	final ModelRendererTF canopy16;
+	final ModelRendererTF canopy17;
+	final ModelRendererTF canopy18;
+	final ModelRendererTF canopy19;
+	final ModelRendererTF canopy2;
+	final ModelRendererTF canopy20;
+	final ModelRendererTF canopy3;
+	final ModelRendererTF canopy4;
+	final ModelRendererTF canopy5;
+	final ModelRendererTF canopy6;
+	final ModelRendererTF canopy7;
+	final ModelRendererTF canopy8;
+	final ModelRendererTF canopy9;
+	final ModelRendererTF chin;
+	final ModelRendererTF footThruster1;
+	final ModelRendererTF footThruster2;
+	final ModelRendererTF frontCrotch;
+	final ModelRendererTF headConnector;
+	final ModelRendererTF headPiece1;
+	final ModelRendererTF headPiece2;
+	final ModelRendererTF headPiece3;
+	final ModelRendererTF headPiece4;
+	final ModelRendererTF headPiece5;
+	final ModelRendererTF leftArm1;
+	final ModelRendererTF leftArm2;
+	final ModelRendererTF leftArm3;
+	final ModelRendererTF leftArm4;
+	final ModelRendererTF leftArm5;
+	final ModelRendererTF leftArmConnector;
+	final ModelRendererTF leftChest1;
+	final ModelRendererTF leftChest2;
+	final ModelRendererTF leftChest3;
+	final ModelRendererTF leftChest4;
+	final ModelRendererTF leftChest5;
+	final ModelRendererTF leftChest6;
+	final ModelRendererTF leftChest7;
+	final ModelRendererTF leftChest8;
+	final ModelRendererTF leftChest9;
+	final ModelRendererTF leftFin1_1;
+	final ModelRendererTF leftFin1_10;
+	final ModelRendererTF leftFin1_2;
+	final ModelRendererTF leftFin1_3;
+	final ModelRendererTF leftFin1_4;
+	final ModelRendererTF leftFin1_5;
+	final ModelRendererTF leftFin1_6;
+	final ModelRendererTF leftFin1_7;
+	final ModelRendererTF leftFin1_8;
+	final ModelRendererTF leftFin1_9;
+	final ModelRendererTF leftFin2_1;
+	final ModelRendererTF leftFin2_10;
+	final ModelRendererTF leftFin2_2;
+	final ModelRendererTF leftFin2_3;
+	final ModelRendererTF leftFin2_4;
+	final ModelRendererTF leftFin2_5;
+	final ModelRendererTF leftFin2_6;
+	final ModelRendererTF leftFin2_7;
+	final ModelRendererTF leftFin2_8;
+	final ModelRendererTF leftFin2_9;
+	final ModelRendererTF leftGun1;
+	final ModelRendererTF leftGun10;
+	final ModelRendererTF leftGun11;
+	final ModelRendererTF leftGun2;
+	final ModelRendererTF leftGun3;
+	final ModelRendererTF leftGun4;
+	final ModelRendererTF leftGun5;
+	final ModelRendererTF leftGun6;
+	final ModelRendererTF leftGun7;
+	final ModelRendererTF leftGun8;
+	final ModelRendererTF leftGun9;
+	final ModelRendererTF leftHip1;
+	final ModelRendererTF leftHip2;
+	final ModelRendererTF leftHip3;
+	final ModelRendererTF leftKnee1;
+	final ModelRendererTF leftKnee2;
+	final ModelRendererTF leftKnee3;
+	final ModelRendererTF leftLowerLeg1;
+	final ModelRendererTF leftLowerLeg2;
+	final ModelRendererTF leftTorsoSide;
+	final ModelRendererTF leftWing1;
+	final ModelRendererTF leftWing10;
+	final ModelRendererTF leftWing11;
+	final ModelRendererTF leftWing12;
+	final ModelRendererTF leftWing13;
+	final ModelRendererTF leftWing14;
+	final ModelRendererTF leftWing15;
+	final ModelRendererTF leftWing16;
+	final ModelRendererTF leftWing2;
+	final ModelRendererTF leftWing3;
+	final ModelRendererTF leftWing4;
+	final ModelRendererTF leftWing5;
+	final ModelRendererTF leftWing6;
+	final ModelRendererTF leftWing7;
+	final ModelRendererTF leftWing8;
+	final ModelRendererTF leftWing9;
+	final ModelRendererTF lowerBackLeg1;
+	final ModelRendererTF lowerBackLeg2;
+	final ModelRendererTF lowerFoot1;
+	final ModelRendererTF lowerFoot2;
+	final ModelRendererTF lowerLeg1;
+	final ModelRendererTF lowerLeg2;
+	final ModelRendererTF lowerLegPanel1;
+	final ModelRendererTF lowerLegPanel2;
+	final ModelRendererTF neck;
+	final ModelRendererTF nose1;
+	final ModelRendererTF nose2;
+	final ModelRendererTF rightArm2;
+	final ModelRendererTF rightArm4;
+	final ModelRendererTF rightArm5;
+	final ModelRendererTF rightArmConnector;
+	final ModelRendererTF rightChest1;
+	final ModelRendererTF rightChest2;
+	final ModelRendererTF rightChest3;
+	final ModelRendererTF rightChest4;
+	final ModelRendererTF rightChest5;
+	final ModelRendererTF rightChest6;
+	final ModelRendererTF rightChest7;
+	final ModelRendererTF rightChest8;
+	final ModelRendererTF rightChest9;
+	final ModelRendererTF rightFin1_1;
+	final ModelRendererTF rightFin1_10;
+	final ModelRendererTF rightFin1_2;
+	final ModelRendererTF rightFin1_3;
+	final ModelRendererTF rightFin1_4;
+	final ModelRendererTF rightFin1_5;
+	final ModelRendererTF rightFin1_6;
+	final ModelRendererTF rightFin1_7;
+	final ModelRendererTF rightFin1_8;
+	final ModelRendererTF rightFin1_9;
+	final ModelRendererTF rightFin2_1;
+	final ModelRendererTF rightFin2_10;
+	final ModelRendererTF rightFin2_2;
+	final ModelRendererTF rightFin2_3;
+	final ModelRendererTF rightFin2_4;
+	final ModelRendererTF rightFin2_5;
+	final ModelRendererTF rightFin2_6;
+	final ModelRendererTF rightFin2_7;
+	final ModelRendererTF rightFin2_8;
+	final ModelRendererTF rightFin2_9;
+	final ModelRendererTF rightGun1;
+	final ModelRendererTF rightGun10;
+	final ModelRendererTF rightGun11;
+	final ModelRendererTF rightGun2;
+	final ModelRendererTF rightGun3;
+	final ModelRendererTF rightGun4;
+	final ModelRendererTF rightGun5;
+	final ModelRendererTF rightGun6;
+	final ModelRendererTF rightGun7;
+	final ModelRendererTF rightGun8;
+	final ModelRendererTF rightGun9;
+	final ModelRendererTF rightHelmet1;
+	final ModelRendererTF rightHelmet1_1;
+	final ModelRendererTF rightHelmet2;
+	final ModelRendererTF rightHelmet2_1;
+	final ModelRendererTF rightHelmet3;
+	final ModelRendererTF rightHelmet3_1;
+	final ModelRendererTF rightHelmet4;
+	final ModelRendererTF rightHelmet4_1;
+	final ModelRendererTF rightHelmet5;
+	final ModelRendererTF rightHelmet5_1;
+	final ModelRendererTF rightHelmet6;
+	final ModelRendererTF rightHelmet6_1;
+	final ModelRendererTF rightHelmet7;
+	final ModelRendererTF rightHelmet7_1;
+	final ModelRendererTF rightHelmet8;
+	final ModelRendererTF rightHelmet8_1;
+	final ModelRendererTF rightHelmet9;
+	final ModelRendererTF rightHelmet9_1;
+	final ModelRendererTF rightHip1;
+	final ModelRendererTF rightHip2;
+	final ModelRendererTF rightHip3;
+	final ModelRendererTF rightKnee1;
+	final ModelRendererTF rightKnee2;
+	final ModelRendererTF rightKnee3;
+	final ModelRendererTF rightLowerLeg1;
+	final ModelRendererTF rightLowerLeg2;
+	final ModelRendererTF rightTorsoSide;
+	final ModelRendererTF rightWing1;
+	final ModelRendererTF rightWing10;
+	final ModelRendererTF rightWing11;
+	final ModelRendererTF rightWing12;
+	final ModelRendererTF rightWing13;
+	final ModelRendererTF rightWing14;
+	final ModelRendererTF rightWing15;
+	final ModelRendererTF rightWing16;
+	final ModelRendererTF rightWing2;
+	final ModelRendererTF rightWing3;
+	final ModelRendererTF rightWing4;
+	final ModelRendererTF rightWing5;
+	final ModelRendererTF rightWing6;
+	final ModelRendererTF rightWing7;
+	final ModelRendererTF rightWing8;
+	final ModelRendererTF rightWing9;
+	final ModelRendererTF spine;
+	final ModelRendererTF upperBackLeg1;
+	final ModelRendererTF upperBackLeg2;
+	final ModelRendererTF upperFoot1;
+	final ModelRendererTF upperFoot2;
+	final ModelRendererTF waist;
+	public final ModelRendererTF footBase1;
+	public final ModelRendererTF footBase2;
+	public final ModelRendererTF head;
+	public final ModelRendererTF rightArm1;
+	public final ModelRendererTF rightArm3;
 	public final ModelRendererTF torso;
-	public final ModelRendererTF canopy1;
 	public final ModelRendererTF upperLeg1;
 	public final ModelRendererTF upperLeg2;
-	public final ModelRendererTF spine;
-	public final ModelRendererTF rightHip2;
-	public final ModelRendererTF rightHip3;
-	public final ModelRendererTF leftHip2;
-	public final ModelRendererTF leftHip3;
-	public final ModelRendererTF rightTorsoSide;
-	public final ModelRendererTF leftTorsoSide;
-	public final ModelRendererTF rightChest1;
-	public final ModelRendererTF leftChest1;
-	public final ModelRendererTF neck;
-	public final ModelRendererTF rightChest2;
-	public final ModelRendererTF rightChest7;
-	public final ModelRendererTF rightWing1;
-	public final ModelRendererTF rightArmConnector;
-	public final ModelRendererTF rightChest3;
-	public final ModelRendererTF rightChest5;
-	public final ModelRendererTF rightChest4;
-	public final ModelRendererTF rightChest6;
-	public final ModelRendererTF rightChest8;
-	public final ModelRendererTF rightChest9;
-	public final ModelRendererTF rightWing2;
-	public final ModelRendererTF rightWing9;
-	public final ModelRendererTF rightWing13;
-	public final ModelRendererTF rightWing3;
-	public final ModelRendererTF rightWing4;
-	public final ModelRendererTF rightWing5;
-	public final ModelRendererTF rightWing6;
-	public final ModelRendererTF rightWing7;
-	public final ModelRendererTF rightWing8;
-	public final ModelRendererTF rightWing10;
-	public final ModelRendererTF rightWing11;
-	public final ModelRendererTF rightWing12;
-	public final ModelRendererTF rightWing14;
-	public final ModelRendererTF rightWing15;
-	public final ModelRendererTF rightWing16;
-	public final ModelRendererTF rightArm1;
-	public final ModelRendererTF rightArm2;
-	public final ModelRendererTF rightArm5;
-	public final ModelRendererTF rightGun1;
-	public final ModelRendererTF rightArm3;
-	public final ModelRendererTF rightArm4;
-	public final ModelRendererTF rightGun2;
-	public final ModelRendererTF rightGun3;
-	public final ModelRendererTF rightGun4;
-	public final ModelRendererTF rightGun7;
-	public final ModelRendererTF rightGun5;
-	public final ModelRendererTF rightGun6;
-	public final ModelRendererTF rightGun8;
-	public final ModelRendererTF rightGun9;
-	public final ModelRendererTF rightGun10;
-	public final ModelRendererTF rightGun11;
-	public final ModelRendererTF leftChest2;
-	public final ModelRendererTF leftChest7;
-	public final ModelRendererTF leftWing1;
-	public final ModelRendererTF leftArmConnector;
-	public final ModelRendererTF leftChest3;
-	public final ModelRendererTF leftChest5;
-	public final ModelRendererTF leftChest4;
-	public final ModelRendererTF leftChest6;
-	public final ModelRendererTF leftChest8;
-	public final ModelRendererTF leftChest9;
-	public final ModelRendererTF leftWing2;
-	public final ModelRendererTF leftWing9;
-	public final ModelRendererTF leftWing13;
-	public final ModelRendererTF leftWing3;
-	public final ModelRendererTF leftWing4;
-	public final ModelRendererTF leftWing5;
-	public final ModelRendererTF leftWing6;
-	public final ModelRendererTF leftWing7;
-	public final ModelRendererTF leftWing8;
-	public final ModelRendererTF leftWing10;
-	public final ModelRendererTF leftWing11;
-	public final ModelRendererTF leftWing12;
-	public final ModelRendererTF leftWing14;
-	public final ModelRendererTF leftWing15;
-	public final ModelRendererTF leftWing16;
-	public final ModelRendererTF leftArm1;
-	public final ModelRendererTF leftArm2;
-	public final ModelRendererTF leftArm5;
-	public final ModelRendererTF leftGun1;
-	public final ModelRendererTF leftArm3;
-	public final ModelRendererTF leftArm4;
-	public final ModelRendererTF leftGun2;
-	public final ModelRendererTF leftGun3;
-	public final ModelRendererTF leftGun4;
-	public final ModelRendererTF leftGun7;
-	public final ModelRendererTF leftGun5;
-	public final ModelRendererTF leftGun6;
-	public final ModelRendererTF leftGun8;
-	public final ModelRendererTF leftGun9;
-	public final ModelRendererTF leftGun10;
-	public final ModelRendererTF leftGun11;
-	public final ModelRendererTF headConnector;
-	public final ModelRendererTF head;
-	public final ModelRendererTF headPiece1;
-	public final ModelRendererTF chin;
-	public final ModelRendererTF rightHelmet1;
-	public final ModelRendererTF rightHelmet1_1;
-	public final ModelRendererTF nose1;
-	public final ModelRendererTF headPiece2;
-	public final ModelRendererTF headPiece3;
-	public final ModelRendererTF headPiece4;
-	public final ModelRendererTF headPiece5;
-	public final ModelRendererTF rightHelmet2;
-	public final ModelRendererTF rightHelmet3;
-	public final ModelRendererTF rightHelmet7;
-	public final ModelRendererTF rightHelmet8;
-	public final ModelRendererTF rightHelmet4;
-	public final ModelRendererTF rightHelmet5;
-	public final ModelRendererTF rightHelmet6;
-	public final ModelRendererTF rightHelmet9;
-	public final ModelRendererTF rightHelmet2_1;
-	public final ModelRendererTF rightHelmet3_1;
-	public final ModelRendererTF rightHelmet7_1;
-	public final ModelRendererTF rightHelmet8_1;
-	public final ModelRendererTF rightHelmet4_1;
-	public final ModelRendererTF rightHelmet5_1;
-	public final ModelRendererTF rightHelmet6_1;
-	public final ModelRendererTF rightHelmet9_1;
-	public final ModelRendererTF nose2;
-	public final ModelRendererTF canopy2;
-	public final ModelRendererTF canopy3;
-	public final ModelRendererTF canopy6;
-	public final ModelRendererTF canopy20;
-	public final ModelRendererTF canopy4;
-	public final ModelRendererTF canopy5;
-	public final ModelRendererTF canopy7;
-	public final ModelRendererTF canopy12;
-	public final ModelRendererTF canopy14;
-	public final ModelRendererTF canopy16;
-	public final ModelRendererTF canopy18;
-	public final ModelRendererTF canopy8;
-	public final ModelRendererTF canopy11;
-	public final ModelRendererTF canopy9;
-	public final ModelRendererTF canopy10;
-	public final ModelRendererTF canopy13;
-	public final ModelRendererTF canopy15;
-	public final ModelRendererTF canopy17;
-	public final ModelRendererTF canopy19;
-	public final ModelRendererTF backUpperLeg1;
-	public final ModelRendererTF lowerLeg1;
-	public final ModelRendererTF upperBackLeg1;
-	public final ModelRendererTF lowerBackLeg1;
-	public final ModelRendererTF footThruster1;
-	public final ModelRendererTF rightKnee1;
-	public final ModelRendererTF rightLowerLeg1;
-	public final ModelRendererTF leftLowerLeg1;
-	public final ModelRendererTF lowerLegPanel1;
-	public final ModelRendererTF footBase1;
-	public final ModelRendererTF rightFin1_1;
-	public final ModelRendererTF rightFin2_1;
-	public final ModelRendererTF rightFin1_2;
-	public final ModelRendererTF rightFin1_5;
-	public final ModelRendererTF rightFin1_3;
-	public final ModelRendererTF rightFin1_4;
-	public final ModelRendererTF rightFin1_6;
-	public final ModelRendererTF rightFin1_7;
-	public final ModelRendererTF rightFin1_8;
-	public final ModelRendererTF rightFin1_9;
-	public final ModelRendererTF rightFin1_10;
-	public final ModelRendererTF rightFin2_2;
-	public final ModelRendererTF rightFin2_5;
-	public final ModelRendererTF rightFin2_3;
-	public final ModelRendererTF rightFin2_4;
-	public final ModelRendererTF rightFin2_6;
-	public final ModelRendererTF rightFin2_7;
-	public final ModelRendererTF rightFin2_8;
-	public final ModelRendererTF rightFin2_9;
-	public final ModelRendererTF rightFin2_10;
-	public final ModelRendererTF rightKnee2;
-	public final ModelRendererTF rightKnee3;
-	public final ModelRendererTF upperFoot1;
-	public final ModelRendererTF lowerFoot1;
-	public final ModelRendererTF backUpperLeg2;
-	public final ModelRendererTF lowerLeg2;
-	public final ModelRendererTF upperBackLeg2;
-	public final ModelRendererTF lowerBackLeg2;
-	public final ModelRendererTF footThruster2;
-	public final ModelRendererTF leftKnee1;
-	public final ModelRendererTF rightLowerLeg2;
-	public final ModelRendererTF leftLowerLeg2;
-	public final ModelRendererTF lowerLegPanel2;
-	public final ModelRendererTF footBase2;
-	public final ModelRendererTF leftFin1_1;
-	public final ModelRendererTF leftFin2_1;
-	public final ModelRendererTF leftFin1_2;
-	public final ModelRendererTF leftFin1_5;
-	public final ModelRendererTF leftFin1_3;
-	public final ModelRendererTF leftFin1_4;
-	public final ModelRendererTF leftFin1_6;
-	public final ModelRendererTF leftFin1_7;
-	public final ModelRendererTF leftFin1_8;
-	public final ModelRendererTF leftFin1_9;
-	public final ModelRendererTF leftFin1_10;
-	public final ModelRendererTF leftFin2_2;
-	public final ModelRendererTF leftFin2_5;
-	public final ModelRendererTF leftFin2_3;
-	public final ModelRendererTF leftFin2_4;
-	public final ModelRendererTF leftFin2_6;
-	public final ModelRendererTF leftFin2_7;
-	public final ModelRendererTF leftFin2_8;
-	public final ModelRendererTF leftFin2_9;
-	public final ModelRendererTF leftFin2_10;
-	public final ModelRendererTF leftKnee2;
-	public final ModelRendererTF leftKnee3;
-	public final ModelRendererTF upperFoot2;
-	public final ModelRendererTF lowerFoot2;
 
 	public ModelStarscream() {
 		super(1, 0.8F, new AnimationModifier(Type.DEGREE, isBacking(), 0.5F), new AnimationModifier(Type.SPEED, isSneaking(), 1.5F));
-		textureWidth = 64;
-		textureHeight = 64;
+		textureWidth = textureHeight = 64;
+
 		headPiece2 = new ModelRendererTF(this, 32, 27);
 		headPiece2.setRotationPoint(0, -1, 1);
 		headPiece2.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
-		setRotateAngle(headPiece2, -0.3839724354387525F, 0, 0);
+		headPiece2.rotateAngleX = -0.3839724354387525F;
+
 		leftWing1 = new ModelRendererTF(this, 60, 31);
 		leftWing1.mirror = true;
 		leftWing1.setRotationPoint(0.9F, -0.7F, 2);
 		leftWing1.addBox(0, -2, -0.5F, 1, 11, 1, 0);
+
 		leftWing7 = new ModelRendererTF(this, 54, 60);
 		leftWing7.mirror = true;
-		leftWing7.setRotationPoint(0, 1, 0);
+		leftWing7.rotationPointY = 1;
 		leftWing7.addBox(0, 0, -0.5F, 2, 1, 1, 0);
+
 		rightFin2_5 = new ModelRendererTF(this, 3, 51);
-		rightFin2_5.setRotationPoint(0, -0.5F, 0);
+		rightFin2_5.rotationPointY = -0.5F;
 		rightFin2_5.addBox(-0.5F, -1, 0, 1, 1, 5, 0);
+
 		canopy9 = new ModelRendererTF(this, 50, 24);
-		canopy9.setRotationPoint(0, 0, 0);
 		canopy9.addBox(-0.15F, 0, -0.35F, 1, 1, 1, 0);
+
 		rightLowerLeg1 = new ModelRendererTF(this, 0, 12);
 		rightLowerLeg1.setRotationPoint(-1.3F, 0.1F, 0);
 		rightLowerLeg1.addBox(-0.5F, 0, -1.5F, 1, 8, 3, 0);
 		setRotateAngle(rightLowerLeg1, 0.06981317007977318F, 0, 0.03490658503988659F);
+
 		rightWing13 = new ModelRendererTF(this, 60, 51);
 		rightWing13.setRotationPoint(-1, 9, -0.1F);
 		rightWing13.addBox(0, -12, -0.5F, 1, 12, 1, 0);
 		setRotateAngle(rightWing13, 0, 0, -0.7853981633974483F);
+
 		leftChest4 = new ModelRendererTF(this, 12, 34);
 		leftChest4.mirror = true;
 		leftChest4.setRotationPoint(0, -2, 0);
 		leftChest4.addBox(-1, -2, -1, 2, 2, 1, 0);
 		setRotateAngle(leftChest4, 0.3490658503988659F, 0, 0);
+
 		rightFin2_10 = new ModelRendererTF(this, 13, 37);
 		rightFin2_10.setRotationPoint(0, 0.1F, 0);
 		rightFin2_10.addBox(-0.5F, -1, 0, 1, 1, 1, 0);
+
 		leftArmConnector = new ModelRendererTF(this, 21, 23);
 		leftArmConnector.mirror = true;
 		leftArmConnector.setRotationPoint(1.5F, -1, 0);
 		leftArmConnector.addBox(0, -1, -1, 1, 3, 2, 0);
+
 		headPiece5 = new ModelRendererTF(this, 40, 27);
 		headPiece5.setRotationPoint(0, 0, 2);
 		headPiece5.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(headPiece5, -0.5410520681182421F, 0, 0);
+
 		leftWing16 = new ModelRendererTF(this, 60, 43);
 		leftWing16.mirror = true;
 		leftWing16.setRotationPoint(-2, 1, 0);
 		leftWing16.addBox(0, 0, -0.5F, 1, 4, 1, 0);
 		setRotateAngle(leftWing16, 0, 0, -1.064650843716541F);
+
 		canopy18 = new ModelRendererTF(this, 50, 19);
 		canopy18.mirror = true;
 		canopy18.setRotationPoint(1.5F, 0, 1);
 		canopy18.addBox(-1, 0, 0, 2, 4, 1, 0);
 		setRotateAngle(canopy18, 0.08726646259971647F, -1.5707963267948966F, 0);
+
 		leftFin1_9 = new ModelRendererTF(this, 0, 60);
 		leftFin1_9.mirror = true;
 		leftFin1_9.setRotationPoint(0, 0.1F, 0);
 		leftFin1_9.addBox(-0.5F, -1, 0, 1, 1, 2, 0);
+
 		leftHip1 = new ModelRendererTF(this, 34, 6);
 		leftHip1.mirror = true;
 		leftHip1.setRotationPoint(1, -0.7F, 0);
 		leftHip1.addBox(-0.7000000000000002F, -1, -1.5F, 3, 2, 3, 0);
+
 		rightWing15 = new ModelRendererTF(this, 54, 45);
 		rightWing15.setRotationPoint(0, -2, 0);
 		rightWing15.addBox(0, 0, -0.5F, 2, 1, 1, 0);
 		setRotateAngle(rightWing15, 0, 0, -1.064650843716541F);
+
 		canopy14 = new ModelRendererTF(this, 50, 19);
 		canopy14.mirror = true;
 		canopy14.setRotationPoint(0, 0, 2.5F);
 		canopy14.addBox(-1, 0, 0, 2, 4, 1, 0);
 		setRotateAngle(canopy14, 0.08726646259971647F, -3.141592653589793F, 0);
+
 		canopy1 = new ModelRendererTF(this, 0, 36);
 		canopy1.setRotationPoint(0, -7.9F, -1.3F);
 		canopy1.addBox(-1, 0, -1.5F, 2, 8, 3, 0);
 		setRotateAngle(canopy1, 0.05235987755982988F, 0, 0);
+
 		rightHelmet5 = new ModelRendererTF(this, 22, 40);
 		rightHelmet5.setRotationPoint(0, -1, 1);
 		rightHelmet5.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(rightHelmet5, -0.40142572795869574F, 0, 0);
+
 		leftFin1_3 = new ModelRendererTF(this, 0, 47);
 		leftFin1_3.mirror = true;
 		leftFin1_3.setRotationPoint(0, -6.5F, 0);
 		leftFin1_3.addBox(-0.5F, 0, -1, 1, 8, 1, 0);
+
 		canopy15 = new ModelRendererTF(this, 56, 19);
 		canopy15.mirror = true;
 		canopy15.setRotationPoint(0, 4, 0);
 		canopy15.addBox(-0.5F, 0, 0, 1, 4, 1, 0);
 		setRotateAngle(canopy15, 0.0767944870877505F, 0, 0);
+
 		backUpperLeg2 = new ModelRendererTF(this, 22, 0);
 		backUpperLeg2.mirror = true;
 		backUpperLeg2.setRotationPoint(0, 3, 0.25F);
 		backUpperLeg2.addBox(-1, -3, 0, 2, 6, 1, 0);
+
 		canopy4 = new ModelRendererTF(this, 10, 27);
 		canopy4.setRotationPoint(0, 2, 0);
 		canopy4.addBox(-1, 0, 0, 2, 3, 1, 0);
 		setRotateAngle(canopy4, 0.3490658503988659F, 0, 0);
+
 		leftGun1 = new ModelRendererTF(this, 46, 19);
 		leftGun1.mirror = true;
 		leftGun1.setRotationPoint(3, 1.5F, 0);
 		leftGun1.addBox(0, -1, -0.5F, 1, 2, 1, 0);
+
 		rightHelmet7_1 = new ModelRendererTF(this, 28, 32);
 		rightHelmet7_1.mirror = true;
 		rightHelmet7_1.setRotationPoint(0.3F, 0.1F, -0.2F);
 		rightHelmet7_1.addBox(0, -1.5F, -0.5F, 1, 2, 2, 0);
+
 		chin = new ModelRendererTF(this, 25, 32);
 		chin.setRotationPoint(0, -1, -1.4F);
 		chin.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
-		setRotateAngle(chin, -0.3839724354387525F, 0, 0);
+		chin.rotateAngleX = -0.3839724354387525F;
+
 		rightWing3 = new ModelRendererTF(this, 46, 52);
-		rightWing3.setRotationPoint(0, 3, 0);
+		rightWing3.rotationPointY = 3;
 		rightWing3.addBox(-6, 0, -0.5F, 6, 1, 1, 0);
+
 		leftGun2 = new ModelRendererTF(this, 60, 26);
 		leftGun2.mirror = true;
-		leftGun2.setRotationPoint(0.3F, 0, 0);
+		leftGun2.rotationPointX = 0.3F;
 		leftGun2.addBox(0.8F, -2.5F, -0.8F, 1, 4, 1, 0);
+
 		leftLowerLeg1 = new ModelRendererTF(this, 0, 12);
 		leftLowerLeg1.mirror = true;
 		leftLowerLeg1.setRotationPoint(1.3F, 0.1F, 0);
 		leftLowerLeg1.addBox(-0.5F, 0, -1.5F, 1, 8, 3, 0);
 		setRotateAngle(leftLowerLeg1, 0.06981317007977318F, 0, -0.03490658503988659F);
+
 		leftFin1_10 = new ModelRendererTF(this, 0, 58);
 		leftFin1_10.mirror = true;
 		leftFin1_10.setRotationPoint(0, 0.1F, 0);
@@ -416,11 +444,9 @@ public class ModelStarscream extends ModelTransformerBase {
 		neck.addBox(-1, -1, -2, 2, 1, 2, 0);
 		setRotateAngle(neck, 0.17453292519943295F, 0, 0);
 		rightGun6 = new ModelRendererTF(this, 60, 26);
-		rightGun6.setRotationPoint(0, 0, 0);
 		rightGun6.addBox(-0.8F, -2.5F, -0.2F, 1, 4, 1, 0);
 		leftFin1_2 = new ModelRendererTF(this, 4, 47);
 		leftFin1_2.mirror = true;
-		leftFin1_2.setRotationPoint(0, 0, 0);
 		leftFin1_2.addBox(-0.5F, -6.5F, -1, 1, 7, 1, 0);
 		setRotateAngle(leftFin1_2, -1.5707963267948966F, 0, 0);
 		rightHelmet6 = new ModelRendererTF(this, 30, 29);
@@ -441,7 +467,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		leftFin1_8.setRotationPoint(0, 0.1F, 0);
 		leftFin1_8.addBox(-0.5F, -1, 0, 1, 1, 3, 0);
 		headConnector = new ModelRendererTF(this, 0, 0);
-		headConnector.setRotationPoint(0, 0, 0);
 		headConnector.addBox(0, 0, 0, 0, 0, 0, 0);
 		setRotateAngle(headConnector, -0.17453292519943295F, 0, 0);
 		leftFin1_1 = new ModelRendererTF(this, 0, 57);
@@ -451,7 +476,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		setRotateAngle(leftFin1_1, 1.5707963267948966F, 0, 0);
 		leftFin2_7 = new ModelRendererTF(this, 10, 51);
 		leftFin2_7.mirror = true;
-		leftFin2_7.setRotationPoint(0, 0, 0);
 		leftFin2_7.addBox(-0.5F, -1, 0, 1, 1, 4, 0);
 		leftWing15 = new ModelRendererTF(this, 54, 45);
 		leftWing15.mirror = true;
@@ -459,7 +483,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		leftWing15.addBox(-2, 0, -0.5F, 2, 1, 1, 0);
 		setRotateAngle(leftWing15, 0, 0, 1.064650843716541F);
 		canopy10 = new ModelRendererTF(this, 50, 24);
-		canopy10.setRotationPoint(0, 0, 0);
 		canopy10.addBox(-0.85F, 0, -0.35F, 1, 1, 1, 0);
 		rightArm2 = new ModelRendererTF(this, 34, 18);
 		rightArm2.setRotationPoint(-1.5F, 2.5F, 0);
@@ -487,7 +510,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		rightHelmet2_1.setRotationPoint(0.3F, 0.5F, -0.8F);
 		rightHelmet2_1.addBox(-0.5F, -1, -1, 1, 2, 1, 0);
 		canopy8 = new ModelRendererTF(this, 50, 24);
-		canopy8.setRotationPoint(0, 0, 0);
 		canopy8.addBox(-0.15F, 0, -0.85F, 1, 1, 1, 0);
 		leftFin2_4 = new ModelRendererTF(this, 16, 32);
 		leftFin2_4.mirror = true;
@@ -530,7 +552,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		leftChest6.setRotationPoint(0, -4, -2);
 		leftChest6.addBox(-1, -1, 0, 2, 1, 1, 0);
 		rightFin2_7 = new ModelRendererTF(this, 10, 51);
-		rightFin2_7.setRotationPoint(0, 0, 0);
 		rightFin2_7.addBox(-0.5F, -1, 0, 1, 1, 4, 0);
 		backCrotch = new ModelRendererTF(this, 28, 6);
 		backCrotch.setRotationPoint(0, -1.04F, 1.32F);
@@ -546,7 +567,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		rightHelmet2.setRotationPoint(-0.3F, 0.5F, -0.8F);
 		rightHelmet2.addBox(-0.5F, -1, -1, 1, 2, 1, 0);
 		rightGun11 = new ModelRendererTF(this, 45, 11);
-		rightGun11.setRotationPoint(0, 0, 0);
 		rightGun11.addBox(-0.7F, -1, -0.3F, 1, 2, 1, 0);
 		canopy11 = new ModelRendererTF(this, 57, 30);
 		canopy11.setRotationPoint(0, 2.99F, 0);
@@ -561,7 +581,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		frontCrotch.addBox(-1, 0, -0.5F, 2, 3, 1, 0);
 		setRotateAngle(frontCrotch, 0.10471975511965977F, 0, 0);
 		canopy2 = new ModelRendererTF(this, 0, 26);
-		canopy2.setRotationPoint(0, 0, 0);
 		canopy2.addBox(-1.5F, 0, -1, 3, 8, 2, 0);
 		lowerBackLeg1 = new ModelRendererTF(this, 20, 14);
 		lowerBackLeg1.setRotationPoint(0, 5.87F, 1.47F);
@@ -654,7 +673,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		setRotateAngle(rightChest9, 0.6981317007977318F, 0, 0);
 		leftGun11 = new ModelRendererTF(this, 45, 11);
 		leftGun11.mirror = true;
-		leftGun11.setRotationPoint(0, 0, 0);
 		leftGun11.addBox(-0.30000000000000004F, -1, -0.3F, 1, 2, 1, 0);
 		upperFoot2 = new ModelRendererTF(this, 8, 17);
 		upperFoot2.setRotationPoint(0, 0.46F, -2.77F);
@@ -680,7 +698,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		setRotateAngle(leftChest3, 0.3490658503988659F, 0, 0);
 		leftGun5 = new ModelRendererTF(this, 60, 26);
 		leftGun5.mirror = true;
-		leftGun5.setRotationPoint(0, 0, 0);
 		leftGun5.addBox(-0.8F, -2.5F, -0.2F, 1, 4, 1, 0);
 		spine = new ModelRendererTF(this, 54, 36);
 		spine.setRotationPoint(0, 0, 0.5F);
@@ -692,7 +709,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		setRotateAngle(upperBackLeg1, 0.24434609527920614F, 0, 0);
 		leftFin1_7 = new ModelRendererTF(this, 27, 59);
 		leftFin1_7.mirror = true;
-		leftFin1_7.setRotationPoint(0, 0, 0);
 		leftFin1_7.addBox(-0.5F, -1, 0, 1, 1, 4, 0);
 		rightHelmet9 = new ModelRendererTF(this, 27, 36);
 		rightHelmet9.setRotationPoint(0, 0, 1);
@@ -755,7 +771,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		canopy6.addBox(-1, 0, 0, 2, 4, 2, 0);
 		setRotateAngle(canopy6, -3.141592653589793F, -3.141592653589793F, 0);
 		rightGun9 = new ModelRendererTF(this, 45, 11);
-		rightGun9.setRotationPoint(0, 0, 0);
 		rightGun9.addBox(-0.3F, -1, -0.7F, 1, 2, 1, 0);
 		leftChest7 = new ModelRendererTF(this, 14, 25);
 		leftChest7.mirror = true;
@@ -764,7 +779,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		setRotateAngle(leftChest7, -0.6981317007977318F, 0, 0);
 		leftGun9 = new ModelRendererTF(this, 45, 11);
 		leftGun9.mirror = true;
-		leftGun9.setRotationPoint(0, 0, 0);
 		leftGun9.addBox(-0.7F, -1, -0.7F, 1, 2, 1, 0);
 		leftGun4 = new ModelRendererTF(this, 60, 26);
 		leftGun4.mirror = true;
@@ -774,7 +788,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		rightWing4.setRotationPoint(0, 1, 0);
 		rightWing4.addBox(-5, 0, -0.5F, 5, 1, 1, 0);
 		rightGun10 = new ModelRendererTF(this, 45, 11);
-		rightGun10.setRotationPoint(0, 0, 0);
 		rightGun10.addBox(-0.3F, -1, -0.3F, 1, 2, 1, 0);
 		rightHelmet4 = new ModelRendererTF(this, 18, 45);
 		rightHelmet4.setRotationPoint(0, -1, -1);
@@ -782,7 +795,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		setRotateAngle(rightHelmet4, -0.3490658503988659F, 0, 0);
 		leftGun10 = new ModelRendererTF(this, 45, 11);
 		leftGun10.mirror = true;
-		leftGun10.setRotationPoint(0, 0, 0);
 		leftGun10.addBox(-0.7F, -1, -0.3F, 1, 2, 1, 0);
 		head = new ModelRendererTF(this, 18, 31);
 		head.setRotationPoint(0, -0.5F, -1.3F);
@@ -792,7 +804,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		rightGun2.addBox(-1.8F, -2.5F, -0.8F, 1, 4, 1, 0);
 		nose2 = new ModelRendererTF(this, 36, 29);
 		nose2.mirror = true;
-		nose2.setRotationPoint(0, 0, 0);
 		nose2.addBox(-0.75F, 0, -1, 1, 1, 1, 0);
 		rightHelmet8 = new ModelRendererTF(this, 33, 30);
 		rightHelmet8.setRotationPoint(-0.9F, -0.3F, 0.8F);
@@ -882,7 +893,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		setRotateAngle(rightChest4, 0.3490658503988659F, 0, 0);
 		leftGun6 = new ModelRendererTF(this, 60, 26);
 		leftGun6.mirror = true;
-		leftGun6.setRotationPoint(0, 0, 0);
 		leftGun6.addBox(-0.19999999999999996F, -2.5F, -0.2F, 1, 4, 1, 0);
 		leftArm1 = new ModelRendererTF(this, 36, 11);
 		leftArm1.mirror = true;
@@ -939,7 +949,6 @@ public class ModelStarscream extends ModelTransformerBase {
 		waist.addBox(-1, -1, -1.5F, 2, 3, 3, 0);
 		leftFin2_2 = new ModelRendererTF(this, 10, 39);
 		leftFin2_2.mirror = true;
-		leftFin2_2.setRotationPoint(0, 0, 0);
 		leftFin2_2.addBox(-0.5F, -6.5F, -1, 1, 7, 1, 0);
 		setRotateAngle(leftFin2_2, -1.5707963267948966F, 0, 0);
 		rightHelmet3_1 = new ModelRendererTF(this, 21, 37);
@@ -985,112 +994,136 @@ public class ModelStarscream extends ModelTransformerBase {
 		headPiece3.setRotationPoint(0, 0, 1);
 		headPiece3.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(headPiece3, -0.5585053606381855F, 0, 0);
+
 		rightKnee1 = new ModelRendererTF(this, 0, 23);
 		rightKnee1.setRotationPoint(0, 1.5F, -1.46F);
 		rightKnee1.addBox(-1.5F, -1, -0.5F, 3, 2, 1, 0);
 		setRotateAngle(rightKnee1, 0.5235987755982988F, 0, 0);
+
 		rightFin1_2 = new ModelRendererTF(this, 4, 47);
-		rightFin1_2.setRotationPoint(0, 0, 0);
 		rightFin1_2.addBox(-0.5F, -6.5F, -1, 1, 7, 1, 0);
 		setRotateAngle(rightFin1_2, -1.5707963267948966F, 0, 0);
+
 		rightFin2_9 = new ModelRendererTF(this, 28, 56);
 		rightFin2_9.setRotationPoint(0, 0.1F, 0);
 		rightFin2_9.addBox(-0.5F, -1, 0, 1, 1, 2, 0);
+
 		rightWing6 = new ModelRendererTF(this, 52, 58);
 		rightWing6.setRotationPoint(0, 1, 0);
 		rightWing6.addBox(-3, 0, -0.5F, 3, 1, 1, 0);
+
 		canopy3 = new ModelRendererTF(this, 8, 24);
 		canopy3.setRotationPoint(0, 0, -1.5F);
 		canopy3.addBox(-1, 0, 0, 2, 2, 1, 0);
-		setRotateAngle(canopy3, -0.3490658503988659F, 0, 0);
+		canopy3.rotateAngleX = -0.3490658503988659F;
+
 		leftKnee3 = new ModelRendererTF(this, 20, 19);
 		leftKnee3.mirror = true;
 		leftKnee3.setRotationPoint(0, -1.81F, -0.07F);
 		leftKnee3.addBox(-1.5F, 0, -0.4F, 3, 2, 1, 0);
-		setRotateAngle(leftKnee3, 0.3141592653589793F, 0, 0);
+		leftKnee3.rotateAngleX = 0.3141592653589793F;
+
 		footBase1 = new ModelRendererTF(this, 18, 11);
 		footBase1.setRotationPoint(0, 8.2F, 0);
 		footBase1.addBox(-1.5F, 0, -3, 3, 1, 2, 0);
 		setRotateAngle(footBase1, -0.10471975511965977F, 0, -0.017453292519943295F);
+
 		rightTorsoSide = new ModelRendererTF(this, 38, 0);
 		rightTorsoSide.setRotationPoint(-3, -0.5F, 0);
 		rightTorsoSide.addBox(0, -3, -1.5F, 1, 3, 3, 0);
-		setRotateAngle(rightTorsoSide, 0, 0, -0.08726646259971647F);
+		rightTorsoSide.rotateAngleZ = -0.08726646259971647F;
+
 		rightHelmet4_1 = new ModelRendererTF(this, 18, 45);
 		rightHelmet4_1.mirror = true;
 		rightHelmet4_1.setRotationPoint(0, -1, -1);
 		rightHelmet4_1.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
-		setRotateAngle(rightHelmet4_1, -0.3490658503988659F, 0, 0);
+		rightHelmet4_1.rotateAngleX = -0.3490658503988659F;
+
 		rightWing12 = new ModelRendererTF(this, 60, 43);
 		rightWing12.setRotationPoint(2, 1, 0);
 		rightWing12.addBox(-1, 0, -0.5F, 1, 4, 1, 0);
-		setRotateAngle(rightWing12, 0, 0, 1.064650843716541F);
+		rightWing12.rotateAngleZ = 1.064650843716541F;
+
 		leftHip3 = new ModelRendererTF(this, 27, 10);
 		leftHip3.mirror = true;
 		leftHip3.setRotationPoint(1, -1.02F, 1.4F);
 		leftHip3.addBox(-1, 0, -0.5F, 2, 2, 1, 0);
-		setRotateAngle(leftHip3, -0.10471975511965977F, 0, 0);
+		leftHip3.rotateAngleX = -0.10471975511965977F;
+
 		rightGun5 = new ModelRendererTF(this, 60, 26);
-		rightGun5.setRotationPoint(0, 0, 0);
 		rightGun5.addBox(-0.2F, -2.5F, -0.2F, 1, 4, 1, 0);
+
 		rightWing1 = new ModelRendererTF(this, 60, 31);
 		rightWing1.setRotationPoint(-0.9F, -0.7F, 2);
 		rightWing1.addBox(-1, -2, -0.5F, 1, 11, 1, 0);
+
 		leftWing12 = new ModelRendererTF(this, 60, 43);
 		leftWing12.mirror = true;
 		leftWing12.setRotationPoint(-2, 1, 0);
 		leftWing12.addBox(0, 0, -0.5F, 1, 4, 1, 0);
-		setRotateAngle(leftWing12, 0, 0, -1.064650843716541F);
+		leftWing12.rotateAngleZ = -1.064650843716541F;
+
 		lowerFoot1 = new ModelRendererTF(this, 8, 13);
 		lowerFoot1.setRotationPoint(0, 0.55F, -1.22F);
 		lowerFoot1.addBox(-1.5F, -0.5F, 0, 3, 1, 3, 0);
-		setRotateAngle(lowerFoot1, 0.45378560551852565F, 0, 0);
+		lowerFoot1.rotateAngleX = 0.45378560551852565F;
+
 		leftWing5 = new ModelRendererTF(this, 50, 56);
 		leftWing5.mirror = true;
-		leftWing5.setRotationPoint(0, 1, 0);
+		leftWing5.rotationPointY = 1;
 		leftWing5.addBox(0, 0, -0.5F, 4, 1, 1, 0);
+
 		rightArm4 = new ModelRendererTF(this, 30, 23);
 		rightArm4.setRotationPoint(0, 4.7F, 0);
 		rightArm4.addBox(-1, 0, -1, 2, 2, 2, 0);
 		setRotateAngle(rightArm4, -0.10471975511965977F, 0, -0.08726646259971647F);
+
 		rightWing16 = new ModelRendererTF(this, 60, 43);
 		rightWing16.setRotationPoint(2, 1, 0);
 		rightWing16.addBox(-1, 0, -0.5F, 1, 4, 1, 0);
-		setRotateAngle(rightWing16, 0, 0, 1.064650843716541F);
+		rightWing16.rotateAngleZ = 1.064650843716541F;
+
 		headPiece1 = new ModelRendererTF(this, 26, 26);
 		headPiece1.mirror = true;
 		headPiece1.setRotationPoint(0, -2.63F, -0.51F);
 		headPiece1.addBox(-0.5F, -1, -1, 1, 1, 2, 0);
-		setRotateAngle(headPiece1, 0.22689280275926282F, 0, 0);
+		headPiece1.rotateAngleX = 0.22689280275926282F;
+
 		leftWing10 = new ModelRendererTF(this, 54, 33);
 		leftWing10.mirror = true;
 		leftWing10.setRotationPoint(0, -12, 0);
 		leftWing10.addBox(-2, -2, -0.5F, 2, 2, 1, 0);
-		setRotateAngle(leftWing10, 0, 0, -0.7853981633974483F);
+		leftWing10.rotateAngleZ = -0.7853981633974483F;
+
 		rightFin1_7 = new ModelRendererTF(this, 27, 59);
-		rightFin1_7.setRotationPoint(0, 0, 0);
 		rightFin1_7.addBox(-0.5F, -1, 0, 1, 1, 4, 0);
+
 		rightGun3 = new ModelRendererTF(this, 60, 11);
 		rightGun3.setRotationPoint(-1, 1.5F, 0);
 		rightGun3.addBox(-0.5F, -5, -0.5F, 1, 5, 1, 0);
+
 		rightChest5 = new ModelRendererTF(this, 28, 13);
 		rightChest5.setRotationPoint(0, 0.23F, -0.74F);
 		rightChest5.addBox(-1, -4, -2, 2, 4, 2, 0);
+
 		leftWing14 = new ModelRendererTF(this, 54, 33);
 		leftWing14.mirror = true;
 		leftWing14.setRotationPoint(0, -12, 0);
 		leftWing14.addBox(-2, -2, -0.5F, 2, 2, 1, 0);
-		setRotateAngle(leftWing14, 0, 0, -0.7853981633974483F);
+		leftWing14.rotateAngleZ = -0.7853981633974483F;
+
 		rightFin2_2 = new ModelRendererTF(this, 10, 39);
-		rightFin2_2.setRotationPoint(0, 0, 0);
 		rightFin2_2.addBox(-0.5F, -6.5F, -1, 1, 7, 1, 0);
-		setRotateAngle(rightFin2_2, -1.5707963267948966F, 0, 0);
+		rightFin2_2.rotateAngleX = -1.5707963267948966F;
+
 		rightChest1 = new ModelRendererTF(this, 38, 18);
 		rightChest1.setRotationPoint(-1.7F, -5.7F, 0);
 		rightChest1.addBox(-2, -2.5F, -2, 2, 5, 4, 0);
+
 		rightArm5 = new ModelRendererTF(this, 25, 19);
 		rightArm5.setRotationPoint(-1.5F, 2.1F, 0);
 		rightArm5.addBox(-1.3F, 0, -1.3F, 2, 1, 3, 0);
+
 		headPiece1.addChild(headPiece2);
 		leftChest1.addChild(leftWing1);
 		leftWing6.addChild(leftWing7);
@@ -1448,11 +1481,6 @@ public class ModelStarscream extends ModelTransformerBase {
 			footBase1.rotateAngleX -= 0.1F;
 			footBase2.rotateAngleX -= 0.1F;
 		}
-	}
-
-	@Override
-	public void doIdleAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
-
 	}
 
 	@Override
