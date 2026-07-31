@@ -55,6 +55,12 @@ public class TransformerOptimusPrime extends TransformerTruck {
 	}
 
 	@Override
+	public boolean onJump(EntityPlayer player) {
+		player.motionY += 0.225D;
+		return true;
+	}
+
+	@Override
 	public void doNitroParticles(EntityPlayer player) {
 		for(int i = 0; i < 4; ++i) {
 			final Vec3 side = TFVectorHelper.getBackSideCoords(player, 0.225, i < 2, -0.3, false);
