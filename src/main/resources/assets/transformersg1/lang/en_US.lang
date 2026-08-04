@@ -12,15 +12,15 @@ item.starscreams_greave.name=Starscream's Greave
 
 
 ------Armor------
-item.g1_optimus_prime_head.name=G1 Optimus Prime Head
-item.g1_optimus_prime_torso.name=G1 Optimus Prime Torso
-item.g1_optimus_prime_legs.name=G1 Optimus Prime Legs
-item.g1_optimus_prime_feet.name=G1 Optimus Prime Feet
+item.g1_optimus_prime_head.name=Optimus Prime Head
+item.g1_optimus_prime_torso.name=Optimus Prime Torso
+item.g1_optimus_prime_legs.name=Optimus Prime Legs
+item.g1_optimus_prime_feet.name=Optimus Prime Feet
 
-item.g1_starscream_head.name=G1 Starscream Head
-item.g1_starscream_torso.name=G1 Starscream Torso
-item.g1_starscream_legs.name=G1 Starscream Legs
-item.g1_starscream_feet.name=G1 Starscream Feet
+item.g1_starscream_head.name=Starscream Head
+item.g1_starscream_torso.name=Starscream Torso
+item.g1_starscream_legs.name=Starscream Legs
+item.g1_starscream_feet.name=Starscream Feet
 
 
 ------Display Vehicles------

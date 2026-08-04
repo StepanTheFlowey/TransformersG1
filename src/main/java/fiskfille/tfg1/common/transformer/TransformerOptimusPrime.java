@@ -14,7 +14,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class TransformerOptimusPrime extends TransformerTruck {
 	public TransformerOptimusPrime() {
-		super("G1 Optimus Prime");
+		super("Optimus Prime");
 	}
 
 	@Override

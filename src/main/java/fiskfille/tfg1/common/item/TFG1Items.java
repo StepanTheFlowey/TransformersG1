@@ -27,14 +27,14 @@ public class TFG1Items {
 		starscreamLeggings = new ItemStarscreamArmor(2);
 		starscreamBoots = new ItemStarscreamArmor(3);
 
-		TFItemRegistry.registerItem(optimusPrimeHelmet, "G1 Optimus Prime Head");
-		TFItemRegistry.registerItem(optimusPrimeChestplate, "G1 Optimus Prime Torso");
-		TFItemRegistry.registerItem(optimusPrimeLeggings, "G1 Optimus Prime Legs");
-		TFItemRegistry.registerItem(optimusPrimeBoots, "G1 Optimus Prime Feet");
+		TFItemRegistry.registerItem(optimusPrimeHelmet, "Optimus Prime Head");
+		TFItemRegistry.registerItem(optimusPrimeChestplate, "Optimus Prime Torso");
+		TFItemRegistry.registerItem(optimusPrimeLeggings, "Optimus Prime Legs");
+		TFItemRegistry.registerItem(optimusPrimeBoots, "Optimus Prime Feet");
 
-		TFItemRegistry.registerItem(starscreamHelmet, "G1 Starscream Head");
-		TFItemRegistry.registerItem(starscreamChestplate, "G1 Starscream Torso");
-		TFItemRegistry.registerItem(starscreamLeggings, "G1 Starscream Legs");
-		TFItemRegistry.registerItem(starscreamBoots, "G1 Starscream Feet");
+		TFItemRegistry.registerItem(starscreamHelmet, "Starscream Head");
+		TFItemRegistry.registerItem(starscreamChestplate, "Starscream Torso");
+		TFItemRegistry.registerItem(starscreamLeggings, "Starscream Legs");
+		TFItemRegistry.registerItem(starscreamBoots, "Starscream Feet");
 	}
 }

@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class TransformerStarscream extends TransformerJet {
 	public TransformerStarscream() {
-		super("G1 Starscream");
+		super("Starscream");
 	}
 
 	@Override
