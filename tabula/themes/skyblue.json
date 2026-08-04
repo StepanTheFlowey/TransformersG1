@@ -61,7 +61,7 @@
     178,
     225
   ],
-  //Done  
+  //Done
   "elementButtonBackgroundInactive": [
     166,
     217,
@@ -109,7 +109,7 @@
     165,
     235
   ],
- 
+
   //Done
   "elementProjectTabFont": [
     200,
@@ -164,14 +164,14 @@
     232,
     255
   ],
- 
+
   //Done
   "fontChat": [
     51,
     51,
     225
   ],
- 
+
   //Done
   "font": [
     255,
@@ -184,7 +184,7 @@
     255,
     255
   ],
- 
+
   //Done
   "workspaceBlock": {
     "block": "minecraft:ice",
