@@ -16,10 +16,9 @@ import net.minecraft.util.ResourceLocation;
 				version = Tags.VERSION
 )
 public class TFG1 {
+	public static final String MODID = "transformersg1";
 	public static final ResourceLocation soundRobot = new ResourceLocation(TFG1.MODID, "transform_robot");
 	public static final ResourceLocation soundVehicle = new ResourceLocation(TFG1.MODID, "transform_vehicle");
-	public static final String MODID = "transformersg1";
-
 	@SidedProxy(
 					clientSide = "fiskfille.tfg1.common.proxy.ClientProxy",
 					serverSide = "fiskfille.tfg1.common.proxy.CommonProxy"

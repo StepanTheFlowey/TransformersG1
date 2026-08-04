@@ -10,11 +10,9 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class TransformerOptimusPrime extends TransformerTruck {
-	private final Random random = new Random();
-
 	public TransformerOptimusPrime() {
 		super("G1 Optimus Prime");
 	}
@@ -62,6 +60,8 @@ public class TransformerOptimusPrime extends TransformerTruck {
 
 	@Override
 	public void doNitroParticles(EntityPlayer player) {
+		final ThreadLocalRandom random = ThreadLocalRandom.current();
+
 		for(int i = 0; i < 4; ++i) {
 			final Vec3 side = TFVectorHelper.getBackSideCoords(player, 0.225, i < 2, -0.3, false);
 			player.worldObj.spawnParticle(

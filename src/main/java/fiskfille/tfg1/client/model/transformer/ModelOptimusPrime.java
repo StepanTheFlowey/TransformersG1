@@ -16,16 +16,22 @@ import org.lwjgl.opengl.GL11;
 import static fiskfille.tf.common.data.TFPredicates.isBacking;
 
 public class ModelOptimusPrime extends ModelTransformerBase {
+	public final ModelRendererTF footBase1;
+	public final ModelRendererTF footBase2;
+	public final ModelRendererTF lowerArm1;
+	public final ModelRendererTF lowerArm2;
+	public final ModelRendererTF neck;
+	public final ModelRendererTF torso;
+	public final ModelRendererTF upperArm1;
+	public final ModelRendererTF upperLeg1;
+	public final ModelRendererTF upperLeg2;
 	private final ModelRendererTF armConnector1;
 	private final ModelRendererTF armConnector2;
-	private final ModelRendererTF cheek2;
 	private final ModelRendererTF crotchPiece1;
 	private final ModelRendererTF crotchPiece2;
 	private final ModelRendererTF crotchPiece3;
 	private final ModelRendererTF elbowJoint1;
 	private final ModelRendererTF elbowJoint2;
-	public final ModelRendererTF footBase1;
-	public final ModelRendererTF footBase2;
 	private final ModelRendererTF grill;
 	private final ModelRendererTF hand1;
 	private final ModelRendererTF hand2;
@@ -54,17 +60,10 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 	private final ModelRendererTF leftLegVent7;
 	private final ModelRendererTF legPipe1;
 	private final ModelRendererTF legPipe2;
-	public final ModelRendererTF lowerArm1;
-	public final ModelRendererTF lowerArm2;
-	private final ModelRendererTF lowerEar1;
-	private final ModelRendererTF lowerEar2;
 	private final ModelRendererTF lowerFootExtension1;
 	private final ModelRendererTF lowerFootExtension2;
 	private final ModelRendererTF lowerLeg1;
 	private final ModelRendererTF lowerLeg2;
-	private final ModelRendererTF mouthGuard1;
-	private final ModelRendererTF mouthGuard2;
-	public final ModelRendererTF neck;
 	private final ModelRendererTF rightLegIndent1;
 	private final ModelRendererTF rightLegIndent2;
 	private final ModelRendererTF rightLegIndentFrame1;
@@ -86,7 +85,6 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 	private final ModelRendererTF toeBase2;
 	private final ModelRendererTF toeExtension1;
 	private final ModelRendererTF toeExtension2;
-	public final ModelRendererTF torso;
 	private final ModelRendererTF torsoConnector;
 	private final ModelRendererTF torsoFront1;
 	private final ModelRendererTF torsoFront2;
@@ -95,15 +93,11 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 	private final ModelRendererTF torsoSide1;
 	private final ModelRendererTF torsoSide2;
 	private final ModelRendererTF torsoTop;
-	public final ModelRendererTF upperArm1;
 	private final ModelRendererTF upperArm2;
 	private final ModelRendererTF upperArmPiece1;
 	private final ModelRendererTF upperArmPiece2;
-	private final ModelRendererTF upperEar2;
 	private final ModelRendererTF upperFootExtension1;
 	private final ModelRendererTF upperFootExtension2;
-	public final ModelRendererTF upperLeg1;
-	public final ModelRendererTF upperLeg2;
 	private final ModelRendererTF upperLegBack1;
 	private final ModelRendererTF upperLegBack2;
 	private final ModelRendererTF upperLegTile1;
@@ -127,7 +121,7 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		textureWidth = 64;
 		textureHeight = 128;
 
-		lowerEar1 = new ModelRendererTF(this, 49, 51);
+		final ModelRendererTF lowerEar1 = new ModelRendererTF(this, 49, 51);
 		lowerEar1.setRotationPoint(-3, -2, -4);
 		lowerEar1.addBox(-2, -2, -2, 2, 4, 4, 0);
 		lowerEar1.rotateAngleY = -0.7853981633974483F;
@@ -146,13 +140,13 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		toeBase1.rotationPointZ = -0.8F;
 		toeBase1.addBox(-1.5F, -0.5F, -1, 3, 1, 1, 0);
 
-		upperEar2 = new ModelRendererTF(this, 56, 60);
+		final ModelRendererTF upperEar2 = new ModelRendererTF(this, 56, 60);
 		upperEar2.mirror = true;
 		upperEar2.setRotationPoint(0.7F, -1.7F, 0.8F);
 		upperEar2.addBox(-0.5F, -10, -1.5F, 1, 13, 3, 0);
 		setRotateAngle(upperEar2, -0.08726646259971647F, 0, 0.08726646259971647F);
 
-		mouthGuard1 = new ModelRendererTF(this, 24, 51);
+		final ModelRendererTF mouthGuard1 = new ModelRendererTF(this, 24, 51);
 		mouthGuard1.setRotationPoint(3.5F, -1.5F, -3.5F);
 		mouthGuard1.addBox(-4, -3, -1, 5, 6, 1, 0);
 
@@ -181,7 +175,7 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		rightLegVent3.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		rightLegVent3.rotateAngleX = 1.0471975511965976F;
 
-		lowerEar2 = new ModelRendererTF(this, 49, 51);
+		final ModelRendererTF lowerEar2 = new ModelRendererTF(this, 49, 51);
 		lowerEar2.mirror = true;
 		lowerEar2.setRotationPoint(4, -2, 3);
 		lowerEar2.addBox(0, -2, -2, 2, 4, 4, 0);
@@ -191,7 +185,7 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		headTop1.rotationPointY = -6.5F;
 		headTop1.addBox(-4.5F, -3, -4.5F, 9, 3, 9, 0);
 
-		mouthGuard2 = new ModelRendererTF(this, 24, 51);
+		final ModelRendererTF mouthGuard2 = new ModelRendererTF(this, 24, 51);
 		mouthGuard2.mirror = true;
 		mouthGuard2.setRotationPoint(3.6F, -1.5F, -3.5F);
 		mouthGuard2.addBox(-1, -3, -1, 5, 6, 1, 0);
@@ -300,7 +294,7 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		waistPanel1.addBox(-1.8F, -1, -1, 3, 2, 1, 0);
 		setRotateAngle(waistPanel1, 0, 0, 0.20943951023931953F);
 
-		cheek2 = new ModelRendererTF(this, 36, 63);
+		final ModelRendererTF cheek2 = new ModelRendererTF(this, 36, 63);
 		cheek2.mirror = true;
 		cheek2.setRotationPoint(-2.2F, -0.4F, -0.5F);
 		cheek2.addBox(-3, -2, -3, 6, 4, 3, 0);
@@ -357,19 +351,23 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		torsoSide2.setRotationPoint(3.5F, -2.6F, -2.3F);
 		torsoSide2.addBox(-0.5F, -2, 0, 1, 4, 4, 0);
 		setRotateAngle(torsoSide2, 0.17453292519943295F, 0, 0.10471975511965977F);
+
 		lowerLeg1 = new ModelRendererTF(this, 0, 0);
 		lowerLeg1.setRotationPoint(0, 4.7F, -0.25F);
 		lowerLeg1.addBox(-2, 0, -1.25F, 4, 9, 3, 0);
 		setRotateAngle(lowerLeg1, 0.24434609527920614F, 0.05235987755982988F, -0.06981317007977318F);
+
 		leftLegVent2 = new ModelRendererTF(this, 36, 14);
 		leftLegVent2.mirror = true;
 		leftLegVent2.setRotationPoint(0, -1.7F, -0.2F);
 		leftLegVent2.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(leftLegVent2, 1.0471975511965976F, 0, 0);
+
 		final ModelRendererTF eye1 = new ModelRendererTF(this, 0, 51);
 		eye1.setRotationPoint(1, -5.5F, -3.5F);
 		eye1.addBox(-1.5F, -0.5F, -1, 3, 1, 1, 0);
 		setRotateAngle(eye1, 0, -0.17453292519943295F, 0);
+
 		grill = new ModelRendererTF(this, 29, 26);
 		grill.setRotationPoint(0, -4, -1.5F);
 		grill.addBox(-1.5F, -2, -1, 3, 4, 1, 0);
@@ -403,46 +401,57 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		rightLegIndentFrame2 = new ModelRendererTF(this, 14, 13);
 		rightLegIndentFrame2.setRotationPoint(-1.5F, 2, -0.75F);
 		rightLegIndentFrame2.addBox(-0.5F, -1, -1, 1, 3, 1, 0);
+
 		rightLegVent5 = new ModelRendererTF(this, 36, 14);
 		rightLegVent5.setRotationPoint(0, -0.5F, -0.2F);
 		rightLegVent5.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(rightLegVent5, 1.0471975511965976F, 0, 0);
+
 		leftLegVent4 = new ModelRendererTF(this, 36, 14);
 		leftLegVent4.mirror = true;
 		leftLegVent4.setRotationPoint(0, -0.9F, -0.2F);
 		leftLegVent4.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(leftLegVent4, 1.0471975511965976F, 0, 0);
+
 		lowerArm1 = new ModelRendererTF(this, 12, 20);
 		lowerArm1.setRotationPoint(0, 1.6F, 0);
 		lowerArm1.addBox(-1.5F, 0, -1.5F, 3, 5, 3, 0);
 		setRotateAngle(lowerArm1, -0.20943951023931953F, 0, -0.06981317007977318F);
+
 		torsoFrontUpper1 = new ModelRendererTF(this, 43, 17);
 		torsoFrontUpper1.setRotationPoint(0.05F, -2.27F, -0.1F);
 		torsoFrontUpper1.addBox(-2, -0.5F, -1, 4, 1, 1, 0);
 		setRotateAngle(torsoFrontUpper1, 0.4363323129985824F, 0, 0.03490658503988659F);
+
 		wheel5 = new ModelRendererTF(this, 48, 0);
 		wheel5.setRotationPoint(-0.7F, 7.1F, 0);
 		wheel5.addBox(-2, -1.5F, -1.5F, 2, 3, 3, 0);
+
 		toeBase2 = new ModelRendererTF(this, 10, 18);
 		toeBase2.mirror = true;
 		toeBase2.setRotationPoint(0, 0, -0.8F);
 		toeBase2.addBox(-1.5F, -0.5F, -1, 3, 1, 1, 0);
+
 		torso = new ModelRendererTF(this, 24, 17);
 		torso.setRotationPoint(0, -1.3F, 0);
 		torso.addBox(-3.5F, -4, -2.7F, 7, 4, 5, 0);
+
 		leftLegIndent2 = new ModelRendererTF(this, 14, 7);
 		leftLegIndent2.mirror = true;
 		leftLegIndent2.setRotationPoint(0, 6, -1.05F);
 		leftLegIndent2.addBox(-1, -2, -1, 2, 5, 1, 0);
+
 		neck = new ModelRendererTF(this, 36, 70);
 		neck.setRotationPoint(0, -5, -0.5F);
 		neck.addBox(-2.5F, -2, -2.5F, 5, 2, 5, 0);
 		setRotateAngle(neck, 0.17453292519943295F, 0, 0);
+
 		leftLegIndentFrame4 = new ModelRendererTF(this, 4, 14);
 		leftLegIndentFrame4.mirror = true;
 		leftLegIndentFrame4.setRotationPoint(0, 4.34F, -1.89F);
 		leftLegIndentFrame4.addBox(-2, -1, -0.5F, 4, 1, 1, 0);
 		setRotateAngle(leftLegIndentFrame4, -0.7504915783575618F, 0, 0);
+
 		leftLegVent7 = new ModelRendererTF(this, 36, 14);
 		leftLegVent7.mirror = true;
 		leftLegVent7.setRotationPoint(0, 0.3F, -0.2F);
@@ -485,129 +494,160 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 		upperArm1.setRotationPoint(-0.8F, 0.2F, 0);
 		upperArm1.addBox(-3, -1.5F, -1.5F, 3, 4, 3, 0);
 		setRotateAngle(upperArm1, 0.06981317007977318F, 0, 0.10471975511965977F);
+
 		rightLegIndentFrame3 = new ModelRendererTF(this, 14, 13);
 		rightLegIndentFrame3.mirror = true;
 		rightLegIndentFrame3.setRotationPoint(1.5F, 2, -0.75F);
 		rightLegIndentFrame3.addBox(-0.5F, -1, -1, 1, 3, 1, 0);
+
 		leftLegVent5 = new ModelRendererTF(this, 36, 14);
 		leftLegVent5.mirror = true;
 		leftLegVent5.setRotationPoint(0, -0.5F, -0.2F);
 		leftLegVent5.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(leftLegVent5, 1.0471975511965976F, 0, 0);
+
 		smokeStack2 = new ModelRendererTF(this, 48, 6);
 		smokeStack2.mirror = true;
 		smokeStack2.setRotationPoint(2.7F, 0, 0);
 		smokeStack2.addBox(0, -3, -0.5F, 1, 5, 1, 0);
+
 		rightLegVent7 = new ModelRendererTF(this, 36, 14);
 		rightLegVent7.setRotationPoint(0, 0.3F, -0.2F);
 		rightLegVent7.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(rightLegVent7, 1.0471975511965976F, 0, 0);
+
 		headSpike1 = new ModelRendererTF(this, 0, 53);
 		headSpike1.setRotationPoint(-3.2F, -8.5F, -3.2F);
 		headSpike1.addBox(-0.5F, -3, -1, 1, 3, 2, 0);
 		setRotateAngle(headSpike1, 0, -0.7853981633974483F, 0);
+
 		rightLegIndentFrame6 = new ModelRendererTF(this, 0, 12);
 		rightLegIndentFrame6.mirror = true;
 		rightLegIndentFrame6.setRotationPoint(1.5F, 6, -1.25F);
 		rightLegIndentFrame6.addBox(-0.5F, -2, -1, 1, 5, 1, 0);
+
 		headSpike2 = new ModelRendererTF(this, 0, 53);
 		headSpike2.mirror = true;
 		headSpike2.setRotationPoint(3.2F, -8.5F, 3.2F);
 		headSpike2.addBox(-0.5F, -3, -1, 1, 3, 2, 0);
 		setRotateAngle(headSpike2, 0, -0.7853981633974483F, 0);
+
 		upperArm2 = new ModelRendererTF(this, 0, 20);
 		upperArm2.mirror = true;
 		upperArm2.setRotationPoint(0.8F, 0.2F, 0);
 		upperArm2.addBox(0, -1.5F, -1.5F, 3, 4, 3, 0);
 		setRotateAngle(upperArm2, 0.06981317007977318F, 0, -0.10471975511965977F);
+
 		leftLegVent3 = new ModelRendererTF(this, 36, 14);
 		leftLegVent3.mirror = true;
 		leftLegVent3.setRotationPoint(0, -1.3F, -0.2F);
 		leftLegVent3.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(leftLegVent3, 1.0471975511965976F, 0, 0);
+
 		rightLegVent2 = new ModelRendererTF(this, 36, 14);
 		rightLegVent2.setRotationPoint(0, -1.7F, -0.2F);
 		rightLegVent2.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(rightLegVent2, 1.0471975511965976F, 0, 0);
+
 		windshield1 = new ModelRendererTF(this, 40, 8);
 		windshield1.setRotationPoint(0, 0, -0.15F);
 		windshield1.addBox(-1.5F, -1.5F, -1, 3, 3, 1, 0);
+
 		upperFootExtension2 = new ModelRendererTF(this, 0, 18);
 		upperFootExtension2.mirror = true;
 		upperFootExtension2.setRotationPoint(0, -0.54F, 0.85F);
 		upperFootExtension2.addBox(-2, -1, -1, 4, 1, 1, 0);
 		setRotateAngle(upperFootExtension2, 0.45378560551852565F, 0, 0);
+
 		wheel2 = new ModelRendererTF(this, 48, 0);
 		wheel2.mirror = true;
 		wheel2.setRotationPoint(1.8F, -0.6F, 0);
 		wheel2.addBox(0, -1.5F, -1.5F, 2, 3, 3, 0);
 		setRotateAngle(wheel2, 0, -0.15707963267948966F, -0.12217304763960307F);
+
 		upperLights2 = new ModelRendererTF(this, 43, 19);
 		upperLights2.mirror = true;
 		upperLights2.setRotationPoint(0.5F, 0.2F, -0.3F);
 		upperLights2.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(upperLights2, -0.6632251157578453F, 0, 0);
+
 		upperLeg1 = new ModelRendererTF(this, 14, 0);
 		upperLeg1.setRotationPoint(-2, -0.1F, 0);
 		upperLeg1.addBox(-1.5F, 0, -1.5F, 3, 5, 2, 0);
 		setRotateAngle(upperLeg1, -0.13962634015954636F, 0.08726646259971647F, 0.10471975511965977F);
+
 		headTop2 = new ModelRendererTF(this, 32, 50);
 		headTop2.setRotationPoint(1.1F, -1, -1.1F);
 		headTop2.addBox(-2, -4, -4.5F, 4, 4, 9, 0);
 		setRotateAngle(headTop2, 0, -0.7853981633974483F, 0);
+
 		torsoConnector = new ModelRendererTF(this, 22, 8);
 		torsoConnector.setRotationPoint(0, -4.3F, 0);
 		torsoConnector.addBox(-3.5F, -2, -2, 7, 2, 4, 0);
+
 		torsoFront2 = new ModelRendererTF(this, 44, 12);
 		torsoFront2.mirror = true;
 		torsoFront2.setRotationPoint(1.79F, -2.2F, -2);
 		torsoFront2.addBox(-2, -2, -1, 4, 4, 1, 0);
 		setRotateAngle(torsoFront2, 0, -0.17453292519943295F, 0);
+
 		leftLegIndentFrame1 = new ModelRendererTF(this, 4, 12);
 		leftLegIndentFrame1.mirror = true;
 		leftLegIndentFrame1.setRotationPoint(0, 0.5F, -0.75F);
 		leftLegIndentFrame1.addBox(-2, -0.5F, -1, 4, 1, 1, 0);
+
 		toeExtension1 = new ModelRendererTF(this, 18, 17);
 		toeExtension1.setRotationPoint(0, -0.04F, 0.35F);
 		toeExtension1.addBox(-1.5F, -1, -1, 3, 1, 2, 0);
 		setRotateAngle(toeExtension1, 0.45378560551852565F, 0, 0);
+
 		leftLegIndentFrame5 = new ModelRendererTF(this, 0, 12);
 		leftLegIndentFrame5.mirror = true;
 		leftLegIndentFrame5.setRotationPoint(-1.5F, 6, -1.25F);
 		leftLegIndentFrame5.addBox(-0.5F, -2, -1, 1, 5, 1, 0);
+
 		headTop3 = new ModelRendererTF(this, 27, 65);
 		headTop3.setRotationPoint(0, -2, -3.5F);
 		headTop3.addBox(-1, -2.5F, -1.5F, 2, 5, 5, 0);
+
 		crotchPiece3 = new ModelRendererTF(this, 6, 27);
 		crotchPiece3.setRotationPoint(0, 0.65F, -0.65F);
 		crotchPiece3.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(crotchPiece3, -0.7853981633974483F, 0, 0);
+
 		headConnector = new ModelRendererTF(this, 0, 0);
 		headConnector.setRotationPoint(0, 0.4F, -0.5F);
 		headConnector.addBox(0, 0, 0, 0, 0, 0, 0);
 		setRotateAngle(headConnector, -0.17453292519943295F, 0, 0);
+
 		waist = new ModelRendererTF(this, 30, 0);
 		waist.setRotationPoint(0, 10.6F, 0);
 		waist.addBox(-3, -5, -1.5F, 6, 5, 3, 0);
+
 		armConnector1 = new ModelRendererTF(this, 23, 26);
 		armConnector1.setRotationPoint(-3.5F, -3.7F, 0);
 		armConnector1.addBox(-1, -1, -1, 1, 3, 2, 0);
+
 		footBase1 = new ModelRendererTF(this, 4, 16);
 		footBase1.setRotationPoint(0, 2.5F, -0.9F);
 		footBase1.addBox(-2, -0.5F, -1, 4, 1, 1, 0);
 		setRotateAngle(footBase1, -0.10471975511965977F, 0, -0.017453292519943295F);
+
 		elbowJoint1 = new ModelRendererTF(this, 0, 27);
 		elbowJoint1.setRotationPoint(-1.5F, 2.5F, 0);
 		elbowJoint1.addBox(-1, 0, -1, 2, 2, 2, 0);
+
 		upperLeg2 = new ModelRendererTF(this, 14, 0);
 		upperLeg2.mirror = true;
 		upperLeg2.setRotationPoint(2, -0.1F, 0);
 		upperLeg2.addBox(-1.5F, 0, -1.5F, 3, 5, 2, 0);
 		setRotateAngle(upperLeg2, -0.13962634015954636F, -0.08726646259971647F, -0.10471975511965977F);
+
 		rightLegVent4 = new ModelRendererTF(this, 36, 14);
 		rightLegVent4.setRotationPoint(0, -0.9F, -0.2F);
 		rightLegVent4.addBox(-1, -0.5F, -1, 2, 1, 1, 0);
 		setRotateAngle(rightLegVent4, 1.0471975511965976F, 0, 0);
+
 		rightLegIndentFrame4 = new ModelRendererTF(this, 4, 14);
 		rightLegIndentFrame4.setRotationPoint(0, 4.34F, -1.89F);
 		rightLegIndentFrame4.addBox(-2, -1, -0.5F, 4, 1, 1, 0);
@@ -803,6 +843,8 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 
 	@Override
 	public void doActiveAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
+		final float PI = (float)Math.PI;
+
 		applyDefaultHoldingAnimation(upperArm1, upperArm2, lowerArm1, lowerArm2);
 		applyDefaultHittingAnimation(upperArm1, upperArm2, head, torso, lowerArm1, lowerArm2);
 
@@ -950,6 +992,8 @@ public class ModelOptimusPrime extends ModelTransformerBase {
 
 	@Override
 	public void doPartialAnimations(EntityPlayer player, float progress, float limbSwing, float limbSwingAmount, float ticks, float rotationYaw, float rotationPitch, boolean wearingHead, boolean wearingChest, boolean wearingLegs, boolean wearingFeet) {
+		final float PI = (float)Math.PI;
+
 		upperLeg1.setRotationAngles(0, 0, 0);
 		upperLeg2.setRotationAngles(0, 0, 0);
 		lowerLeg1.setRotationAngles(0, 0, 0);

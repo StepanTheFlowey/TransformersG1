@@ -270,815 +270,1023 @@ public class ModelStarscreamVehicle extends ModelVehicleBase {
 		rightFin1_9 = new ModelRendererTF(this, 0, 60);
 		rightFin1_9.setRotationPoint(0, -0.9F, 0);
 		rightFin1_9.addBox(-0.5F, -1, 0, 1, 1, 2, 0);
+
 		leftFin2_9 = new ModelRendererTF(this, 28, 56);
 		leftFin2_9.mirror = true;
 		leftFin2_9.setRotationPoint(0, -0.9F, 0);
 		leftFin2_9.addBox(-0.5F, -1, 0, 1, 1, 2, 0);
+
 		leftWing10 = new ModelRendererTF(this, 54, 33);
 		leftWing10.mirror = true;
 		leftWing10.setRotationPoint(0, -12, 0);
 		leftWing10.addBox(-2, -2, -0.5F, 2, 2, 1, 0);
-		setRotateAngle(leftWing10, 0, 0, -0.7853981633974483F);
+		leftWing10.rotateAngleZ = -0.7853981633974483F;
+
 		rightChest4 = new ModelRendererTF(this, 12, 34);
 		rightChest4.setRotationPoint(0, -2, 0);
 		rightChest4.addBox(-1, -2, -1, 2, 2, 1, 0);
 		setRotateAngle(rightChest4, 0.3490658503988659F, 0, 0);
+
 		leftChest9 = new ModelRendererTF(this, 14, 25);
 		leftChest9.mirror = true;
 		leftChest9.setRotationPoint(0, 2, 0);
 		leftChest9.addBox(-1, 0, 0, 2, 1, 1, 0);
 		setRotateAngle(leftChest9, 0.6981317007977318F, 0, 0);
+
 		lowerLegPanel1 = new ModelRendererTF(this, 5, 11);
 		lowerLegPanel1.setRotationPoint(0, 4.8F, 0.3F);
 		lowerLegPanel1.addBox(-1, -1.5F, -1, 2, 3, 1, 0);
+
 		rightFin2_4 = new ModelRendererTF(this, 16, 32);
 		rightFin2_4.setRotationPoint(0, 8, 0);
 		rightFin2_4.addBox(-0.5F, 0, -1, 1, 1, 1, 0);
 		setRotateAngle(rightFin2_4, -0.8478809506188453F, 0, 0);
+
 		canopy3 = new ModelRendererTF(this, 8, 24);
 		canopy3.setRotationPoint(0, 0, -1.5F);
 		canopy3.addBox(-1, 0, 0, 2, 2, 1, 0);
 		setRotateAngle(canopy3, -0.3490658503988659F, 0, 0);
+
 		rightWing1 = new ModelRendererTF(this, 60, 31);
 		rightWing1.setRotationPoint(-1.8F, 8, 1.55F);
 		rightWing1.addBox(-1, -2, -0.5F, 1, 11, 1, 0);
 		setRotateAngle(rightWing1, 3.141592653589793F, 0, 0);
+
 		rightWing11 = new ModelRendererTF(this, 54, 45);
 		rightWing11.setRotationPoint(0, -2, 0);
 		rightWing11.addBox(0, 0, -0.5F, 2, 1, 1, 0);
 		setRotateAngle(rightWing11, 0, 0, -1.064650843716541F);
+
 		leftGun5 = new ModelRendererTF(this, 60, 26);
 		leftGun5.mirror = true;
 		leftGun5.setRotationPoint(0, 0, 0);
 		leftGun5.addBox(-0.8F, -2.5F, -0.2F, 1, 4, 1, 0);
+
 		rightTorsoSide = new ModelRendererTF(this, 38, 0);
 		rightTorsoSide.setRotationPoint(-3, -0.5F, 0);
 		rightTorsoSide.addBox(0, -3, -1.5F, 1, 3, 3, 0);
 		setRotateAngle(rightTorsoSide, 0, 0, -0.08726646259971647F);
+
 		rightHip2 = new ModelRendererTF(this, 27, 10);
 		rightHip2.setRotationPoint(-1.3F, 0.5F, 1.5F);
 		rightHip2.addBox(-1, 0, -0.5F, 2, 2, 1, 0);
 		setRotateAngle(rightHip2, 1.5707963267948966F, 0, 0);
+
 		upperBackLeg1 = new ModelRendererTF(this, 12, 8);
 		upperBackLeg1.setRotationPoint(0, 0.24F, 1.02F);
 		upperBackLeg1.addBox(-1.5F, 0, -0.5F, 3, 4, 1, 0);
 		setRotateAngle(upperBackLeg1, 0.24434609527920614F, 0, 0);
+
 		lowerLeg1 = new ModelRendererTF(this, 0, 0);
 		lowerLeg1.setRotationPoint(0.25F, 8, -0.7F);
 		lowerLeg1.addBox(-1.5F, 0, -1.5F, 3, 8, 3, 0);
+
 		leftFin1_10 = new ModelRendererTF(this, 0, 58);
 		leftFin1_10.mirror = true;
 		leftFin1_10.setRotationPoint(0, -0.9F, 0);
 		leftFin1_10.addBox(-0.5F, -1, 0, 1, 1, 1, 0);
+
 		leftFin2_2 = new ModelRendererTF(this, 10, 39);
 		leftFin2_2.mirror = true;
 		leftFin2_2.setRotationPoint(0, 0, 0);
 		leftFin2_2.addBox(-0.5F, -6.5F, -1, 1, 7, 1, 0);
+
 		rightHelmet7_1 = new ModelRendererTF(this, 28, 32);
 		rightHelmet7_1.mirror = true;
 		rightHelmet7_1.setRotationPoint(0, 0.1F, -0.5F);
 		rightHelmet7_1.addBox(0, -1.5F, -0.5F, 1, 2, 2, 0);
+
 		leftKnee1 = new ModelRendererTF(this, 0, 23);
 		leftKnee1.mirror = true;
 		leftKnee1.setRotationPoint(0.25F, 8.36F, -0.74F);
 		leftKnee1.addBox(-1.5F, -1, -0.5F, 3, 2, 1, 0);
 		setRotateAngle(leftKnee1, 1.5707963267948966F, 0, 0);
+
 		leftChest4 = new ModelRendererTF(this, 12, 34);
 		leftChest4.mirror = true;
 		leftChest4.setRotationPoint(0, -2, 0);
 		leftChest4.addBox(-1, -2, -1, 2, 2, 1, 0);
 		setRotateAngle(leftChest4, 0.3490658503988659F, 0, 0);
+
 		rightFin1_4 = new ModelRendererTF(this, 0, 56);
 		rightFin1_4.setRotationPoint(0, 8, 0);
 		rightFin1_4.addBox(-0.5F, 0, -1, 1, 1, 1, 0);
 		setRotateAngle(rightFin1_4, -0.8478809506188453F, 0, 0);
+
 		leftFin2_6 = new ModelRendererTF(this, 15, 52);
 		leftFin2_6.mirror = true;
 		leftFin2_6.setRotationPoint(0, -0.4F, 0);
 		leftFin2_6.addBox(-0.5F, -1, 0, 1, 1, 5, 0);
+
 		rightWing14 = new ModelRendererTF(this, 54, 33);
 		rightWing14.setRotationPoint(0, -12, 0);
 		rightWing14.addBox(0, -2, -0.5F, 2, 2, 1, 0);
 		setRotateAngle(rightWing14, 0, 0, 0.7853981633974483F);
+
 		leftFin2_10 = new ModelRendererTF(this, 13, 37);
 		leftFin2_10.mirror = true;
 		leftFin2_10.setRotationPoint(0, -0.9F, 0);
 		leftFin2_10.addBox(-0.5F, -1, 0, 1, 1, 1, 0);
+
 		head = new ModelRendererTF(this, 18, 31);
 		head.setRotationPoint(0, -0.5F, -1.3F);
 		head.addBox(-1, -3, -1.5F, 2, 3, 3, 0);
+
 		headPiece2 = new ModelRendererTF(this, 32, 27);
 		headPiece2.setRotationPoint(0, -1, 1);
 		headPiece2.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(headPiece2, -1.2566370614359172F, 0, 0);
+
 		canopy12 = new ModelRendererTF(this, 50, 19);
 		canopy12.setRotationPoint(0, 0, -0.5F);
 		canopy12.addBox(-1, 0, 0, 2, 4, 1, 0);
 		setRotateAngle(canopy12, 0.08726646259971647F, 0, 0);
+
 		headPiece1 = new ModelRendererTF(this, 26, 26);
 		headPiece1.mirror = true;
 		headPiece1.setRotationPoint(0, -2.63F, 0.49F);
 		headPiece1.addBox(-0.5F, -1, -1, 1, 1, 2, 0);
 		setRotateAngle(headPiece1, 0.22689280275926282F, 0, 0);
+
 		torso = new ModelRendererTF(this, 46, 0);
 		torso.setRotationPoint(0, -1, 0);
 		torso.addBox(-3, -8, -1.5F, 6, 8, 3, 0);
+
 		leftWing6 = new ModelRendererTF(this, 52, 58);
 		leftWing6.mirror = true;
 		leftWing6.setRotationPoint(0, 1, 0);
 		leftWing6.addBox(0, 0, -0.5F, 3, 1, 1, 0);
+
 		rightHelmet1 = new ModelRendererTF(this, 18, 40);
 		rightHelmet1.setRotationPoint(-0.3F, -1.5F, 0);
 		rightHelmet1.addBox(-0.9F, -1.8F, -1.2F, 1, 3, 2, 0);
 		setRotateAngle(rightHelmet1, 0, -1.5707963267948966F, 0);
+
 		leftArm2 = new ModelRendererTF(this, 34, 18);
 		leftArm2.mirror = true;
 		leftArm2.setRotationPoint(1.5F, 2.5F, 0);
 		leftArm2.addBox(-1, 0, -1, 2, 2, 2, 0);
+
 		leftKnee3 = new ModelRendererTF(this, 20, 19);
 		leftKnee3.mirror = true;
 		leftKnee3.setRotationPoint(0, -1.78F, 0.05F);
 		leftKnee3.addBox(-1.5F, 0, -0.4F, 3, 2, 1, 0);
 		setRotateAngle(leftKnee3, 2.7576202181510405F, 0, 0);
+
 		canopy1 = new ModelRendererTF(this, 0, 36);
 		canopy1.setRotationPoint(0, -9.2F, 1.01F);
 		canopy1.addBox(-1, 0, -1.5F, 2, 8, 3, 0);
 		setRotateAngle(canopy1, -3.141592653589793F, 0, 0);
+
 		leftWing1 = new ModelRendererTF(this, 60, 31);
 		leftWing1.mirror = true;
 		leftWing1.setRotationPoint(1.8F, 8, 1.55F);
 		leftWing1.addBox(0, -2, -0.5F, 1, 11, 1, 0);
 		setRotateAngle(leftWing1, 3.141592653589793F, 0, 0);
+
 		leftFin1_3 = new ModelRendererTF(this, 0, 47);
 		leftFin1_3.mirror = true;
 		leftFin1_3.setRotationPoint(0, -6.5F, 0);
 		leftFin1_3.addBox(-0.5F, 0, -1, 1, 8, 1, 0);
 		setRotateAngle(leftFin1_3, 0.8478809506188453F, 0, 0);
+
 		waist = new ModelRendererTF(this, 28, 0);
 		waist.setRotationPoint(0, 21, 0);
 		waist.addBox(-1, -1, -1.5F, 2, 3, 3, 0);
 		setRotateAngle(waist, 1.5707963267948966F, 0, 0);
+
 		rightHelmet5_1 = new ModelRendererTF(this, 22, 40);
 		rightHelmet5_1.mirror = true;
 		rightHelmet5_1.setRotationPoint(0, -1, 1);
 		rightHelmet5_1.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(rightHelmet5_1, -0.40142572795869574F, 0, 0);
+
 		rightChest9 = new ModelRendererTF(this, 14, 25);
 		rightChest9.setRotationPoint(0, 2, 0);
 		rightChest9.addBox(-1, 0, 0, 2, 1, 1, 0);
 		setRotateAngle(rightChest9, 0.6981317007977318F, 0, 0);
+
 		rightGun1 = new ModelRendererTF(this, 46, 19);
 		rightGun1.setRotationPoint(-6.5F, 5.5F, 0.4F);
 		rightGun1.addBox(-1, -1, -0.5F, 1, 2, 1, 0);
 		setRotateAngle(rightGun1, -3.141592653589793F, -1.5707963267948966F, 0);
+
 		upperFoot2 = new ModelRendererTF(this, 8, 17);
 		upperFoot2.setRotationPoint(0, 0.5F, 2);
 		upperFoot2.addBox(-1.5F, -0.5F, 0, 3, 1, 3, 0);
+
 		leftChest5 = new ModelRendererTF(this, 28, 13);
 		leftChest5.mirror = true;
 		leftChest5.setRotationPoint(0, 0.23F, -0.74F);
 		leftChest5.addBox(-1, -4, -2, 2, 4, 2, 0);
+
 		canopy5 = new ModelRendererTF(this, 16, 22);
 		canopy5.setRotationPoint(0, 3, 0);
 		canopy5.addBox(-1, 0, 0, 2, 2, 1, 0);
 		setRotateAngle(canopy5, 0.3490658503988659F, 0, 0);
+
 		rightChest6 = new ModelRendererTF(this, 15, 30);
 		rightChest6.setRotationPoint(0, -4, -2);
 		rightChest6.addBox(-1, -1, 0, 2, 1, 1, 0);
+
 		leftFin2_3 = new ModelRendererTF(this, 14, 39);
 		leftFin2_3.mirror = true;
 		leftFin2_3.setRotationPoint(0, -6.5F, 0);
 		leftFin2_3.addBox(-0.5F, 0, -1, 1, 8, 1, 0);
 		setRotateAngle(leftFin2_3, 0.8478809506188453F, 0, 0);
+
 		leftChest2 = new ModelRendererTF(this, 7, 36);
 		leftChest2.mirror = true;
 		leftChest2.setRotationPoint(1, -0.61F, 1.32F);
 		leftChest2.addBox(-1, -2, -1, 2, 2, 1, 0);
 		setRotateAngle(leftChest2, -0.3490658503988659F, 0, 0);
+
 		leftWing5 = new ModelRendererTF(this, 50, 56);
 		leftWing5.mirror = true;
 		leftWing5.setRotationPoint(0, 1, 0);
 		leftWing5.addBox(0, 0, -0.5F, 4, 1, 1, 0);
+
 		rightGun6 = new ModelRendererTF(this, 60, 26);
 		rightGun6.setRotationPoint(0, 0, 0);
 		rightGun6.addBox(-0.8F, -2.5F, -0.2F, 1, 4, 1, 0);
+
 		canopy7 = new ModelRendererTF(this, 50, 24);
 		canopy7.setRotationPoint(0, 3.95F, 1);
 		canopy7.addBox(-0.85F, 0, -0.85F, 1, 1, 1, 0);
+
 		rightChest5 = new ModelRendererTF(this, 28, 13);
 		rightChest5.setRotationPoint(0, 0.23F, -0.74F);
 		rightChest5.addBox(-1, -4, -2, 2, 4, 2, 0);
+
 		rightFin1_2 = new ModelRendererTF(this, 4, 47);
 		rightFin1_2.setRotationPoint(0, 0, 0);
 		rightFin1_2.addBox(-0.5F, -6.5F, -1, 1, 7, 1, 0);
+
 		rightFin1_10 = new ModelRendererTF(this, 0, 58);
 		rightFin1_10.setRotationPoint(0, -0.9F, 0);
 		rightFin1_10.addBox(-0.5F, -1, 0, 1, 1, 1, 0);
+
 		rightHip3 = new ModelRendererTF(this, 27, 10);
 		rightHip3.setRotationPoint(-1.3F, -0.95F, -6.76F);
 		rightHip3.addBox(-1, 0, -0.5F, 2, 2, 1, 0);
-		setRotateAngle(rightHip3, 0.3508111796508603F, 0, 0);
+		rightHip3.rotateAngleX = 0.3508111796508603F;
+
 		rightChest7 = new ModelRendererTF(this, 14, 25);
 		rightChest7.setRotationPoint(-1, -2.5F, -1);
 		rightChest7.addBox(-1, 0, 0, 2, 1, 1, 0);
-		setRotateAngle(rightChest7, -0.6981317007977318F, 0, 0);
+		rightChest7.rotateAngleX = -0.6981317007977318F;
+
 		leftArm3 = new ModelRendererTF(this, 48, 11);
 		leftArm3.mirror = true;
 		leftArm3.setRotationPoint(-0.5F, 4, -0.5F);
 		leftArm3.addBox(-1.5F, 0, -1.5F, 3, 5, 3, 0);
+
 		rightChest8 = new ModelRendererTF(this, 10, 31);
 		rightChest8.setRotationPoint(0, 1, 0);
 		rightChest8.addBox(-1, 0, 0, 2, 2, 1, 0);
-		setRotateAngle(rightChest8, 0.6981317007977318F, 0, 0);
+		rightChest8.rotateAngleX = 0.6981317007977318F;
+
 		leftWing9 = new ModelRendererTF(this, 60, 51);
 		leftWing9.mirror = true;
 		leftWing9.setRotationPoint(1, 9, 0.1F);
 		leftWing9.addBox(-1, -12, -0.5F, 1, 12, 1, 0);
-		setRotateAngle(leftWing9, 0, 0, 0.7853981633974483F);
+		leftWing9.rotateAngleZ = 0.7853981633974483F;
+
 		leftFin2_7 = new ModelRendererTF(this, 10, 51);
 		leftFin2_7.mirror = true;
 		leftFin2_7.setRotationPoint(0, -1, 0);
 		leftFin2_7.addBox(-0.5F, -1, 0, 1, 1, 4, 0);
+
 		rightFin1_7 = new ModelRendererTF(this, 27, 59);
 		rightFin1_7.setRotationPoint(0, -1, 0);
 		rightFin1_7.addBox(-0.5F, -1, 0, 1, 1, 4, 0);
+
 		leftFin1_6 = new ModelRendererTF(this, 8, 57);
 		leftFin1_6.mirror = true;
 		leftFin1_6.setRotationPoint(0, -0.4F, 0);
 		leftFin1_6.addBox(-0.5F, -1, 0, 1, 1, 5, 0);
+
 		canopy15 = new ModelRendererTF(this, 56, 19);
 		canopy15.mirror = true;
 		canopy15.setRotationPoint(0, 4, 0);
 		canopy15.addBox(-0.5F, 0, 0, 1, 4, 1, 0);
-		setRotateAngle(canopy15, 0.0767944870877505F, 0, 0);
+		canopy15.rotateAngleX = 0.0767944870877505F;
+
 		rightChest1 = new ModelRendererTF(this, 38, 18);
 		rightChest1.setRotationPoint(-1.5F, -5.7F, 0);
 		rightChest1.addBox(-2, -2.5F, -2, 2, 5, 4, 0);
+
 		leftFin2_8 = new ModelRendererTF(this, 22, 53);
 		leftFin2_8.mirror = true;
 		leftFin2_8.setRotationPoint(0, -0.9F, 0);
 		leftFin2_8.addBox(-0.5F, -1, 0, 1, 1, 3, 0);
+
 		rightWing15 = new ModelRendererTF(this, 54, 45);
 		rightWing15.setRotationPoint(0, -2, 0);
 		rightWing15.addBox(0, 0, -0.5F, 2, 1, 1, 0);
-		setRotateAngle(rightWing15, 0, 0, -1.064650843716541F);
+		rightWing15.rotateAngleZ = -1.064650843716541F;
+
 		leftGun11 = new ModelRendererTF(this, 45, 11);
 		leftGun11.mirror = true;
 		leftGun11.setRotationPoint(0, 0, 0);
 		leftGun11.addBox(-0.30000000000000004F, -1, -0.3F, 1, 2, 1, 0);
+
 		leftArmConnector = new ModelRendererTF(this, 21, 23);
 		leftArmConnector.mirror = true;
 		leftArmConnector.setRotationPoint(-1.75F, -1.2F, 0.55F);
 		leftArmConnector.addBox(0, -1, -1, 1, 3, 2, 0);
+
 		leftChest1 = new ModelRendererTF(this, 38, 18);
 		leftChest1.mirror = true;
 		leftChest1.setRotationPoint(1.5F, -5.7F, 0);
 		leftChest1.addBox(0, -2.5F, -2, 2, 5, 4, 0);
+
 		rightArm3 = new ModelRendererTF(this, 48, 11);
 		rightArm3.setRotationPoint(0.5F, 4, -0.5F);
 		rightArm3.addBox(-1.5F, 0, -1.5F, 3, 5, 3, 0);
+
 		rightGun2 = new ModelRendererTF(this, 60, 26);
 		rightGun2.setRotationPoint(-0.3F, 0, 0);
 		rightGun2.addBox(-1.8F, -2.5F, -0.8F, 1, 4, 1, 0);
+
 		rightFin2_10 = new ModelRendererTF(this, 13, 37);
 		rightFin2_10.setRotationPoint(0, -0.9F, 0);
 		rightFin2_10.addBox(-0.5F, -1, 0, 1, 1, 1, 0);
+
 		rightFin2_7 = new ModelRendererTF(this, 10, 51);
 		rightFin2_7.setRotationPoint(0, -1, 0);
 		rightFin2_7.addBox(-0.5F, -1, 0, 1, 1, 4, 0);
+
 		rightGun10 = new ModelRendererTF(this, 45, 11);
 		rightGun10.setRotationPoint(0, 0, 0);
 		rightGun10.addBox(-0.3F, -1, -0.3F, 1, 2, 1, 0);
+
 		rightArm4 = new ModelRendererTF(this, 30, 23);
 		rightArm4.setRotationPoint(0, 2.9F, 0);
 		rightArm4.addBox(-1, 0, -1, 2, 2, 2, 0);
+
 		rightArm1 = new ModelRendererTF(this, 36, 11);
 		rightArm1.setRotationPoint(-0.8F, 0.2F, 0);
 		rightArm1.addBox(-3, -1.5F, -1.5F, 3, 4, 3, 0);
+
 		nose1 = new ModelRendererTF(this, 36, 29);
 		nose1.setRotationPoint(0, -1.9F, -0.5F);
 		nose1.addBox(-0.25F, 0, -1, 1, 1, 1, 0);
-		setRotateAngle(nose1, -0.33161255787892263F, 0, 0);
+		nose1.rotateAngleX = -0.33161255787892263F;
+
 		leftLowerLeg2 = new ModelRendererTF(this, 0, 12);
 		leftLowerLeg2.setRotationPoint(-1.8F, -1.8F, -0.05F);
 		leftLowerLeg2.addBox(-0.5F, 0, -1.5F, 1, 8, 3, 0);
+
 		rightChest3 = new ModelRendererTF(this, 16, 27);
 		rightChest3.setRotationPoint(0, -2, 0);
 		rightChest3.addBox(-1, -2, -1, 2, 2, 1, 0);
-		setRotateAngle(rightChest3, 0.3490658503988659F, 0, 0);
+		rightChest3.rotateAngleX = 0.3490658503988659F;
+
 		rightFin1_8 = new ModelRendererTF(this, 22, 59);
 		rightFin1_8.setRotationPoint(0, -0.9F, 0);
 		rightFin1_8.addBox(-0.5F, -1, 0, 1, 1, 3, 0);
+
 		canopy2 = new ModelRendererTF(this, 0, 26);
 		canopy2.setRotationPoint(0, 0, 0);
 		canopy2.addBox(-1.5F, 0, -1, 3, 8, 2, 0);
+
 		footThruster1 = new ModelRendererTF(this, 20, 7);
 		footThruster1.setRotationPoint(0, 8, 0.6F);
 		footThruster1.addBox(-1, 0, -1, 2, 2, 2, 0);
+
 		leftHip1 = new ModelRendererTF(this, 34, 6);
 		leftHip1.mirror = true;
 		leftHip1.setRotationPoint(1.2F, -2.7F, -0.9F);
 		leftHip1.addBox(-0.7F, -1, -1.5F, 3, 2, 3, 0);
-		setRotateAngle(leftHip1, -1.5707963267948966F, 0, 0);
+		leftHip1.rotateAngleX = -1.5707963267948966F;
+
 		leftGun10 = new ModelRendererTF(this, 45, 11);
 		leftGun10.mirror = true;
 		leftGun10.setRotationPoint(0, 0, 0);
 		leftGun10.addBox(-0.7F, -1, -0.3F, 1, 2, 1, 0);
+
 		rightGun11 = new ModelRendererTF(this, 45, 11);
 		rightGun11.setRotationPoint(0, 0, 0);
 		rightGun11.addBox(-0.7F, -1, -0.3F, 1, 2, 1, 0);
+
 		leftWing13 = new ModelRendererTF(this, 60, 51);
 		leftWing13.mirror = true;
 		leftWing13.setRotationPoint(1, 9, -0.1F);
 		leftWing13.addBox(-1, -12, -0.5F, 1, 12, 1, 0);
-		setRotateAngle(leftWing13, 0, 0, 0.7853981633974483F);
+		leftWing13.rotateAngleZ = 0.7853981633974483F;
+
 		rightHelmet3_1 = new ModelRendererTF(this, 21, 37);
 		rightHelmet3_1.mirror = true;
 		rightHelmet3_1.setRotationPoint(0, -1.3F, -0.3F);
 		rightHelmet3_1.addBox(-0.5F, -1, -1, 1, 1, 2, 0);
-		setRotateAngle(rightHelmet3_1, 0.15707963267948966F, 0, 0);
+		rightHelmet3_1.rotateAngleX = 0.15707963267948966F;
+
 		leftFin1_4 = new ModelRendererTF(this, 0, 56);
 		leftFin1_4.mirror = true;
 		leftFin1_4.setRotationPoint(0, 8, 0);
 		leftFin1_4.addBox(-0.5F, 0, -1, 1, 1, 1, 0);
-		setRotateAngle(leftFin1_4, -0.8478809506188453F, 0, 0);
+		leftFin1_4.rotateAngleX = -0.8478809506188453F;
+
 		leftFin1_8 = new ModelRendererTF(this, 22, 59);
 		leftFin1_8.mirror = true;
 		leftFin1_8.setRotationPoint(0, -0.9F, 0);
 		leftFin1_8.addBox(-0.5F, -1, 0, 1, 1, 3, 0);
+
 		rightWing2 = new ModelRendererTF(this, 44, 47);
 		rightWing2.setRotationPoint(-1, -1, 0);
 		rightWing2.addBox(-7, -1, -0.5F, 7, 4, 1, 0);
+
 		rightFin1_5 = new ModelRendererTF(this, 15, 58);
 		rightFin1_5.setRotationPoint(0, -0.5F, 0);
 		rightFin1_5.addBox(-0.5F, -1, 0, 1, 1, 5, 0);
+
 		rightWing5 = new ModelRendererTF(this, 50, 56);
 		rightWing5.setRotationPoint(0, 1, 0);
 		rightWing5.addBox(-4, 0, -0.5F, 4, 1, 1, 0);
+
 		rightHelmet3 = new ModelRendererTF(this, 21, 37);
 		rightHelmet3.setRotationPoint(0, -1.3F, -0.3F);
 		rightHelmet3.addBox(-0.5F, -1, -1, 1, 1, 2, 0);
 		setRotateAngle(rightHelmet3, 0.15707963267948966F, 0, 0);
+
 		upperLeg1 = new ModelRendererTF(this, 12, 0);
 		upperLeg1.setRotationPoint(-2.05F, -5.2F, 1.3F);
 		upperLeg1.addBox(-1.5F, 0, -1.25F, 3, 6, 2, 0);
+
 		rightWing10 = new ModelRendererTF(this, 54, 33);
 		rightWing10.setRotationPoint(0, -12, 0);
 		rightWing10.addBox(0, -2, -0.5F, 2, 2, 1, 0);
 		setRotateAngle(rightWing10, 0, 0, 0.7853981633974483F);
+
 		leftKnee2 = new ModelRendererTF(this, 8, 21);
 		leftKnee2.mirror = true;
 		leftKnee2.setRotationPoint(0, -0.54F, 0);
 		leftKnee2.addBox(-1.5F, -2, -0.5F, 3, 2, 1, 0);
 		setRotateAngle(leftKnee2, -1.186823891356144F, 0, 0);
+
 		canopy10 = new ModelRendererTF(this, 50, 24);
 		canopy10.setRotationPoint(0, 0, 0);
 		canopy10.addBox(-0.85F, 0, -0.35F, 1, 1, 1, 0);
+
 		leftWing3 = new ModelRendererTF(this, 46, 52);
 		leftWing3.mirror = true;
 		leftWing3.setRotationPoint(0, 3, 0);
 		leftWing3.addBox(0, 0, -0.5F, 6, 1, 1, 0);
+
 		leftGun7 = new ModelRendererTF(this, 60, 17);
 		leftGun7.mirror = true;
 		leftGun7.setRotationPoint(1, -5, 0);
 		leftGun7.addBox(-0.5F, 0.5F, -0.5F, 1, 8, 1, 0);
+
 		rightGun5 = new ModelRendererTF(this, 60, 26);
 		rightGun5.setRotationPoint(0, 0, 0);
 		rightGun5.addBox(-0.2F, -2.5F, -0.2F, 1, 4, 1, 0);
+
 		leftFin1_7 = new ModelRendererTF(this, 27, 59);
 		leftFin1_7.mirror = true;
 		leftFin1_7.setRotationPoint(0, -1, 0);
 		leftFin1_7.addBox(-0.5F, -1, 0, 1, 1, 4, 0);
+
 		rightHelmet2 = new ModelRendererTF(this, 17, 37);
 		rightHelmet2.setRotationPoint(-0.3F, 0.5F, -0.4F);
 		rightHelmet2.addBox(-0.5F, -1, -1, 1, 2, 1, 0);
+
 		leftWing16 = new ModelRendererTF(this, 60, 43);
 		leftWing16.mirror = true;
 		leftWing16.setRotationPoint(-2, 1, 0);
 		leftWing16.addBox(0, 0, -0.5F, 1, 4, 1, 0);
 		setRotateAngle(leftWing16, 0, 0, -1.064650843716541F);
+
 		rightFin2_2 = new ModelRendererTF(this, 10, 39);
 		rightFin2_2.setRotationPoint(0, 0, 0);
 		rightFin2_2.addBox(-0.5F, -6.5F, -1, 1, 7, 1, 0);
+
 		lowerBackLeg2 = new ModelRendererTF(this, 20, 14);
 		lowerBackLeg2.mirror = true;
 		lowerBackLeg2.setRotationPoint(0, 6, 1.47F);
 		lowerBackLeg2.addBox(-1.5F, -2, 0, 3, 4, 1, 0);
+
 		rightArmConnector = new ModelRendererTF(this, 21, 23);
 		rightArmConnector.setRotationPoint(1.75F, -1.2F, 0.55F);
 		rightArmConnector.addBox(-1, -1, -1, 1, 3, 2, 0);
+
 		leftFin1_2 = new ModelRendererTF(this, 4, 47);
 		leftFin1_2.mirror = true;
 		leftFin1_2.setRotationPoint(0, 0, 0);
 		leftFin1_2.addBox(-0.5F, -6.5F, -1, 1, 7, 1, 0);
+
 		leftChest3 = new ModelRendererTF(this, 16, 27);
 		leftChest3.mirror = true;
 		leftChest3.setRotationPoint(0, -2, 0);
 		leftChest3.addBox(-1, -2, -1, 2, 2, 1, 0);
 		setRotateAngle(leftChest3, 0.3490658503988659F, 0, 0);
+
 		leftArm5 = new ModelRendererTF(this, 25, 19);
 		leftArm5.mirror = true;
 		leftArm5.setRotationPoint(2, 9.8F, -0.75F);
 		leftArm5.addBox(-0.7F, 0, -1.3F, 2, 1, 3, 0);
 		setRotateAngle(leftArm5, -1.5707963267948966F, -1.5707963267948966F, 0);
+
 		leftTorsoSide = new ModelRendererTF(this, 38, 0);
 		leftTorsoSide.mirror = true;
 		leftTorsoSide.setRotationPoint(3, -0.5F, 0);
 		leftTorsoSide.addBox(-1, -3, -1.5F, 1, 3, 3, 0);
 		setRotateAngle(leftTorsoSide, 0, 0, 0.08726646259971647F);
+
 		leftWing7 = new ModelRendererTF(this, 54, 60);
 		leftWing7.mirror = true;
 		leftWing7.setRotationPoint(0, 1, 0);
 		leftWing7.addBox(0, 0, -0.5F, 2, 1, 1, 0);
+
 		rightHelmet5 = new ModelRendererTF(this, 22, 40);
 		rightHelmet5.setRotationPoint(0, -1, 1);
 		rightHelmet5.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(rightHelmet5, -0.40142572795869574F, 0, 0);
+
 		leftChest8 = new ModelRendererTF(this, 10, 31);
 		leftChest8.mirror = true;
 		leftChest8.setRotationPoint(0, 1, 0);
 		leftChest8.addBox(-1, 0, 0, 2, 2, 1, 0);
 		setRotateAngle(leftChest8, 0.6981317007977318F, 0, 0);
+
 		canopy18 = new ModelRendererTF(this, 50, 19);
 		canopy18.mirror = true;
 		canopy18.setRotationPoint(1.5F, 0, 1);
 		canopy18.addBox(-1, 0, 0, 2, 4, 1, 0);
 		setRotateAngle(canopy18, 0.08726646259971647F, -1.5707963267948966F, 0);
+
 		lowerBackLeg1 = new ModelRendererTF(this, 20, 14);
 		lowerBackLeg1.setRotationPoint(0, 6, 1.47F);
 		lowerBackLeg1.addBox(-1.5F, -2, 0, 3, 4, 1, 0);
+
 		rightArm2 = new ModelRendererTF(this, 34, 18);
 		rightArm2.setRotationPoint(-1.5F, 2.5F, 0);
 		rightArm2.addBox(-1, 0, -1, 2, 2, 2, 0);
+
 		rightHelmet6_1 = new ModelRendererTF(this, 30, 29);
 		rightHelmet6_1.mirror = true;
 		rightHelmet6_1.setRotationPoint(0, 0, 1);
 		rightHelmet6_1.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(rightHelmet6_1, -0.8726646259971648F, 0, 0);
+
 		chin = new ModelRendererTF(this, 25, 32);
 		chin.setRotationPoint(0, -1, -0.4F);
 		chin.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
+
 		rightChest2 = new ModelRendererTF(this, 7, 36);
 		rightChest2.setRotationPoint(-1, -0.61F, 1.32F);
 		rightChest2.addBox(-1, -2, -1, 2, 2, 1, 0);
 		setRotateAngle(rightChest2, -0.3490658503988659F, 0, 0);
+
 		rightHelmet9 = new ModelRendererTF(this, 27, 36);
 		rightHelmet9.setRotationPoint(0, 0, 1);
 		rightHelmet9.addBox(0, -1, 0, 1, 2, 1, 0);
 		setRotateAngle(rightHelmet9, 0, 0.8203047484373349F, 0);
+
 		footBase1 = new ModelRendererTF(this, 18, 11);
 		footBase1.setRotationPoint(0, 4.2F, -0.1F);
 		footBase1.addBox(-1.5F, 0, -3, 3, 1, 2, 0);
 		setRotateAngle(footBase1, 1.5707963267948966F, 1.5707963267948966F, 0);
+
 		rightFin2_1 = new ModelRendererTF(this, 37, 57);
 		rightFin2_1.setRotationPoint(-0.5F, 1.7F, -0.5F);
 		rightFin2_1.addBox(-0.5F, -0.5F, 0, 1, 1, 6, 0);
 		setRotateAngle(rightFin2_1, 0, -1.5707963267948966F, -0.2617993877991494F);
+
 		upperBackLeg2 = new ModelRendererTF(this, 12, 8);
 		upperBackLeg2.mirror = true;
 		upperBackLeg2.setRotationPoint(0, 0.24F, 1.02F);
 		upperBackLeg2.addBox(-1.5F, 0, -0.5F, 3, 4, 1, 0);
 		setRotateAngle(upperBackLeg2, 0.24434609527920614F, 0, 0);
+
 		frontCrotch = new ModelRendererTF(this, 28, 6);
 		frontCrotch.setRotationPoint(0, -4.2F, -1.4F);
 		frontCrotch.addBox(-1, 0, -0.5F, 2, 3, 1, 0);
+
 		canopy11 = new ModelRendererTF(this, 57, 30);
 		canopy11.setRotationPoint(0, 2.99F, 0);
 		canopy11.addBox(-0.5F, 0, -0.5F, 1, 1, 1, 0);
+
 		rightFin2_9 = new ModelRendererTF(this, 28, 56);
 		rightFin2_9.setRotationPoint(0, -0.9F, 0);
 		rightFin2_9.addBox(-0.5F, -1, 0, 1, 1, 2, 0);
+
 		canopy4 = new ModelRendererTF(this, 10, 27);
 		canopy4.setRotationPoint(0, 2, 0);
 		canopy4.addBox(-1, 0, 0, 2, 3, 1, 0);
 		setRotateAngle(canopy4, 0.3490658503988659F, 0, 0);
+
 		upperFoot1 = new ModelRendererTF(this, 8, 17);
 		upperFoot1.setRotationPoint(0, 0.5F, 2);
 		upperFoot1.addBox(-1.5F, -0.5F, 0, 3, 1, 3, 0);
+
 		canopy6 = new ModelRendererTF(this, 52, 24);
 		canopy6.setRotationPoint(0, 8, -1);
 		canopy6.addBox(-1, 0, 0, 2, 4, 2, 0);
+
 		leftLowerLeg1 = new ModelRendererTF(this, 0, 12);
 		leftLowerLeg1.mirror = true;
 		leftLowerLeg1.setRotationPoint(-0.25F, -2, -2);
 		leftLowerLeg1.addBox(-0.5F, 0, -1.5F, 1, 8, 3, 0);
 		setRotateAngle(leftLowerLeg1, 0, 1.5707963267948966F, 0);
+
 		rightHelmet6 = new ModelRendererTF(this, 30, 29);
 		rightHelmet6.setRotationPoint(0, 0, 1);
 		rightHelmet6.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(rightHelmet6, -0.8726646259971648F, 0, 0);
+
 		leftGun9 = new ModelRendererTF(this, 45, 11);
 		leftGun9.mirror = true;
 		leftGun9.setRotationPoint(0, 0, 0);
 		leftGun9.addBox(-0.7F, -1, -0.7F, 1, 2, 1, 0);
+
 		upperLeg2 = new ModelRendererTF(this, 12, 0);
 		upperLeg2.mirror = true;
 		upperLeg2.setRotationPoint(2.05F, -5.2F, 1.3F);
 		upperLeg2.addBox(-1.5F, 0, -1.25F, 3, 6, 2, 0);
+
 		rightWing7 = new ModelRendererTF(this, 54, 60);
 		rightWing7.setRotationPoint(0, 1, 0);
 		rightWing7.addBox(-2, 0, -0.5F, 2, 1, 1, 0);
+
 		canopy16 = new ModelRendererTF(this, 50, 19);
 		canopy16.setRotationPoint(-1.5F, 0, 1);
 		canopy16.addBox(-1, 0, 0, 2, 4, 1, 0);
 		setRotateAngle(canopy16, 0.08726646259971647F, 1.5707963267948966F, 0);
+
 		headConnector = new ModelRendererTF(this, 0, 0);
 		headConnector.setRotationPoint(0, 0, 0);
 		headConnector.addBox(0, 0, 0, 0, 0, 0, 0);
+
 		footThruster2 = new ModelRendererTF(this, 20, 7);
 		footThruster2.mirror = true;
 		footThruster2.setRotationPoint(0, 8, 0.6F);
 		footThruster2.addBox(-1, 0, -1, 2, 2, 2, 0);
+
 		canopy14 = new ModelRendererTF(this, 50, 19);
 		canopy14.mirror = true;
 		canopy14.setRotationPoint(0, 0, 2.5F);
 		canopy14.addBox(-1, 0, 0, 2, 4, 1, 0);
 		setRotateAngle(canopy14, 0.08726646259971647F, -3.141592653589793F, 0);
+
 		rightGun9 = new ModelRendererTF(this, 45, 11);
 		rightGun9.setRotationPoint(0, 0, 0);
 		rightGun9.addBox(-0.3F, -1, -0.7F, 1, 2, 1, 0);
+
 		leftWing12 = new ModelRendererTF(this, 60, 43);
 		leftWing12.mirror = true;
 		leftWing12.setRotationPoint(-2, 1, 0);
 		leftWing12.addBox(0, 0, -0.5F, 1, 4, 1, 0);
 		setRotateAngle(leftWing12, 0, 0, -1.064650843716541F);
+
 		leftFin1_9 = new ModelRendererTF(this, 0, 60);
 		leftFin1_9.mirror = true;
 		leftFin1_9.setRotationPoint(0, -0.9F, 0);
 		leftFin1_9.addBox(-0.5F, -1, 0, 1, 1, 2, 0);
+
 		rightHelmet9_1 = new ModelRendererTF(this, 27, 36);
 		rightHelmet9_1.mirror = true;
 		rightHelmet9_1.setRotationPoint(0, 0, 1);
 		rightHelmet9_1.addBox(-1, -1, 0, 1, 2, 1, 0);
 		setRotateAngle(rightHelmet9_1, 0, -0.8203047484373349F, 0);
+
 		leftChest7 = new ModelRendererTF(this, 14, 25);
 		leftChest7.mirror = true;
 		leftChest7.setRotationPoint(1, -2.5F, -1);
 		leftChest7.addBox(-1, 0, 0, 2, 1, 1, 0);
 		setRotateAngle(leftChest7, -0.6981317007977318F, 0, 0);
+
 		leftChest6 = new ModelRendererTF(this, 15, 30);
 		leftChest6.mirror = true;
 		leftChest6.setRotationPoint(0, -4, -2);
 		leftChest6.addBox(-1, -1, 0, 2, 1, 1, 0);
+
 		rightHip1 = new ModelRendererTF(this, 34, 6);
 		rightHip1.setRotationPoint(-1.2F, -2.7F, -0.9F);
 		rightHip1.addBox(-2.3F, -1, -1.5F, 3, 2, 3, 0);
 		setRotateAngle(rightHip1, -1.5707963267948966F, 0, 0);
+
 		rightHelmet1_1 = new ModelRendererTF(this, 18, 40);
 		rightHelmet1_1.mirror = true;
 		rightHelmet1_1.setRotationPoint(0.3F, -1.5F, 0);
 		rightHelmet1_1.addBox(-0.1F, -1.8F, -1.2F, 1, 3, 2, 0);
 		setRotateAngle(rightHelmet1_1, 0, 1.5707963267948966F, 0);
+
 		canopy20 = new ModelRendererTF(this, 25, 23);
 		canopy20.setRotationPoint(0, 8, -1.5F);
 		canopy20.addBox(-1, 0, 0, 2, 1, 1, 0);
 		setRotateAngle(canopy20, 0.6981317007977318F, 0, 0);
+
 		rightKnee3 = new ModelRendererTF(this, 20, 19);
 		rightKnee3.setRotationPoint(0, -1.78F, 0.05F);
 		rightKnee3.addBox(-1.5F, 0, -0.4F, 3, 2, 1, 0);
 		setRotateAngle(rightKnee3, 2.7576202181510405F, 0, 0);
+
 		canopy8 = new ModelRendererTF(this, 50, 24);
 		canopy8.setRotationPoint(0, 0, 0);
 		canopy8.addBox(-0.15F, 0, -0.85F, 1, 1, 1, 0);
+
 		leftGun8 = new ModelRendererTF(this, 45, 11);
 		leftGun8.mirror = true;
 		leftGun8.setRotationPoint(0, 7, 0);
 		leftGun8.addBox(-0.3F, -1, -0.7F, 1, 2, 1, 0);
+
 		rightHelmet4 = new ModelRendererTF(this, 18, 45);
 		rightHelmet4.setRotationPoint(0, -1, -1);
 		rightHelmet4.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(rightHelmet4, -0.3490658503988659F, 0, 0);
+
 		leftHip3 = new ModelRendererTF(this, 27, 10);
 		leftHip3.mirror = true;
 		leftHip3.setRotationPoint(1.3F, -0.95F, -6.72F);
 		leftHip3.addBox(-1, 0, -0.5F, 2, 2, 1, 0);
 		setRotateAngle(leftHip3, 0.3508111796508603F, 0, 0);
+
 		lowerFoot2 = new ModelRendererTF(this, 8, 13);
 		lowerFoot2.mirror = true;
 		lowerFoot2.setRotationPoint(0, 0.5F, -1);
 		lowerFoot2.addBox(-1.5F, -0.5F, 0, 3, 1, 3, 0);
+
 		leftFin1_1 = new ModelRendererTF(this, 0, 57);
 		leftFin1_1.mirror = true;
 		leftFin1_1.setRotationPoint(1.1F, 1.7F, -0.7F);
 		leftFin1_1.addBox(-0.5F, -0.5F, 0, 1, 1, 6, 0);
 		setRotateAngle(leftFin1_1, -0.2617993877991494F, 0, 0);
+
 		rightFin1_6 = new ModelRendererTF(this, 8, 57);
 		rightFin1_6.setRotationPoint(0, -0.4F, 0);
 		rightFin1_6.addBox(-0.5F, -1, 0, 1, 1, 5, 0);
+
 		nose2 = new ModelRendererTF(this, 36, 29);
 		nose2.mirror = true;
 		nose2.setRotationPoint(0, 0, 0);
 		nose2.addBox(-0.75F, 0, -1, 1, 1, 1, 0);
+
 		rightGun8 = new ModelRendererTF(this, 45, 11);
 		rightGun8.setRotationPoint(0, 7, 0);
 		rightGun8.addBox(-0.7F, -1, -0.7F, 1, 2, 1, 0);
+
 		leftWing2 = new ModelRendererTF(this, 44, 47);
 		leftWing2.mirror = true;
 		leftWing2.setRotationPoint(1, -1, 0);
 		leftWing2.addBox(0, -1, -0.5F, 7, 4, 1, 0);
+
 		rightFin2_3 = new ModelRendererTF(this, 14, 39);
 		rightFin2_3.setRotationPoint(0, -6.5F, 0);
 		rightFin2_3.addBox(-0.5F, 0, -1, 1, 8, 1, 0);
 		setRotateAngle(rightFin2_3, 0.8478809506188453F, 0, 0);
+
 		leftArm1 = new ModelRendererTF(this, 36, 11);
 		leftArm1.mirror = true;
 		leftArm1.setRotationPoint(0.8F, 0.2F, 0);
 		leftArm1.addBox(0, -1.5F, -1.5F, 3, 4, 3, 0);
+
 		rightHelmet8 = new ModelRendererTF(this, 33, 30);
 		rightHelmet8.setRotationPoint(-0.9F, -0.3F, 0.8F);
 		rightHelmet8.addBox(0, -1.5F, 0, 1, 3, 1, 0);
 		setRotateAngle(rightHelmet8, 0, 0.45378560551852565F, 0);
+
 		rightFin1_1 = new ModelRendererTF(this, 0, 57);
 		rightFin1_1.setRotationPoint(-1.1F, 1.7F, -0.7F);
 		rightFin1_1.addBox(-0.5F, -0.5F, 0, 1, 1, 6, 0);
 		setRotateAngle(rightFin1_1, -0.2617993877991494F, 0, 0);
+
 		leftGun2 = new ModelRendererTF(this, 60, 26);
 		leftGun2.mirror = true;
 		leftGun2.setRotationPoint(0.3F, 0, 0);
 		leftGun2.addBox(0.8F, -2.5F, -0.8F, 1, 4, 1, 0);
+
 		rightGun7 = new ModelRendererTF(this, 60, 17);
 		rightGun7.setRotationPoint(-1, -5, 0);
 		rightGun7.addBox(-0.5F, 0.5F, -0.5F, 1, 8, 1, 0);
+
 		leftFin2_4 = new ModelRendererTF(this, 16, 32);
 		leftFin2_4.mirror = true;
 		leftFin2_4.setRotationPoint(0, 8, 0);
 		leftFin2_4.addBox(-0.5F, 0, -1, 1, 1, 1, 0);
 		setRotateAngle(leftFin2_4, -0.8478809506188453F, 0, 0);
+
 		rightArm5 = new ModelRendererTF(this, 25, 19);
 		rightArm5.setRotationPoint(-2, 10, -0.75F);
 		rightArm5.addBox(-1.3F, 0, -1.5F, 2, 1, 3, 0);
 		setRotateAngle(rightArm5, -1.5707963267948966F, 1.5707963267948966F, 0);
+
 		rightGun4 = new ModelRendererTF(this, 60, 26);
 		rightGun4.setRotationPoint(-1, 0, 0);
 		rightGun4.addBox(-0.2F, -2.5F, -0.8F, 1, 4, 1, 0);
+
 		rightFin2_5 = new ModelRendererTF(this, 3, 51);
 		rightFin2_5.setRotationPoint(0, -0.5F, 0);
 		rightFin2_5.addBox(-0.5F, -1, 0, 1, 1, 5, 0);
+
 		leftGun4 = new ModelRendererTF(this, 60, 26);
 		leftGun4.mirror = true;
 		leftGun4.setRotationPoint(1, 0, 0);
 		leftGun4.addBox(-0.8F, -2.5F, -0.8F, 1, 4, 1, 0);
+
 		leftGun3 = new ModelRendererTF(this, 60, 11);
 		leftGun3.mirror = true;
 		leftGun3.setRotationPoint(1, 1.5F, 0);
 		leftGun3.addBox(-0.5F, -5, -0.5F, 1, 5, 1, 0);
+
 		rightHelmet2_1 = new ModelRendererTF(this, 17, 37);
 		rightHelmet2_1.mirror = true;
 		rightHelmet2_1.setRotationPoint(0.3F, 0.5F, -0.4F);
 		rightHelmet2_1.addBox(-0.5F, -1, -1, 1, 2, 1, 0);
+
 		backUpperLeg2 = new ModelRendererTF(this, 22, 0);
 		backUpperLeg2.mirror = true;
 		backUpperLeg2.setRotationPoint(0.25F, 9, -0.25F);
 		backUpperLeg2.addBox(-1, -3, 0, 2, 6, 1, 0);
+
 		leftGun6 = new ModelRendererTF(this, 60, 26);
 		leftGun6.mirror = true;
 		leftGun6.setRotationPoint(0, 0, 0);
 		leftGun6.addBox(-0.19999999999999996F, -2.5F, -0.2F, 1, 4, 1, 0);
+
 		lowerLegPanel2 = new ModelRendererTF(this, 5, 11);
 		lowerLegPanel2.mirror = true;
 		lowerLegPanel2.setRotationPoint(0, 4.8F, 0.3F);
 		lowerLegPanel2.addBox(-1, -1.5F, -1, 2, 3, 1, 0);
+
 		canopy17 = new ModelRendererTF(this, 56, 19);
 		canopy17.setRotationPoint(0, 4, 0);
 		canopy17.addBox(-0.5F, 0, 0, 1, 4, 1, 0);
 		setRotateAngle(canopy17, 0.0767944870877505F, 0, 0);
+
 		canopy9 = new ModelRendererTF(this, 50, 24);
 		canopy9.setRotationPoint(0, 0, 0);
 		canopy9.addBox(-0.15F, 0, -0.35F, 1, 1, 1, 0);
+
 		leftFin2_1 = new ModelRendererTF(this, 37, 57);
 		leftFin2_1.mirror = true;
 		leftFin2_1.setRotationPoint(0.5F, 1.7F, -0.5F);
 		leftFin2_1.addBox(-0.5F, -0.5F, 0, 1, 1, 6, 0);
 		setRotateAngle(leftFin2_1, 0, 1.5707963267948966F, 0.2617993877991494F);
+
 		rightLowerLeg1 = new ModelRendererTF(this, 0, 12);
 		rightLowerLeg1.setRotationPoint(1.8F, -5, 0.95F);
 		rightLowerLeg1.addBox(-0.5F, 0, -1.5F, 1, 8, 3, 0);
 		setRotateAngle(rightLowerLeg1, 0, 1.5707963267948966F, 0);
+
 		rightFin2_8 = new ModelRendererTF(this, 22, 53);
 		rightFin2_8.setRotationPoint(0, -0.9F, 0);
 		rightFin2_8.addBox(-0.5F, -1, 0, 1, 1, 3, 0);
+
 		leftWing11 = new ModelRendererTF(this, 54, 45);
 		leftWing11.mirror = true;
 		leftWing11.setRotationPoint(0, -2, 0);
 		leftWing11.addBox(-2, 0, -0.5F, 2, 1, 1, 0);
 		setRotateAngle(leftWing11, 0, 0, 1.064650843716541F);
+
 		rightWing9 = new ModelRendererTF(this, 60, 51);
 		rightWing9.setRotationPoint(-1, 9, 0.1F);
 		rightWing9.addBox(0, -12, -0.5F, 1, 12, 1, 0);
 		setRotateAngle(rightWing9, 0, 0, -0.7853981633974483F);
+
 		rightHelmet7 = new ModelRendererTF(this, 28, 32);
 		rightHelmet7.setRotationPoint(0, 0.1F, -0.5F);
 		rightHelmet7.addBox(-1, -1.5F, -0.5F, 1, 2, 2, 0);
+
 		headPiece5 = new ModelRendererTF(this, 40, 27);
 		headPiece5.setRotationPoint(0, 0, 2);
 		headPiece5.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(headPiece5, -0.5410520681182421F, 0, 0);
+
 		canopy19 = new ModelRendererTF(this, 56, 19);
 		canopy19.mirror = true;
 		canopy19.setRotationPoint(0, 4, 0);
 		canopy19.addBox(-0.5F, 0, 0, 1, 4, 1, 0);
 		setRotateAngle(canopy19, 0.0767944870877505F, 0, 0);
+
 		rightLowerLeg2 = new ModelRendererTF(this, 0, 12);
 		rightLowerLeg2.mirror = true;
 		rightLowerLeg2.setRotationPoint(0.25F, -2, -2);
 		rightLowerLeg2.addBox(-0.5F, 0, -1.5F, 1, 8, 3, 0);
 		setRotateAngle(rightLowerLeg2, 0, -1.5707963267948966F, 0);
+
 		leftWing8 = new ModelRendererTF(this, 56, 62);
 		leftWing8.mirror = true;
 		leftWing8.setRotationPoint(0, 1, 0);
 		leftWing8.addBox(0, 0, -0.5F, 1, 1, 1, 0);
+
 		rightWing8 = new ModelRendererTF(this, 56, 62);
 		rightWing8.setRotationPoint(0, 1, 0);
 		rightWing8.addBox(-1, 0, -0.5F, 1, 1, 1, 0);
+
 		headPiece3 = new ModelRendererTF(this, 36, 27);
 		headPiece3.setRotationPoint(0, 0, 1);
 		headPiece3.addBox(-0.5F, 0, 0, 1, 1, 1, 0);
 		setRotateAngle(headPiece3, -0.5585053606381855F, 0, 0);
+
 		rightGun3 = new ModelRendererTF(this, 60, 11);
 		rightGun3.setRotationPoint(-1, 1.5F, 0);
 		rightGun3.addBox(-0.5F, -5, -0.5F, 1, 5, 1, 0);
+
 		headPiece4 = new ModelRendererTF(this, 26, 29);
 		headPiece4.setRotationPoint(0, 0, 1);
 		headPiece4.addBox(-0.5F, 0, 0, 1, 1, 2, 0);
+
 		leftArm4 = new ModelRendererTF(this, 30, 23);
 		leftArm4.mirror = true;
 		leftArm4.setRotationPoint(0, 2.9F, 0);
 		leftArm4.addBox(-1, 0, -1, 2, 2, 2, 0);
+
 		rightWing12 = new ModelRendererTF(this, 60, 43);
 		rightWing12.setRotationPoint(2, 1, 0);
 		rightWing12.addBox(-1, 0, -0.5F, 1, 4, 1, 0);
 		setRotateAngle(rightWing12, 0, 0, 1.064650843716541F);
+
 		leftFin2_5 = new ModelRendererTF(this, 3, 51);
 		leftFin2_5.mirror = true;
 		leftFin2_5.setRotationPoint(0, -0.5F, 0);
 		leftFin2_5.addBox(-0.5F, -1, 0, 1, 1, 5, 0);
+
 		leftWing4 = new ModelRendererTF(this, 48, 54);
 		leftWing4.mirror = true;
 		leftWing4.setRotationPoint(0, 1, 0);
 		leftWing4.addBox(0, 0, -0.5F, 5, 1, 1, 0);
+
 		leftGun1 = new ModelRendererTF(this, 46, 19);
 		leftGun1.mirror = true;
 		leftGun1.setRotationPoint(6.5F, 5.5F, 0.4F);
 		leftGun1.addBox(0, -1, -0.5F, 1, 2, 1, 0);
 		setRotateAngle(leftGun1, -3.141592653589793F, 1.5707963267948966F, 0);
+
 		leftWing15 = new ModelRendererTF(this, 54, 45);
 		leftWing15.mirror = true;
 		leftWing15.setRotationPoint(0, -2, 0);
 		leftWing15.addBox(-2, 0, -0.5F, 2, 1, 1, 0);
 		setRotateAngle(leftWing15, 0, 0, 1.064650843716541F);
+
 		leftHip2 = new ModelRendererTF(this, 27, 10);
 		leftHip2.mirror = true;
 		leftHip2.setRotationPoint(1.3F, 0.5F, 1.5F);
 		leftHip2.addBox(-1, 0, -0.5F, 2, 2, 1, 0);
 		setRotateAngle(leftHip2, 1.5707963267948966F, 0, 0);
+
 		rightWing13 = new ModelRendererTF(this, 60, 51);
 		rightWing13.setRotationPoint(-1, 9, -0.1F);
 		rightWing13.addBox(0, -12, -0.5F, 1, 12, 1, 0);
 		setRotateAngle(rightWing13, 0, 0, -0.7853981633974483F);
+
 		rightWing4 = new ModelRendererTF(this, 48, 54);
 		rightWing4.setRotationPoint(0, 1, 0);
 		rightWing4.addBox(-5, 0, -0.5F, 5, 1, 1, 0);
+
 		rightKnee1 = new ModelRendererTF(this, 0, 23);
 		rightKnee1.setRotationPoint(-0.2F, 8.36F, -0.74F);
 		rightKnee1.addBox(-1.5F, -1, -0.5F, 3, 2, 1, 0);
 		setRotateAngle(rightKnee1, 1.5707963267948966F, 0, 0);
+
 		footBase2 = new ModelRendererTF(this, 18, 11);
 		footBase2.mirror = true;
 		footBase2.setRotationPoint(0, 4.2F, -0.1F);
 		footBase2.addBox(-1.5F, 0, -3, 3, 1, 2, 0);
 		setRotateAngle(footBase2, 1.5707963267948966F, -1.5707963267948966F, 0);
+
 		rightKnee2 = new ModelRendererTF(this, 8, 21);
 		rightKnee2.setRotationPoint(-0.05F, -0.54F, -0.3F);
 		rightKnee2.addBox(-1.5F, -2, -0.5F, 3, 2, 1, 0);
 		setRotateAngle(rightKnee2, -1.186823891356144F, 0, 0);
+
 		leftWing14 = new ModelRendererTF(this, 54, 33);
 		leftWing14.mirror = true;
 		leftWing14.setRotationPoint(0, -12, 0);
 		leftWing14.addBox(-2, -2, -0.5F, 2, 2, 1, 0);
 		setRotateAngle(leftWing14, 0, 0, -0.7853981633974483F);
+
 		backUpperLeg1 = new ModelRendererTF(this, 22, 0);
 		backUpperLeg1.setRotationPoint(-0.25F, 9, -0.25F);
 		backUpperLeg1.addBox(-1, -3, 0, 2, 6, 1, 0);
+
 		backCrotch = new ModelRendererTF(this, 28, 6);
 		backCrotch.setRotationPoint(0, -1.2F, 1.45F);
 		backCrotch.addBox(-1, 0, -0.5F, 2, 3, 1, 0);
+
 		neck = new ModelRendererTF(this, 20, 28);
 		neck.setRotationPoint(0, -2.8F, 1.5F);
 		neck.addBox(-1, -1, -2, 2, 1, 2, 0);
+
 		rightWing6 = new ModelRendererTF(this, 52, 58);
 		rightWing6.setRotationPoint(0, 1, 0);
 		rightWing6.addBox(-3, 0, -0.5F, 3, 1, 1, 0);
+
 		spine = new ModelRendererTF(this, 54, 36);
 		spine.setRotationPoint(0, 0, 0.6F);
 		spine.addBox(-1, -8, -1, 2, 8, 1, 0);
+
 		canopy13 = new ModelRendererTF(this, 56, 19);
 		canopy13.setRotationPoint(0, 4, 0);
 		canopy13.addBox(-0.5F, 0, 0, 1, 4, 1, 0);
 		setRotateAngle(canopy13, 0.0767944870877505F, 0, 0);
+
 		rightFin1_3 = new ModelRendererTF(this, 0, 47);
 		rightFin1_3.setRotationPoint(0, -6.5F, 0);
 		rightFin1_3.addBox(-0.5F, 0, -1, 1, 8, 1, 0);
-		setRotateAngle(rightFin1_3, 0.8478809506188453F, 0, 0);
+		rightFin1_3.rotateAngleX = 0.8478809506188453F;
+
 		rightWing15.addChild(rightWing16);
 		rightWing2.addChild(rightWing3);
 		upperLeg2.addChild(lowerLeg2);
@@ -1317,7 +1525,7 @@ public class ModelStarscreamVehicle extends ModelVehicleBase {
 		setToInitPose();
 
 		if(entity instanceof EntityPlayer) {
-			waist.rotateAngleX = (rotationPitch + 90) / (180F / PI);
+			waist.rotateAngleX = (float) Math.toRadians(rotationPitch + 90);
 			waist.rotateAngleZ = -bipedHead.rotateAngleY;
 		}
 	}

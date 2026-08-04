@@ -16,8 +16,8 @@ import org.lwjgl.opengl.GL11;
 import javax.annotation.Nonnull;
 
 public class TFModelStarscream extends TransformerModel {
-	private final ModelStarscream model= new ModelStarscream();
-	private final ModelStarscream modelItem= new ModelStarscream();
+	private final ModelStarscream model = new ModelStarscream();
+	private final ModelStarscream modelItem = new ModelStarscream();
 	private final ModelStarscreamVehicle vehicle = new ModelStarscreamVehicle();
 
 	@Override
@@ -73,12 +73,12 @@ public class TFModelStarscream extends TransformerModel {
 
 	@Override
 	public void renderCape(EntityPlayer player) {
-		GL11.glTranslatef(0.18F, 0F, -0.01F);
+		GL11.glTranslatef(0.18F, 0, -0.01F);
 	}
 
 	@Override
 	public void renderFirstPersonArm(EntityPlayer player) {
-		GL11.glTranslatef(0.0F, -0.05F, 0.15F);
+		GL11.glTranslatef(0, -0.05F, 0.15F);
 	}
 
 	@Override

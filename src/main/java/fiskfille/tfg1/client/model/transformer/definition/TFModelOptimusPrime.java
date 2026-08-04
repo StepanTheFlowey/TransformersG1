@@ -73,12 +73,12 @@ public class TFModelOptimusPrime extends TransformerModel {
 
 	@Override
 	public void renderCape(EntityPlayer player) {
-		GL11.glTranslatef(0.18F, 0F, -0.01F);
+		GL11.glTranslatef(0.18F, 0, -0.01F);
 	}
 
 	@Override
 	public void renderFirstPersonArm(EntityPlayer player) {
-		GL11.glTranslatef(0.0F, -0.05F, 0.15F);
+		GL11.glTranslatef(0, -0.05F, 0.15F);
 	}
 
 	@Override
