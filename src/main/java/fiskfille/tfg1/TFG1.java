@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 @Mod(
 				acceptedMinecraftVersions = "[1.7.10]",
-				dependencies = "required-after:transformers@[0.7.6,)",
+				dependencies = "required-after:transformers@[0.7.9,)",
 				modid = TFG1.MODID,
 				name = "Transformers Mod: G1 Edition",
 				version = Tags.VERSION

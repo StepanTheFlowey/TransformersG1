@@ -644,8 +644,8 @@ public class ModelOptimusPrimeVehicle extends ModelVehicleBase {
 	}
 
 	@Override
-	public void render(EntityPlayer player, ItemStack itemstack) {
-		TFRenderHelper.setupRenderLayers(player, itemstack, waist);
+	public void render(ItemStack itemstack) {
+		TFRenderHelper.setupRenderLayers(itemstack, waist);
 	}
 
 	@Override

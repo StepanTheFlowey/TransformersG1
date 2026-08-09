@@ -1507,16 +1507,8 @@ public class ModelStarscreamVehicle extends ModelVehicleBase {
 	}
 
 	@Override
-	public void render(EntityPlayer player, ItemStack itemstack) {
-		float scale = 1;
-
-		if(player == null) {
-			scale = 0.85F;
-			waist.rotationPointZ += 3;
-		}
-
-		waist.setScale(scale, scale, scale);
-		TFRenderHelper.setupRenderLayers(player, itemstack, waist);
+	public void render(ItemStack itemstack) {
+		TFRenderHelper.setupRenderLayers(itemstack, waist);
 	}
 
 	@Override
