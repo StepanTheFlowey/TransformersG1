@@ -13,7 +13,7 @@ import net.minecraft.item.ItemStack;
 
 import static fiskfille.tf.common.recipe.Dyes.*;
 
-public class TFG1Recipes extends TFRecipes {
+public final class TFG1Recipes extends TFRecipes {
 	public static void register() {
 		addCraftingComponentRecipes();
 		addArmorRecipes();

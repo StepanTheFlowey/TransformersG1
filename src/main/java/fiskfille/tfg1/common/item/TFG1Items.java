@@ -5,7 +5,7 @@ import fiskfille.tf.common.registry.TFItemRegistry;
 import fiskfille.tfg1.common.item.armor.ItemOptimusPrimeArmor;
 import fiskfille.tfg1.common.item.armor.ItemStarscreamArmor;
 
-public class TFG1Items {
+public final class TFG1Items {
 	public static ItemTransformerArmor optimusPrimeHelmet;
 	public static ItemTransformerArmor optimusPrimeChestplate;
 	public static ItemTransformerArmor optimusPrimeLeggings;
