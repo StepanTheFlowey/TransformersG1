@@ -1,23 +1,19 @@
-item.smoke_stack.name=Smoke Stack
-item.optimus_primes_gauntlet.name=Optimus Prime's Gauntlet
-item.optimus_prime_torso_base.name=Optimus Prime Torso Base
-item.optimus_primes_greave.name=Optimus Prime's Greave
-
-item.starscreams_wing.name=Starscream's Wing
-item.starscreams_shoulder_cover.name=Starscream's Shoulder Cover
-item.starscreams_gauntlet.name=Starscream's Gauntlet
-item.starscream_torso_base.name=Starscream Torso Base
-item.starscreams_greave.name=Starscream's Greave
-
-item.optimus_prime_head.name=Optimus Prime Head
-item.optimus_prime_torso.name=Optimus Prime Torso
-item.optimus_prime_legs.name=Optimus Prime Legs
-item.optimus_prime_feet.name=Optimus Prime Feet
-
-item.starscream_head.name=Starscream Head
-item.starscream_torso.name=Starscream Torso
-item.starscream_legs.name=Starscream Legs
-item.starscream_feet.name=Starscream Feet
-
 item.display_g1_optimus_prime.name=1984 Freightliner Class 8 COE
 item.display_g1_starscream.name=1984 F-15 Eagle
+item.optimus_prime_feet.name=Optimus Prime Feet
+item.optimus_prime_head.name=Optimus Prime Head
+item.optimus_prime_legs.name=Optimus Prime Legs
+item.optimus_primes_gauntlet.name=Optimus Prime's Gauntlet
+item.optimus_primes_greave.name=Optimus Prime's Greave
+item.optimus_prime_torso_base.name=Optimus Prime Torso Base
+item.optimus_prime_torso.name=Optimus Prime Torso
+item.smoke_stack.name=Smoke Stack
+item.starscream_feet.name=Starscream Feet
+item.starscream_head.name=Starscream Head
+item.starscream_legs.name=Starscream Legs
+item.starscreams_gauntlet.name=Starscream's Gauntlet
+item.starscreams_greave.name=Starscream's Greave
+item.starscreams_shoulder_cover.name=Starscream's Shoulder Cover
+item.starscreams_wing.name=Starscream's Wing
+item.starscream_torso_base.name=Starscream Torso Base
+item.starscream_torso.name=Starscream Torso
